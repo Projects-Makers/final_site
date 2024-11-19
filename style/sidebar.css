@@ -32,6 +32,7 @@ aside{
     height: 400px;
     width: 300px;
     margin-left: 25px;
+    overflow-y: scroll;
     
 }
 
