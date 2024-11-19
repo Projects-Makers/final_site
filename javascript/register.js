@@ -56,7 +56,7 @@ function enableScroll() {
 // Gdy użytkownik kliknie link, otwórz modal i zablokuj przewijanie
 link.onclick = function (event) {
     event.preventDefault(); // Zapobiega przekierowaniu
-    modal.style.display = "block";
+    modal.style.display = "flex"; // Ustaw Flexbox dla centrowania
     disableScroll(); // Blokuje przewijanie strony
 };
 
