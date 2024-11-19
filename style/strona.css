@@ -4,39 +4,11 @@ body {
     box-sizing: border-box;
 }
 
-section {
+.section1 {
     background: #f6f8fa;
     display: flex;
-    justify-content: center;
     align-items: center;
     height: 82.9vh; /* Pełna wysokość widoku */
     margin: 0;    /* Usuń marginesy */
     padding: 0;   /* Usuń padding */
 }
-
-.img {
-    position: relative;
-    margin: 0;
-    padding: 0;
-}
-
-img {
-    display: block; /* Usuń dodatkowy odstęp wokół obrazka */
-}
-
-#red-object {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    display: none; /* Domyślnie ukryty */
-}
-
-#red-object.active {
-    display: block; /* Widoczny, gdy aktywowany */
-}
-

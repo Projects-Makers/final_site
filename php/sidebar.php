@@ -24,26 +24,13 @@
     echo'  <div class="Miasta">Wieś:</div>' ;
     $wynik = mysqli_query($conn,"SELECT * FROM Wsi"); 
     while ($wiersz = mysqli_fetch_array($wynik))
-    
    {
     echo'<li><span class="text"><a href="index.php?strona=cos&id=' . htmlspecialchars($wiersz["id"]) . '">' . htmlspecialchars($wiersz["wsi"]) . '</span>→</a></li>';
     }
-    
   ?>
   </ul>
 </div>
 <hr style="width: 300px; height: 1px; background-color: gray; "></hr>
-
-
-
-
-
-
-
-
-
-
-
 <!-- Przerwa jest tu po to bo mnie wkurza kod do przycisku by Purple -->
 <div class="options">
 <label class="theme-switch">
