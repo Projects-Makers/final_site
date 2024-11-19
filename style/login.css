@@ -70,7 +70,7 @@ body.noscroll {
 }
 
 #termsModal {
-    display: none;
+    display: none; /* Modal jest ukryty przy starcie */
     position: fixed; /* Ustawienie na fixed dla centrowania względem całego ekranu */
     z-index: 1;
     left: 0;
@@ -78,11 +78,11 @@ body.noscroll {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4); /* Przyciemnione tło */
-    display: flex; /* Użyj Flexbox do centrowania */
     justify-content: center; /* Wyśrodkowanie w poziomie */
     align-items: center; /* Wyśrodkowanie w pionie */
 }
 
+/* Treść modala */
 .modal-content {
     background-color: #fefefe;
     padding: 20px;
