@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style/section.css">
     <link rel="stylesheet" href="style/footer.css">
     <link rel="stylesheet" href="style/light-darck.css">
+    <link rel="stylesheet" href="style/strona.css">
 </head>
 <body>      
 <?php 
