@@ -5,7 +5,7 @@ function toggleMenu() {
     hamburger.classList.toggle('active');
 }
 
-document.querySelector('.register-form').addEventListener('submit', function(e) {
+document.querySelector('.login-form').addEventListener('submit', function(e) {
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
     var terms = document.getElementById('terms').checked;
