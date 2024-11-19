@@ -24,4 +24,7 @@
             </div>
         </div>
     </div>
+
+
+    <script src="../javascript/login.js"></script>
     

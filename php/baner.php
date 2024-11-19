@@ -5,6 +5,6 @@
 
 <div class="login">
    <a href="index.php?strona=login"><div class="sign-in-button">Sign in</div></a>
-   <a href="index.php?strona-register"><div class="sign-up-button">Sign up</div></a>
+   <a href="index.php?strona=register"><div class="sign-up-button">Sign up</div></a>
 </div>
 </header>

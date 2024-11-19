@@ -30,3 +30,6 @@ include("php/footer.php");
 
 </body>
 </html>
+
+<script src="javascript/login.js"></script>
+<script src="javascript/register.js"></script>
