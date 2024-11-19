@@ -38,34 +38,35 @@ document.querySelector('.login-form').addEventListener('submit', function (e) {
 });
 
 // Pobierz elementy modalu
+// Pobierz elementy modala
 var modal = document.getElementById("termsModal");
 var link = document.getElementById("termsLink");
 var span = document.getElementsByClassName("close")[0];
 
-// Funkcja do blokowania scrollowania
+// Funkcja do blokowania przewijania
 function disableScroll() {
-    document.body.style.overflow = 'hidden';
+    document.body.classList.add('noscroll'); // Dodaj klasę blokującą scroll
 }
 
-// Funkcja do przywracania scrollowania
+// Funkcja do przywracania przewijania
 function enableScroll() {
-    document.body.style.overflow = '';
+    document.body.classList.remove('noscroll'); // Usuń klasę blokującą scroll
 }
 
-// Gdy użytkownik kliknie link, otwórz modal i zablokuj scrollowanie
+// Gdy użytkownik kliknie link, otwórz modal i zablokuj przewijanie
 link.onclick = function (event) {
     event.preventDefault(); // Zapobiega przekierowaniu
     modal.style.display = "block";
     disableScroll(); // Blokuje przewijanie strony
 };
 
-// Gdy użytkownik kliknie (x), zamknij modal i odblokuj scrollowanie
+// Gdy użytkownik kliknie (x), zamknij modal i odblokuj przewijanie
 span.onclick = function () {
     modal.style.display = "none";
     enableScroll(); // Przywraca przewijanie strony
 };
 
-// Gdy użytkownik kliknie gdziekolwiek poza modalem, zamknij go i odblokuj scrollowanie
+// Gdy użytkownik kliknie gdziekolwiek poza modalem, zamknij go i odblokuj przewijanie
 window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
