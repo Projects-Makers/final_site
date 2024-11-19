@@ -1,6 +1,9 @@
 body{
-    margin: 0px;
-    padding: 0px;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    text-decoration: none;
 }
 
 
