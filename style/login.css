@@ -71,40 +71,45 @@ body.noscroll {
 
 #termsModal {
     display: none;
-    position: fixed;
+    position: fixed; /* Ustawienie na fixed dla centrowania względem całego ekranu */
     z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4); /* Przyciemnione tło */
+    display: flex; /* Użyj Flexbox do centrowania */
+    justify-content: center; /* Wyśrodkowanie w poziomie */
+    align-items: center; /* Wyśrodkowanie w pionie */
 }
 
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
-    max-width: 600px;
-    max-height: 80vh; /* Maksymalna wysokość modalu */
-    overflow-y: auto; /* Przewijanie w pionie */
+    width: 90%; /* Maksymalna szerokość */
+    max-width: 600px; /* Szerokość ograniczona do 600px */
+    max-height: 80vh; /* Maksymalna wysokość, by uniknąć wychodzenia poza ekran */
+    overflow-y: auto; /* Przewijanie w pionie, jeśli treść jest zbyt długa */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+    position: relative; /* Dla przycisku zamknięcia (X) */
 }
 
 .close {
     color: #aaa;
-    float: right;
+    position: absolute; /* Pozycjonowanie wewnątrz modala */
+    top: 10px;
+    right: 15px;
     font-size: 28px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .close:hover,
 .close:focus {
     color: black;
     text-decoration: none;
-    cursor: pointer;
 }
 
 .register-container button {
