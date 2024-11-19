@@ -6,7 +6,7 @@
         <div class="container">
             <div class="register-container">
                 <h1>Rejestracja</h1>
-                <form action="action_php/index.php?strona=register_action.php" method="post" class="login-form">
+                <form action="action_php/index.php?strona=register_action" method="post" class="login-form">
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Proszę podać prawidłowy adres e-mail (np. example@domain.com)">
     
