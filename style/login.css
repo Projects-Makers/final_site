@@ -136,6 +136,11 @@
     margin-bottom: 8px;
     font-weight: bold; 
 }
+.modal-content {
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
 
 
 .register-form input[type="email"],
