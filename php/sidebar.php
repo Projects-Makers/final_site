@@ -14,6 +14,21 @@
     while ($wiersz = mysqli_fetch_array($wynik))  {
     echo'<li><span class="text"><a href="index.php?strona=cos&id=' . htmlspecialchars($wiersz["id"]) . '">' . htmlspecialchars($wiersz["miasto"]) . '</span>→</a></li>';
     }
+    echo'  <div class="Miasta">Miejscowosc:</div>' ;
+    $wynik = mysqli_query($conn,"SELECT * FROM Miejscowosci"); 
+    while ($wiersz = mysqli_fetch_array($wynik))
+    
+   {
+    echo'<li><span class="text"><a href="index.php?strona=cos&id=' . htmlspecialchars($wiersz["id"]) . '">' . htmlspecialchars($wiersz["miejscowosc"]) . '</span>→</a></li>';
+    }
+    echo'  <div class="Miasta">Wieś:</div>' ;
+    $wynik = mysqli_query($conn,"SELECT * FROM Wsi"); 
+    while ($wiersz = mysqli_fetch_array($wynik))
+    
+   {
+    echo'<li><span class="text"><a href="index.php?strona=cos&id=' . htmlspecialchars($wiersz["id"]) . '">' . htmlspecialchars($wiersz["wsi"]) . '</span>→</a></li>';
+    }
+    
   ?>
   </ul>
 </div>
