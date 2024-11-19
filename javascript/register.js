@@ -1,3 +1,4 @@
+// Funkcja do przełączania menu
 function toggleMenu() {
     const menu = document.getElementById('menu');
     const hamburger = document.getElementById('hamburger');
@@ -5,7 +6,8 @@ function toggleMenu() {
     hamburger.classList.toggle('active');
 }
 
-document.querySelector('.login-form').addEventListener('submit', function(e) {
+// Obsługa formularza rejestracji
+document.querySelector('.login-form').addEventListener('submit', function (e) {
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
     var terms = document.getElementById('terms').checked;
@@ -13,17 +15,17 @@ document.querySelector('.login-form').addEventListener('submit', function(e) {
     var passwordRegex = /^(?=.*[!@#$%^&*]).{8,}$/;
     var validEndings = ['.com', '.pl', '.org', '.net']; // Dodaj inne końcówki, które chcesz zaakceptować
     var hasValidEnding = validEndings.some(ending => email.endsWith(ending));
-    
+
     if (!hasValidEnding) {
         e.preventDefault();
         alert('Proszę wpisać adres e-mail z poprawną końcówką (np. .com, .pl).');
     }
-    
+
     if (!emailRegex.test(email)) {
         e.preventDefault();
         alert('Proszę podać prawidłowy adres e-mail.');
     }
-    
+
     if (!passwordRegex.test(password)) {
         e.preventDefault();
         alert('Hasło musi zawierać co najmniej 8 znaków oraz przynajmniej jeden znak specjalny.');
@@ -40,20 +42,33 @@ var modal = document.getElementById("termsModal");
 var link = document.getElementById("termsLink");
 var span = document.getElementsByClassName("close")[0];
 
-// Gdy użytkownik kliknie link, otwórz modal
-link.onclick = function(event) {
+// Funkcja do blokowania scrollowania
+function disableScroll() {
+    document.body.style.overflow = 'hidden';
+}
+
+// Funkcja do przywracania scrollowania
+function enableScroll() {
+    document.body.style.overflow = '';
+}
+
+// Gdy użytkownik kliknie link, otwórz modal i zablokuj scrollowanie
+link.onclick = function (event) {
     event.preventDefault(); // Zapobiega przekierowaniu
     modal.style.display = "block";
-}
+    disableScroll(); // Blokuje przewijanie strony
+};
 
-// Gdy użytkownik kliknie (x), zamknij modal
-span.onclick = function() {
+// Gdy użytkownik kliknie (x), zamknij modal i odblokuj scrollowanie
+span.onclick = function () {
     modal.style.display = "none";
-}
+    enableScroll(); // Przywraca przewijanie strony
+};
 
-// Gdy użytkownik kliknie gdziekolwiek poza modalem, zamknij go
-window.onclick = function(event) {
+// Gdy użytkownik kliknie gdziekolwiek poza modalem, zamknij go i odblokuj scrollowanie
+window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
+        enableScroll(); // Przywraca przewijanie strony
     }
-}
+};
