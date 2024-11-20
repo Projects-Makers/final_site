@@ -7,7 +7,7 @@
         <div class="container">
             <div class="register-container">
                 <h1>Zaloguj się</h1>
-                <form action="index.php?strona=action_php/login_action" method="post" class="login-form">
+                <form action="index.php?strona=login/action_php/login_action" method="post" class="login-form">
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
     

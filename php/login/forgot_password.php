@@ -2,7 +2,7 @@
     <div class="container">
         <div class="forgot-container">
             <h1>Resetuj hasło</h1>
-            <form action="index.php?strona=action_php/reset_password_action" method="post" class="reset-password-form">
+            <form action="index.php?strona=login/action_php/reset_password_action" method="post" class="reset-password-form">
                 <label for="email">Podaj swój adres email:</label>
                 <input type="email" id="email" name="email" required>
 
