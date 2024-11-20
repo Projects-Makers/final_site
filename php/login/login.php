@@ -3,7 +3,7 @@
  
 
     <!-- Główna sekcja - formularz rejestracji -->
-    <div id="main">
+    <section>
         <div class="container">
             <div class="register-container">
                 <h1>Zaloguj się</h1>
@@ -23,7 +23,7 @@
                 </form>
             </div>
         </div>
-    </div>
+</section>
 
 
     <script src="../javascript/login.js"></script>

@@ -2,7 +2,7 @@
    
 
     <!-- Główna sekcja - formularz rejestracji -->
-    <section><div id="main">
+    <section>
         <div class="container">
             <div class="register-container">
                 <h1>Rejestracja</h1>
@@ -27,7 +27,7 @@
                 </form>
             </div>
         </div>
-    </div>
+    
 
     <!-- Modal z warunkami użytkowania -->
     <div id="termsModal" class="modal">
