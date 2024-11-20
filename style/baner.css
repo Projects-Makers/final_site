@@ -6,12 +6,12 @@ header {
 }
 
 .wypelniacz{
-    flex: 0 0 300px;
+    flex: 0 0 600px;
     
     color: white;
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: left; 
 }
 
 .wypelniacz a{
@@ -42,10 +42,11 @@ header {
 }
 
 .login{
-    flex: 0 0 300px;
+    flex: 0 0 600px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: right;
+    padding-right: 20px;
 }
 
 .login a{
