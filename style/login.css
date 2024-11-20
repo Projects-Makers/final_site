@@ -7,8 +7,6 @@ body.noscroll {
 
 #main {
     flex: 1;
-    background-color: #e0e0e0; /* Tło całej sekcji w szarym kolorze */
-    padding: 50px 0;
     text-align: center;
 }
 
