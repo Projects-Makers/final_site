@@ -14,6 +14,7 @@
 </head>
 <body>      
 <?php 
+include("index.html");
 require("config.php");
 include("php/baner.php");
 include("php/sidebar.php");
