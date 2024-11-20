@@ -7,8 +7,7 @@ body {
 .section1 {
     background: #f6f8fa;
     display: flex;
-    align-items: center;
     height: 82.9vh; /* Pełna wysokość widoku */
-    margin: 0;    /* Usuń marginesy */
-    padding: 0;   /* Usuń padding */
+    margin: auto;    /* Usuń marginesy */
+    padding: auto;   /* Usuń padding */
 }
