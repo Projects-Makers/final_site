@@ -1,35 +1,32 @@
 <aside>
-<div class="pismo">
-        Wyszukaj nazwę miasta:
-    </div>
+<div class="pismo">Wyszukaj nazwę miasta:</div>
 <div class="search">
-    <input type="search" class="searchbar"></input>
+<input type="search" class="searchbar"></input>
 </div>
 <hr style="width: 300px; height: 1px; background-color: gray; "></hr>
-<div class="info">
-  <div class="Miasta">Miasta:</div>
-  <ul>
-  <?php
-    $wynik = mysqli_query($conn,"SELECT * FROM Miasta"); 
-    while ($wiersz = mysqli_fetch_array($wynik))  {
-    echo'<li><span class="text"><a href="index.php?strona=podstrona-miasta&id=' . htmlspecialchars($wiersz["id"]) . '">' . htmlspecialchars($wiersz["miasto"]) . '</span>→</a></li>';
-    }
-   echo'  <div class="Miasta">Miejscowosc:</div>' ;
-  //   $wynik = mysqli_query($conn,"SELECT * FROM miasta where miejscowosc=2"); 
-  //   while ($wiersz = mysqli_fetch_array($wynik))
-    
-  //  {
-  //   echo'<li><span class="text"><a href="index.php?strona=cos&id=' . htmlspecialchars($wiersz["id"]) . '">' . htmlspecialchars($wiersz["miasto"]) . '</span>→</a></li>';
-  //   }
-   echo'  <div class="Miasta">Wieś:</div>' ;
-  //   $wynik = mysqli_query($conn,"SELECT * FROM miasta where miejscowosc=3"); 
-  //   while ($wiersz = mysqli_fetch_array($wynik))
-  //  {
-  //   echo'<li><span class="text"><a href="index.php?strona=cos&id=' . htmlspecialchars($wiersz["id"]) . '">' . htmlspecialchars($wiersz["miasto"]) . '</span>→</a></li>';
-  //   }
-  ?>
-  </ul>
-</div>
+<div class="info"> 
+<div class="Miasta">Miasta:</div>
+<ul> 
+<?php
+$wynik = mysqli_query($conn,"SELECT * FROM Miasta"); 
+while ($wiersz = mysqli_fetch_array($wynik))  {
+echo'<li><span class="text"><a href="index.php?strona=podstrona-miasta&id=' . htmlspecialchars($wiersz["id"]) . '">' . htmlspecialchars($wiersz["miasto"]) . '</span>→</a></li>';
+}
+echo'  <div class="Miasta">Miejscowosc:</div>' ;
+// //   $wynik = mysqli_query($conn,"SELECT * FROM miasta where miejscowosc=2"); 
+// //   while ($wiersz = mysqli_fetch_array($wynik)) 
+// //  {
+// //   echo'<li><span class="text"><a href="index.php?strona=cos&id=' . htmlspecialchars($wiersz["id"]) . '">' . htmlspecialchars($wiersz["miasto"]) . '</span>→</a></li>';
+// //   }
+echo'  <div class="Miasta">Wieś:</div>' ;
+// //   $wynik = mysqli_query($conn,"SELECT * FROM miasta where miejscowosc=3"); 
+// //   while ($wiersz = mysqli_fetch_array($wynik))
+// //  {
+// //   echo'<li><span class="text"><a href="index.php?strona=cos&id=' . htmlspecialchars($wiersz["id"]) . '">' . htmlspecialchars($wiersz["miasto"]) . '</span>→</a></li>';
+// //   } 
+?>
+</ul>
+</div> 
 <hr style="width: 300px; height: 1px; background-color: gray; "></hr>
 <!-- Przerwa jest tu po to bo mnie wkurza kod do przycisku by Purple -->
 <div class="options">
