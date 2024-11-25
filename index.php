@@ -15,6 +15,10 @@
 </head>
 <body>      
 <?php 
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
 require("config.php");
 include("php/baner.php");
 include("php/sidebar.php");
