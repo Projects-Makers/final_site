@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style/footer.css">
     <link rel="stylesheet" href="style/light-darck.css">
     <link rel="stylesheet" href="style/strona.css">
+    <link rel="stylesheet" href="style/podstrona.css">
 </head>
 <body>      
 <?php 
