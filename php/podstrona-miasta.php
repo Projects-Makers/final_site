@@ -10,10 +10,14 @@
     echo '<b>' . $wiersz["miasto"] . '</b>';
     ?>
 </div>
-<hr style="width: 450px; height: 1px; background-color: gray; "></hr>
-<div class="info1">Informacje</div>
-<hr style="width: 450px; height: 1px; background-color: gray; "></hr>
-<div class="czcionka"><b>Atrakcje</b></div>
-<hr style="width: 450px; height: 1px; background-color: gray; "></hr>
-</div>
+<hr style="width: 450px;">
+<a href="php/informacje.php">
+<div class="info1">
+            <div class="wypelniacz1">Informacje</div>
+        </div>
+</a>
+        <hr style="width: 450px;">
+        <div class="czcionka"><b>Atrakcje</b></div>
+        <hr style="width: 450px;">
+    </div>
 </div>
