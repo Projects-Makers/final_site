@@ -10,4 +10,5 @@ body {
     height: 82.9vh; /* Pełna wysokość widoku */
     margin: auto;    /* Usuń marginesy */
     padding: auto;   /* Usuń padding */
+    text-align: center;
 }
