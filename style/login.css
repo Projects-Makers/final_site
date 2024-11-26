@@ -33,8 +33,12 @@ section {
     text-align: center;
     margin: 0 auto;
 }
-
-
+.error-message {
+    display: none; /* Hide by default */
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
 .register-container h1 {
     margin-bottom: 10px;
     color: #333;
@@ -46,6 +50,7 @@ section {
     margin-bottom: 5px;
     color: #555;
 }
+
 
 .register-container input[type="email"],
 .register-container input[type="text"],
