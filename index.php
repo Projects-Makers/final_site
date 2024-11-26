@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="style/light-darck.css">
     <link rel="stylesheet" href="style/strona.css">
     <link rel="stylesheet" href="style/podstrona.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  
+  
 </head>
 <body>      
 <?php 
@@ -37,3 +40,4 @@ include("php/footer.php");
 
 <script src="javascript/login.js"></script>
 <script src="javascript/register.js"></script>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
