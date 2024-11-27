@@ -18,7 +18,8 @@ section {
 .container {
     justify-content: center;
     width: 100%;
-    max-width: 400px;
+    height: 752px;
+    padding-top: 40px;
 }
 
 .register-container {

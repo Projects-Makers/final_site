@@ -1,7 +1,7 @@
 <aside>
 <div class="pismo">Wyszukaj nazwę miasta:</div>
 <div class="search">
-<input type="search" class="searchbar"></input>
+<input type="search" class="searchbar" id="searchInput"></input>
 </div>
 <hr style="width: 300px; height: 1px; background-color: gray; "></hr>
 <div class="info"> 
@@ -53,3 +53,23 @@ echo'  <div class="Miasta">Wieś:</div>' ;
 </div>
 <!-- Koniec przycisku by Purple -->
 </aside>
+<script>
+// Pobierz elementy
+const searchInput = document.getElementById('searchInput');
+const cityList = document.querySelector('.info ul'); // Zakładam, że lista miast jest w .info ul
+
+// Funkcja do filtrowania miast
+searchInput.addEventListener('input', function() {
+    const filter = searchInput.value.toLowerCase();
+    const cities = cityList.getElementsByTagName('li');
+
+    for (let i = 0; i < cities.length; i++) {
+        const cityName = cities[i].textContent.toLowerCase();
+        if (cityName.includes(filter)) {
+            cities[i].style.display = ""; // Pokazuje miasto
+        } else {
+            cities[i].style.display = "none"; // Ukrywa miasto
+        }
+    }
+});
+</script>
