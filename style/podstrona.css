@@ -20,11 +20,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    word-wrap: break-word; /* Aby długie słowa się zawijały */
+    word-wrap: break-word;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
 }
 
 .info1:hover {
     background-color: #37393b; /* Zmiana koloru tła */
     transform: scale(1.05); /* Powiększenie elementu */
+    text-decoration: none;
+}
+
+.info-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.information {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow:rgb(70, 33, 87);;
+    text-align: center;
 }
