@@ -12,8 +12,9 @@
 .info1{
     background-color: #24292e;
     width: 1100px;
-    height: 100px;
+    height: auto;
     color: white;
+    padding: 10px;
     text-align: center;
     margin: auto;
     padding: auto;
