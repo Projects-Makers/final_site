@@ -10,7 +10,7 @@ function toggleMenu() {
 document.querySelector('.login-form').addEventListener('submit', function (e) {
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
-    var terms = document.getElementById('termsModal').checked;
+    var terms = document.getElementById('terms').checked;
     var emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
     var passwordRegex = /^(?=.*[!@#$%^&*]).{8,}$/;
     var validEndings = ['.com', '.pl', '.org', '.net']; // Dodaj inne końcówki, które chcesz zaakceptować
