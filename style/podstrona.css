@@ -11,13 +11,20 @@
 
 .info1{
     background-color: #24292e;
-    width: 1100px;
-    height: auto;
     color: white;
     padding: 10px;
     text-align: center;
-    margin: auto;
-    padding: auto;
+    margin: 15px auto;
     border-radius: 10px;
-    margin: 15px 0px;
+    width: 1100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word; /* Aby długie słowa się zawijały */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.info1:hover {
+    background-color: #37393b; /* Zmiana koloru tła */
+    transform: scale(1.05); /* Powiększenie elementu */
 }
