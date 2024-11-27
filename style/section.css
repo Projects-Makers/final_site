@@ -1,63 +1,60 @@
-.center1 {
-    margin: auto;
-    text-align: center;
-    margin-top: 0px;
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.czcionka {
-    font-size: 36px;
-}
-
-
-.section {
+section {
     background: #f6f8fa;
     display: flex;
-    height: 83.9vh; /* Pełna wysokość widoku */
-    margin: auto;    /* Usuń marginesy */
-    padding: auto;   /* Usuń padding */
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 82.9vh; /* Pełna wysokość widoku */
+    margin: 0;    /* Usuń marginesy */
+    padding: 0;   /* Usuń padding */
 }
 
-.info1 {
-    background-color: #24292e;
+.img {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block; /* Usuń dodatkowy odstęp wokół obrazka */
+}
+
+#red-object {
     width: 1100px;
-    height: 100px;
-    color: white;
-    text-align: center;
-    margin: 15px auto;
+    height: 700px;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 10px;
-    line-height: 100px; /* Center text vertically */
-    transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out; /* Smooth transition for scaling and font size */
+    display: none; /* Domyślnie ukryty */
 }
 
-.info1:hover {
-    transform: scale(1.2); /* Powiększa cały element */
+#red-object.active {
+    display: block; /* Widoczny, gdy aktywowany */
 }
 
-.info1 .wypelniacz1 {
-    font-size: 25px;
-    font-weight: bold;
-    transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out; /* Smooth transition for text inside */
+#close-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: #333;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
 }
 
-.info1:hover .wypelniacz1 {
-    font-size: 30px; /* Zwiększa rozmiar czcionki po najechaniu */
+#close-button:hover {
+    background-color: #f0f0f0;
 }
 
-.info1 a {
-    text-decoration: none;
-    color: white;
-    font-size: 25px;
-    padding-left: 20px;
-}
 
-.info1 a:hover {
-    font-size: 40px;
-    transition: 0.6s;
-}
-
-hr {
-    border: none;
-    background-color: gray;
-    height: 1px;
-}

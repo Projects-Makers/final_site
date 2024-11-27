@@ -7,7 +7,7 @@ body {
 .section1 {
     background: #f6f8fa;
     display: flex;
-    height: 84.9vh; /* Pełna wysokość widoku */
+    height: 82.9vh; /* Pełna wysokość widoku */
     margin: auto;    /* Usuń marginesy */
     padding: auto;   /* Usuń padding */
     text-align: center;
