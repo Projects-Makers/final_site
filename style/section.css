@@ -8,6 +8,16 @@
     font-size: 36px;
 }
 
+
+.section {
+    background: #f6f8fa;
+    display: flex;
+    height: 83.9vh; /* Pełna wysokość widoku */
+    margin: auto;    /* Usuń marginesy */
+    padding: auto;   /* Usuń padding */
+    text-align: center;
+}
+
 .info1 {
     background-color: #24292e;
     width: 1100px;
