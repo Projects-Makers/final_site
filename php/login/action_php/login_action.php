@@ -1,5 +1,7 @@
+<section>
 <?php
-session_start();
+
+
 // Połączenie z bazą danych
 $host = 'localhost';
 $db = 'miasta';
@@ -13,34 +15,30 @@ if ($conn->connect_error) {
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
-    $username = $_POST['username'];
     $password = $_POST['password'];
-    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-    $stmt = $conn->prepare("INSERT INTO users (email, username, password) VALUES (?, ?, ?)");
-    $stmt->bind_param("sss", $email, $username, $hashed_password);
+    $stmt = $conn->prepare("SELECT id, username, password FROM users WHERE email = ?");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $stmt->store_result();
 
-    if ($stmt->execute()) {
-        // Ustaw sesję
-        session_start();
-        $_SESSION['username'] = $username;
+    if ($stmt->num_rows > 0) {
+        $stmt->bind_result($id, $username, $hashed_password);
+        $stmt->fetch();
 
-<<<<<<< HEAD
         if (password_verify($password, $hashed_password)) {
             $_SESSION['user_id'] = $id;
             $_SESSION['username'] = $username;
+            echo "Jesteś zalogowany";
         } else {
             echo "Nieprawidłowe hasło.";
         }
-=======
-        // Zwróć odpowiedź JSON
-        echo json_encode(['status' => 'success']);
->>>>>>> c4d73fa63ccef85525883816bcbd0a79d9d1e352
     } else {
-        echo json_encode(['status' => 'error', 'message' => $stmt->error]);
+        echo "Nie znaleziono użytkownika o podanym adresie email.";
     }
 
     $stmt->close();
 }
 $conn->close();
 ?>
+</section>

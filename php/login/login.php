@@ -47,7 +47,7 @@ $conn->close();
                     <label for="password">Hasło:</label>
                     <input type="password" id="password" name="password" required>
     
-                    <input type="submit" class="btn" value="Zaloguj się">
+                    <button type="submit" class="btn">Zaloguj się</button>
                     <p><a href="index.php?strona=login/register">Zarejestruj się</a></p>
                     <p><a href="index.php?strona=login/forgot_password">Zapomniałem hasła</a></p> <!-- Link do opcji zapomnienia hasła -->
                 </form>
