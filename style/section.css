@@ -30,7 +30,7 @@ img {
 
 #red-object {
     width: 1100px;
-    height: 700px;
+    height: 720px;
     background-color: red;
     position: absolute;
     top: 50%;
@@ -46,6 +46,8 @@ img {
 
 #close-button {
     position: absolute;
+    height: 20px;
+    width: auto;
     top: 10px;
     left: 10px;
     background-color: #fff;
