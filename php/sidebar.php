@@ -56,7 +56,7 @@ echo'  <div class="Miasta">Wieś:</div>' ;
 <script>
 // Pobierz elementy
 const searchInput = document.getElementById('searchInput');
-const cityList = document.querySelector('.info ul'); // Zakładam, że lista miast jest w .info ul
+const cityList = document.querySelector('.info ul'); 
 
 // Funkcja do filtrowania miast
 searchInput.addEventListener('input', function() {

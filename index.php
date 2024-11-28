@@ -21,7 +21,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
 require("config.php");
 include("php/baner.php");
-include("php/sidebar.php");
+
 if (!isset($_GET["strona"]))
     {$plik = 'section';}
 else

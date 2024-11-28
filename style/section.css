@@ -6,18 +6,22 @@ body {
 
 section {
     background: #f6f8fa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 82.9vh; /* Pełna wysokość widoku */
     margin: 0;    /* Usuń marginesy */
     padding: 0;   /* Usuń padding */
+    display: flex;
+    
+}
+
+.trzymacz{
+    display: flex;
 }
 
 .img {
     position: relative;
-    margin: 0;
+    margin-left: 280px;
     padding: 0;
+    
 }
 
 img {
