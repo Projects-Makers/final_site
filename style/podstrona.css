@@ -1,34 +1,69 @@
-.center1{
+.center1 {
     margin: auto;
     padding: auto;
     text-align: center;
     margin-top: 0px;
 }
 
-.czcionka{
+.czcionka {
     font-size: 36px;
 }
 
-.info1{
+.info1 {
     background-color: #24292e;
     color: white;
     padding: 10px;
     text-align: center;
     margin: 15px auto;
     border-radius: 10px;
-    width: 1100px;
     display: flex;
     justify-content: center;
     align-items: center;
     word-wrap: break-word;
     transition: background-color 0.3s ease, transform 0.3s ease;
     text-decoration: none;
+    width: 100vh; /* Szerokość tylko dla .info1 */
 }
 
 .info1:hover {
     background-color: #37393b; /* Zmiana koloru tła */
     transform: scale(1.05); /* Powiększenie elementu */
     text-decoration: none;
+}
+
+.info2 {
+    background-color: #24292e;
+    color: white;
+    padding: 10px;
+    text-align: center; /* Wyśrodkowanie tekstu */
+    margin: 15px auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; /* Układ w kolumnach */
+    justify-content: center; /* Wyśrodkowanie w pionie */
+    align-items: center; /* Wyśrodkowanie w poziomie */
+    word-wrap: break-word;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    /* Usunięto width, więc element dopasuje się automatycznie */
+}
+
+.info2:hover {
+    background-color: #37393b; /* Zmiana koloru tła */
+    transform: scale(1.05); /* Powiększenie elementu */
+    text-decoration: none;
+}
+
+span, p {
+    margin: 5px 0; /* Dodanie odstępu między elementami */
+    text-align: center; /* Wyśrodkowanie wewnątrz elementu */
+}
+
+.czcionka {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px; /* Odstęp między nazwą a kolejnymi elementami */
+    text-align: center; /* Wyśrodkowanie tekstu */
 }
 
 .info-section {
@@ -38,10 +73,19 @@
     padding: 20px;
 }
 
+.information1 {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: rgb(70, 33, 87);
+    text-align: center;
+    margin-top: 20px;
+}
+
 .information {
     background-color: white;
     padding: 10px;
     border-radius: 5px;
-    box-shadow:rgb(70, 33, 87);;
+    box-shadow: rgb(70, 33, 87);
     text-align: center;
 }
