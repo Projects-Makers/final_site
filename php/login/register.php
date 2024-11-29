@@ -1,6 +1,8 @@
 
 
-
+<?php
+include("php/sidebar.php");
+?>
     <!-- Główna sekcja - formularz rejestracji -->
     <section>
         <div class="container">

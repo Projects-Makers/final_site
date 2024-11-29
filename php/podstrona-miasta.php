@@ -1,4 +1,7 @@
 <div class="section1">
+<?php
+include("php/sidebar.php");
+?>
 <div class="center1">
 <hr style="width: 450px; height: 1px; background-color: gray; "></hr>
 <div class="czcionka">

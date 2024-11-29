@@ -3,6 +3,7 @@ aside{
     width: 350px;
     height: 82.9vh;
     float: left;
+    z-index: 1;
 }
 
 .pismo{
