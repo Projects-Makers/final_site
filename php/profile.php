@@ -1,26 +1,21 @@
+<div class="section1">
 <?php
-session_start();
-require("config.php");
+// Rozpocznij sesję, jeśli jeszcze nie została rozpoczęta
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
-if (!isset($_SESSION['user_id'])) {
+// Tutaj możesz dodać kod do obsługi profilu użytkownika
+// Na przykład sprawdzenie, czy użytkownik jest zalogowany
+if (!isset($_SESSION['username'])) {
+    // Jeśli użytkownik nie jest zalogowany, przekieruj go na stronę logowania
     header("Location: index.php?strona=login/login");
     exit();
 }
-
-$user_id = $_SESSION['user_id'];
-$query = "SELECT * FROM users WHERE id = ?";
-$stmt = $conn->prepare($query);
-$stmt->bind_param("i", $user_id);
-$stmt->execute();
-$result = $stmt->get_result();
-$user = $result->fetch_assoc();
+echo "Witaj, " . htmlspecialchars($_SESSION['username']) . "!";
+echo "<br>";
+echo "To jest Twój profil.";
+echo "<br>";
+echo '<a href="index.php?strona=login/logout">Wyloguj się</a>';
 ?>
-
-<section>
-    <div class="container">
-        <h1>Profil użytkownika</h1>
-        <p><strong>Username:</strong> <?php echo htmlspecialchars($user['username']); ?></p>
-        <p><strong>Email:</strong> <?php echo htmlspecialchars($user['email']); ?></p>
-        <a href="index.php?strona=login/logout">Wyloguj się</a>
-    </div>
-</section>
+</div>

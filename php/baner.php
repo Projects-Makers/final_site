@@ -16,8 +16,7 @@ if (session_status() === PHP_SESSION_NONE) {
     <div class="login">
     <?php if (isset($_SESSION['username'])): ?>
         <div class="user-menu">
-            <?php echo htmlspecialchars($_SESSION['username']); ?>
-            <a href="index.php?strona=profile"></a>
+        <a href="index.php?strona=profile"><?php echo htmlspecialchars($_SESSION['username']); ?></a>
         </div>
                <a href="index.php?strona=login/logout"><div class="sign-in-button">Wyloguj</div></a>
             
