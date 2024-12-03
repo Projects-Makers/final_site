@@ -14,18 +14,21 @@ if (!isset($_SESSION['username'])) {
 
 // Zakładamy, że e-mail i hasło są przechowywane w sesji (w rzeczywistości hasło nie powinno być przechowywane w sesji)
 $email = isset($_SESSION['email']) ? htmlspecialchars($_SESSION['email']) : 'Nie ustawiono';
-$password = 'twoje_haslo'; // Tutaj powinno być rzeczywiste hasło, ale dla bezpieczeństwa nie powinno być przechowywane w sesji
+$password = isset($_SESSION['password']) ? htmlspecialchars($_SESSION['password']) : 'Nie ustawiono'; // Tutaj powinno być rzeczywiste hasło, ale dla bezpieczeństwa nie powinno być przechowywane w sesji
 
 // Wyświetl dane profilu użytkownika
 echo '<div class="container">';
 echo '<h1>Witaj, ' . htmlspecialchars($_SESSION['username']) . '!</h1>';
 echo '<div class="profile-info">';
 echo '<p><strong>Nazwa użytkownika:</strong> ' . htmlspecialchars($_SESSION['username']) . '</p>';
-echo '<p><strong>E-mail:</strong> ' . $email . '</p>';
+echo '<p><strong>E-mail:</strong> ' . htmlspecialchars($email) . '</p>';
 echo '<p><strong>Hasło:</strong> <span id="password-display">********</span> <button id="toggle-password" onclick="togglePassword()">👁️</button></p>'; // Zasłonięte hasło
 echo '</div>';
 echo '<a class="logout-button" href="index.php?strona=login/logout">Wyloguj się</a>';
 echo '</div>';
+echo '<pre>';
+print_r($_SESSION); // To wyświetli wszystkie dane w sesji
+echo '</pre>';
 ?>
 
 <script>
