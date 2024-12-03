@@ -7,10 +7,20 @@ include("php/sidebar.php");
 <div class="czcionka">
     <?php
     require("config.php");
-    $nr = $_GET["id"];
-    $wynik = mysqli_query($conn,"SELECT * FROM  miasta where id='$nr'");
-    $wiersz = mysqli_fetch_array($wynik);
-    echo '<b>' . $wiersz["miasto"] . '</b>';
+    $nr = $_GET["id"]; // Pobranie ID miasta z URL
+
+    // Debugowanie ID
+    if (!isset($nr)) {
+        die("Błąd: brak parametru 'id' w URL.");
+    }
+
+    $wynikMiasto = mysqli_query($conn, "SELECT * FROM miasta WHERE id='$nr'");
+    if (!$wynikMiasto || mysqli_num_rows($wynikMiasto) == 0) {
+        die("Błąd: Miasto o ID '$nr' nie istnieje.");
+    }
+
+    $miasto = mysqli_fetch_array($wynikMiasto);
+    echo '<b>' . htmlspecialchars($miasto["miasto"]) . '</b>';
     ?>
 </div>
 <hr style="width: 450px; height: 1px; background-color: gray; "></hr>
@@ -25,19 +35,45 @@ Informacje
 <div class="czcionka"><b>Atrakcje</b></div>
 <hr style="width: 450px; height: 1px; background-color: gray; "></hr>
 <?php
-require("config.php"); 
-$nr = $_GET["miasto"]; // Pobranie ID miasta z URL
-$wynik = mysqli_query($conn,"SELECT * FROM atrakcje WHERE miasto='$nr'"); // Filtrowanie atrakcji dla danego miasta
-while ($wiersz = mysqli_fetch_array($wynik))
-{
-   echo '<div class="info2">'; // Dodanie stylizowanego bloku
-   echo '<div class="czcionka">' . htmlspecialchars($wiersz["nazwa"]) . '</div>';
-   echo '<p> Cena: ' . htmlspecialchars($wiersz["cena"]) . '</p>';
-   echo '<p> Godziny otwarcia: ' . htmlspecialchars($wiersz["godz"]) . '</p>';
-   echo '<p> Lokalizacja: ' . htmlspecialchars($wiersz["lokalizacja"]) . '</p>';
-   echo '</div>'; // Zakończenie bloku
+require("config.php");
+
+// Pobranie ID miasta z URL
+$id_miasta = isset($_GET["id"]) ? intval($_GET["id"]) : 0; 
+
+// Debugowanie parametru
+if ($id_miasta == 0) {
+    die("Błąd: brak poprawnego ID miasta.");
+}
+
+// Pobranie danych miasta na podstawie ID
+$wynikMiasto = mysqli_query($conn, "SELECT * FROM Miasta WHERE id='$id_miasta'");
+if (!$wynikMiasto || mysqli_num_rows($wynikMiasto) == 0) {
+    die("Błąd: Nie znaleziono miasta o podanym ID.");
+}
+
+// Pobranie atrakcji dla danego miasta (ID miasta = LP atrakcji)
+$queryAtrakcje = "SELECT * FROM atrakcje WHERE lp='$id_miasta'";
+$wynikAtrakcje = mysqli_query($conn, $queryAtrakcje);
+
+if (!$wynikAtrakcje) {
+    die("Błąd zapytania: " . mysqli_error($conn));
+}
+
+// Wyświetlenie atrakcji
+if (mysqli_num_rows($wynikAtrakcje) == 0) {
+    echo "<p>Brak atrakcji powiązanych z miastem.</p>";
+} else {
+    while ($atrakcja = mysqli_fetch_array($wynikAtrakcje)) {
+        echo '<div class="atrakcja">';
+        echo '<h3>' . htmlspecialchars($atrakcja["nazwa"]) . '</h3>';
+        echo '<p>Cena: ' . htmlspecialchars($atrakcja["cena"]) . '</p>';
+        echo '<p>Godziny otwarcia: ' . htmlspecialchars($atrakcja["godz"]) . '</p>';
+        echo '<p>Lokalizacja: ' . htmlspecialchars($atrakcja["lokalizacja"]) . '</p>';
+        echo '</div>';
+    }
 }
 ?>
+
 
 </div>
 </div>
