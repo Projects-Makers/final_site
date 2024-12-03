@@ -29,6 +29,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (password_verify($password, $hashed_password)) {
             $_SESSION['user_id'] = $id;
             $_SESSION['username'] = $username;
+            $_SESSION['email'] = $email;
+            $_SESSION['password'] = $password;
             echo "Jesteś zalogowany";
         } else {
             echo "Nieprawidłowe hasło.";
