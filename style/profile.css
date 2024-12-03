@@ -1,5 +1,6 @@
-.container {
-    max-width: 400px;
+.container1 {
+
+    width: 600px;
     margin: 50px auto;
     padding: 20px;
     background-color: #f9f9f9;
@@ -71,8 +72,8 @@ button.change-button:hover {
 
 .logout-button {
     display: block;
-    width: 100%;
-    margin-top: 20px;
+    width: calc(100% - 40px); /* Szerokość z marginesem */
+    margin: 20px auto; /* Margines górny i dolny */
     padding: 10px;
     background-color: #ff4757;
     color: white;
@@ -86,4 +87,51 @@ button.change-button:hover {
 
 .logout-button:hover {
     background-color: #e84118;
+}
+.profile-box {
+    border: 1px solid #ccc; /* Kolor i styl ramki */
+    border-radius: 5px; /* Zaokrąglenie rogów */
+    padding: 20px; /* Padding wewnętrzny */
+    margin: 20px 0; /* Margines górny i dolny */
+    background-color: #f9f9f9; /* Kolor tła ramki */
+}
+
+.profile-info {
+    display: block; /* Zmiana na blok, aby elementy były jeden pod drugim */
+}
+
+.profile-info p {
+    margin: 10px 0; /* Odstęp między wierszami */
+    display: flex; /* Użycie flex dla p */
+    justify-content: space-between; /* Rozdzielenie tekstu i przycisku */
+    align-items: center; /* Wyrównanie w pionie */
+    width: 100%; /* Ustawienie szerokości na 100% */
+}
+
+.change-button {
+    margin-left: 10px; /* Odstęp od tekstu */
+    padding: 5px 10px; /* Padding wewnętrzny */
+    background-color: #3498db; /* Kolor tła */
+    color: white; /* Kolor tekstu */
+    border: none; /* Bez ramki */
+    border-radius: 5px; /* Zaokrąglenie */
+    cursor: pointer; /* Kursor w postaci wskaźnika */
+    font-size: 14px; /* Rozmiar czcionki */
+    transition: background-color 0.3s ease; /* Efekt przejścia */
+}
+
+.change-button:hover {
+    background-color: #2980b9; /* Kolor tła przy najechaniu */
+}
+
+.logout-button {
+    display: block;
+    width: calc(100% - 40px); /* Szerokość z marginesem */
+    margin: 20px auto; /* Margines górny i dolny */
+    padding: 10px;
+    background-color: #ff4757;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px; /* Zaokrąglenie */
+    text-align: center; /* Wyśrodkowanie tekstu */
 }
