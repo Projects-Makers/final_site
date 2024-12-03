@@ -54,6 +54,7 @@ header {
 }
 
 .user-menu{
+    text-decoration: none;
     display: flex;
     width:auto;
     height: 35px;
