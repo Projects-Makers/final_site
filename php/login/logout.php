@@ -3,7 +3,7 @@
 
 session_unset();
 session_destroy();
-header("Location: index.php?strona=login/login");
-?>
 
+?>
+<center><h1>Zostales Wylogowany</h1></center>
 </section>

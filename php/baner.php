@@ -14,10 +14,11 @@ if (session_status() === PHP_SESSION_NONE) {
     </div>
 
     <div class="login">
-        <?php if (isset($_SESSION['username'])): ?>
-            <!-- Gdy użytkownik jest zalogowany -->
-            <div class="user-menu">
-               <?php echo htmlspecialchars($_SESSION['username']); ?></div>
+    <?php if (isset($_SESSION['username'])): ?>
+        <div class="user-menu">
+            <?php echo htmlspecialchars($_SESSION['username']); ?>
+            <a href="index.php?strona=profile"></a>
+        </div>
                <a href="index.php?strona=login/logout"><div class="sign-in-button">Wyloguj</div></a>
             
         <?php else: ?>

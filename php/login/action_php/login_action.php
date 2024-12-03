@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (password_verify($password, $hashed_password)) {
             $_SESSION['user_id'] = $id;
             $_SESSION['username'] = $username;
-            header("Location: index.php?strona=section");
+            echo "Jesteś zalogowany";
         } else {
             echo "Nieprawidłowe hasło.";
         }
