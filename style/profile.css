@@ -50,16 +50,21 @@ button.change-button:hover {
 .password-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    justify-content: flex-start; /* Zmiana na flex-start, aby przycisk był blisko pola hasła */
+    margin-bottom: 20px; /* Możesz zostawić ten margines, jeśli chcesz odstęp od innych elementów */
+}
+#password-display {
+    display: inline; /* Upewnij się, że wyświetla się inline */
+    margin: 0; /* Ustaw margines na 0 */
 }
 
 .password-container input[type="password"] {
     flex-grow: 1;
+    margin-right: 0; /* Upewnij się, że nie ma marginesu po prawej stronie */
 }
 
 .eye-icon {
-    margin-left: 10px;
+    margin-left: 0px;
     cursor: pointer;
     font-size: 20px;
     color: #888;
@@ -69,6 +74,11 @@ button.change-button:hover {
 .eye-icon:hover {
     color: #444;
 }
+#toggle-password {
+    display: inline; /* Upewnij się, że wyświetla się inline */
+    margin-left: 0; /* Ustaw margines na 0, aby nie było odstępu */
+}
+
 
 .logout-button {
     display: block;
@@ -100,6 +110,7 @@ button.change-button:hover {
     display: block; /* Zmiana na blok, aby elementy były jeden pod drugim */
 }
 
+
 .profile-info p {
     margin: 10px 0; /* Odstęp między wierszami */
     display: flex; /* Użycie flex dla p */
@@ -120,6 +131,7 @@ button.change-button:hover {
     transition: background-color 0.3s ease; /* Efekt przejścia */
 }
 
+
 .change-button:hover {
     background-color: #2980b9; /* Kolor tła przy najechaniu */
 }
@@ -134,4 +146,9 @@ button.change-button:hover {
     text-decoration: none;
     border-radius: 5px; /* Zaokrąglenie */
     text-align: center; /* Wyśrodkowanie tekstu */
+}
+
+strong {
+    text-align: left;
+    width: 155px;
 }

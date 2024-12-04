@@ -25,22 +25,32 @@ echo '<div class="profile-box">'; // Dodany kontener dla ramki
 echo '<div class="profile-info">';
 echo '<p><strong>Nazwa użytkownika:</strong> ' . htmlspecialchars($_SESSION['username']) . ' <button class="change-button">Zmień</button></p>';
 echo '<p><strong>E-mail:</strong> ' . $email . ' <button class="change-button">Zmień</button></p>';
-echo '<p><strong>Hasło:</strong> <span id="password-display">********</span> <button id="toggle-password" onclick="togglePassword()">👁️</button> <button class="change-button">Zmień</button></p>'; // Zasłonięte hasło
+echo '<p><strong>Hasło:</strong> 
+    <span id="password-display" style="display: inline;">********</span> 
+    <button id="toggle-password" onclick="togglePassword()" style="display: inline; margin-left: 0;">👁️</button> 
+    <button class="change-button">Zmień</button>
+</p>'; // Zasłonięte hasło
 echo '</div>';
 echo '</div>';
 echo '<a class="logout-button" href="index.php?strona=login/logout">Wyloguj się</a>';
 echo '</div>';
+echo '<pre>';
+print_r($_SESSION);
+echo '</pre>';
 ?>
 
 <script>
+// Przekazanie hasła z PHP do JavaScript jako zmiennej
+var userPassword = <?php echo json_encode($password); ?>;
+
 function togglePassword() {
     var passwordDisplay = document.getElementById('password-display');
     var currentText = passwordDisplay.innerText;
 
     if (currentText === '********') {
-        passwordDisplay.innerText = $password; // Zasady bezpieczeństwa - nie pokazuj hasła
+        passwordDisplay.innerText = userPassword; // Wyświetl hasło
     } else {
-        passwordDisplay.innerText = '********'; // Zasłoń hasło
+        passwordDisplay.innerText = '********'; // Ukryj hasło
     }
 }
 </script>
