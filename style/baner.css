@@ -51,6 +51,12 @@ header {
 
 .login a{
     text-decoration: none;
+    color: white;
+}
+
+.login a:hover{
+    text-decoration: none;
+    color: black;
 }
 
 .user-menu{
