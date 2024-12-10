@@ -89,3 +89,11 @@ span, p {
     box-shadow: rgb(70, 33, 87);
     text-align: center;
 }
+
+.atraction-section{
+    height: 200px;
+    width:25vh;
+    background-color:  #37393b;
+    border-radius: 10px;
+    color: white;
+}
