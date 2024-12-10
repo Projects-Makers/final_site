@@ -10,22 +10,20 @@ section {
     margin: 0;    /* Usuń marginesy */
     padding: 0;   /* Usuń padding */
     display: flex;
-    
+    justify-content: center;
+    align-items: center;
 }
 
 .trzymacz{
     display: flex;
+    margin-left:auto;
+    margin-right:auto;
 }
 
-.img {
-    position: relative;
-    margin-left: 280px;
-    padding: 0;
-    
-}
-
-img {
-    display: block; /* Usuń dodatkowy odstęp wokół obrazka */
+#map{
+    border-radius:20px ;
+    border-color: black;
+    border-style: solid;
 }
 
 #red-object {
