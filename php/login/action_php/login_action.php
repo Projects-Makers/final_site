@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['username'] = $username;
             $_SESSION['email'] = $email;
             $_SESSION['password'] = $password;
-            echo "Jesteś zalogowany";
+            header("location: index.php?strona=section");
         } else {
             echo "Nieprawidłowe hasło.";
         }

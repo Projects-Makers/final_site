@@ -3,7 +3,6 @@
 
 session_unset();
 session_destroy();
-
+header("location: index.php?strona=section");
 ?>
-<center><h1>Zostales Wylogowany</h1></center>
 </section>

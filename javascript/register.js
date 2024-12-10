@@ -37,6 +37,9 @@ document.querySelector('.login-form').addEventListener('submit', function (e) {
     }
 });
 
+
+
+
 // Pobierz elementy modalu
 // Pobierz elementy modala
 var modal = document.getElementById("termsModal");
