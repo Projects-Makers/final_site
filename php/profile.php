@@ -34,9 +34,6 @@ echo '</div>';
 echo '</div>';
 echo '<a class="logout-button" href="index.php?strona=login/logout">Wyloguj się</a>';
 echo '</div>';
-echo '<pre>';
-print_r($_SESSION);
-echo '</pre>';
 ?>
 
 <script>
