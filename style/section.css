@@ -24,7 +24,10 @@ section {
     border-radius:20px ;
     border-color: black;
     border-style: solid;
+    display: block;
 }
+
+
 
 #red-object {
     width: 1100px;

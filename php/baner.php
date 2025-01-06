@@ -6,7 +6,7 @@ if (session_status() === PHP_SESSION_NONE) {
 <header>
     <div class="wypelniacz">
         <a href="index.php?strona=section">Strona Główna</a>
-        <a href="#">Napis</a>
+        <a href="#" id="showMapLink">Mapa</a>
     </div>
 
     <div class="napis">

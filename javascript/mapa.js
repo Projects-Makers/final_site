@@ -41,3 +41,29 @@ document.addEventListener('DOMContentLoaded', function () {
       });
 });
 
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Pobierz elementy
+  const showMapLink = document.getElementById('showMapLink');
+  const mapDiv = document.getElementById('map');
+  const mapImage = document.getElementById('clickable-image');
+
+  // Dodaj zdarzenie kliknięcia do linku
+  showMapLink.addEventListener('click', function (event) {
+      event.preventDefault(); // Zapobiega domyślnemu zachowaniu linku
+
+      // Sprawdź aktualny styl wyświetlania mapy
+      if (mapDiv.style.display === 'none') {
+          // Pokaż mapę
+          mapDiv.style.display = 'block';
+      } else {
+          // Ukryj mapę
+          mapDiv.style.display = 'none';
+      }
+  });
+});

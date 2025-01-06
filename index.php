@@ -39,6 +39,7 @@ include("php/footer.php");
 
 <script src="javascript/login.js"></script>
 <script src="javascript/register.js"></script>
+<script src="javascript/mapa.js"></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
 
