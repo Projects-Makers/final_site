@@ -35,7 +35,7 @@ Informacje
 <div class="czcionka"><b>Atrakcje</b></div>
 <hr style="width: 450px; height: 1px; background-color: gray; "></hr>
 <div class="atraction-section">
-<?php
+<?php /*
 require("config.php");
 
 $id_miasta = isset($_GET["id"]) ? intval($_GET["id"]) : 0; 
@@ -70,7 +70,7 @@ if (mysqli_num_rows($wynikAtrakcje) == 0) {
         echo '</div>';
     }
 }
-?>
+*/ ?>
 </div>
 </div>
 </div>
