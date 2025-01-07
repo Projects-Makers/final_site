@@ -1,0 +1,51 @@
+:root{
+    --primary-bg:#24292e;
+    --second-bg:#524C4C;
+    --main-bg:#f6f8fa;
+    --primary-font-color:#000000;
+    --second-font-color:#ffffff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+
+    background-color: var(--main-bg);
+}
+
+header{
+    background-color: var(--primary-bg);
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-grow: 1;
+    position: fixed;
+}
+
+section{
+    position: relative;
+    width: 170vh;
+    top: 10vh;
+    height: 82vh;
+    z-index: -2;
+}
+
+aside{
+    top: 10vh;
+    background-color: var(--second-bg);
+    width: 40vh;
+    height: 82vh;
+    position: fixed;
+    float: left;
+}
+
+footer{
+    top: 92vh;
+    background-color: var(--primary-bg);
+    width: 100%;
+    height: 8vh;
+    position: fixed;
+}

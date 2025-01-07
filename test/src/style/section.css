@@ -1,0 +1,23 @@
+@import 'styl.css';
+
+.container{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 8px;
+    padding: 10px;
+    z-index: -1;
+    overflow-y: scroll;
+    left: 40vh;
+
+}
+
+.grid{
+    display: relative;
+    background-color: white;
+    width: 200px;
+    height:300px;
+    border-radius: 20px;
+    border: black 2px solid;
+}
+

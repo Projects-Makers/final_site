@@ -1,0 +1,37 @@
+@import 'styl.css';
+
+.pismo{
+    color: white;
+    font-size: 26px;
+    padding: 10px;
+    padding-bottom: 0px;
+    align-items: center;
+}
+
+.search{
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.searchbar{
+    height: 30px;
+    width: 280px;
+    border-radius: 5px;
+}
+
+hr{
+    margin: 5px;
+}
+
+/* Poczatek diva z wymiana Miast by Purple */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield; /* Dla przeglądarek Firefox */
+}
