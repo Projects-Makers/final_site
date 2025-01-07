@@ -3,6 +3,7 @@
 include("php/sidebar.php");
 ?>
 <div class="center1">
+<div class="mortadelka">
 <hr style="width: 450px; height: 1px; background-color: gray; "></hr>
 <div class="czcionka">
     <?php
@@ -79,9 +80,30 @@ if (mysqli_num_rows($wynikAtrakcje) == 0) {
 </div>
 <div class="atraction-section">
 </div>
+<br>
+<hr style="width: 450px; height: 1px; background-color: gray; margin-top: 195px;"></hr>
+<div class="czcionka"><b>Restauracje</b></div>
 <hr style="width: 450px; height: 1px; background-color: gray; "></hr>
-<div class="czcionka"><b>Atrakcje</b></div>
+<div class="atraction-section">	
+</div>
+<div class="atraction-section">
+</div>
+<div class="atraction-section">
+</div>
+<div class="atraction-section">
+</div>
+<hr style="width: 450px; height: 1px; background-color: gray; margin-top: 195px;"></hr>
+<div class="czcionka"><b>Noclegi</b></div>
 <hr style="width: 450px; height: 1px; background-color: gray; "></hr>
+<div class="atraction-section">	
+</div>
+<div class="atraction-section">
+</div>
+<div class="atraction-section">
+</div>
+<div class="atraction-section">
+</div>
+</div>
 </div>
 </div>
 </div>
