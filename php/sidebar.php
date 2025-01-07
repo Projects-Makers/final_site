@@ -15,13 +15,13 @@ while ($wiersz = mysqli_fetch_array($wynik)) {
     echo htmlspecialchars($wiersz["miasto"]);
     echo '</a></span> →</li>';
 }
-echo'  <div class="Miasta">Miejscowosc:</div>' ;
+// (wstępnie do wyjebania) ----> echo'  <div class="Miasta">Miejscowosc:</div>' ;
 // //   $wynik = mysqli_query($conn,"SELECT * FROM miasta where miejscowosc=2"); 
 // //   while ($wiersz = mysqli_fetch_array($wynik)) 
 // //  {
 // //   echo'<li><span class="text"><a href="index.php?strona=cos&id=' . htmlspecialchars($wiersz["id"]) . '">' . htmlspecialchars($wiersz["miasto"]) . '</span>→</a></li>';
 // //   }
-echo'  <div class="Miasta">Wieś:</div>' ;
+ // (wstępnie do wyjebania) ----> echo'  <div class="Miasta">Wieś:</div>' ;
 // //   $wynik = mysqli_query($conn,"SELECT * FROM miasta where miejscowosc=3"); 
 // //   while ($wiersz = mysqli_fetch_array($wynik))
 // //  {
