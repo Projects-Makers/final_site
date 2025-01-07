@@ -3,14 +3,13 @@
 document.addEventListener('DOMContentLoaded', function () {
     const map = L.map('map', {
         center: [50.2649, 19.0238],
-        zoom: 13,
-        
-        maxZoom: 10,
-        maxBounds: L.latLngBounds([49.5, 18.5], [51.5, 20.5]) // set bounding box for Silesian region
+        zoom: 10,
+        maxZoom: 13,
+        minZoom: 6,
+        maxBounds: L.latLngBounds([49.5, 17.5], [51.5, 20.5]) // set bounding box for Silesian region
       });
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 10,
         attribution: '© OpenStreetMap'
     }).addTo(map);
 
