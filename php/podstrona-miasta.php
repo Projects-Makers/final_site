@@ -79,12 +79,9 @@ if (mysqli_num_rows($wynikAtrakcje) == 0) {
 </div>
 <div class="atraction-section">
 </div>
-<p>
-<div class="margines">
 <hr style="width: 450px; height: 1px; background-color: gray; "></hr>
 <div class="czcionka"><b>Atrakcje</b></div>
 <hr style="width: 450px; height: 1px; background-color: gray; "></hr>
-</div>
 </div>
 </div>
 </div>
