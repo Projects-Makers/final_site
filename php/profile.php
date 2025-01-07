@@ -32,6 +32,7 @@ echo '<p><strong>Hasło:</strong>
 </p>'; // Zasłonięte hasło
 echo '</div>';
 echo '</div>';
+echo '<a class="admin-button" href="#">Panel administracyjny</a>';
 echo '<a class="logout-button" href="index.php?strona=login/logout">Wyloguj się</a>';
 echo '</div>';
 ?>

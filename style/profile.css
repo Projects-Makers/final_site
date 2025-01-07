@@ -95,6 +95,21 @@ button.change-button:hover {
     transition: background-color 0.3s ease;
 }
 
+.admin-button {
+    display: block;
+    width: calc(100% - 40px); /* Szerokość z marginesem */
+    margin: 20px auto; /* Margines górny i dolny */
+    padding: 10px;
+    background-color: #000000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
 .logout-button:hover {
     background-color: #e84118;
 }
