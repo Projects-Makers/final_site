@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
         center: [50.2649, 19.0238],
         zoom: 10,
         maxZoom: 13,
+        minZoom: 6,
         maxBounds: L.latLngBounds([49.5, 17.5], [51.5, 20.5]) // set bounding box for Silesian region
       });
 
