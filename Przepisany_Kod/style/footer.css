@@ -1,0 +1,6 @@
+footer{
+    background-color: #24292e;
+    display: flex;
+    flex-grow: 1;
+    height: 9.3vh;
+}
