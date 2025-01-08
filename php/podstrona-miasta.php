@@ -81,14 +81,6 @@ if (mysqli_num_rows($wynikAtrakcje) == 0) {
 <hr style="width: 450px; height: 1px; background-color: gray; margin-top: 195px;"></hr>
 <div class="czcionka"><b>Noclegi</b></div>
 <hr style="width: 450px; height: 1px; background-color: gray; "></hr>
-<div class="atraction-section">	
-</div>
-<div class="atraction-section">
-</div>
-<div class="atraction-section">
-</div>
-<div class="atraction-section">
-</div>
 </div>
 </div>
 </div>

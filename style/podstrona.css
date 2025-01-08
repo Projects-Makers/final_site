@@ -96,19 +96,5 @@ span, p {
     background-color:  #37393b;
     border-radius: 10px;
     color: white;
-	float: left;
 	margin-right: 10px;
-}
-
-.margines2137{
-	margin-top: 20px;
-}
-
-.mortadelka {
-    width: 1000px;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    overflow-y: auto; /* Dodanie przewijania w pionie */
-    max-height: 600px; /* Maksymalna wysokość, po przekroczeniu której pojawi się pasek przewijania */
 }
