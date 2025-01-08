@@ -1,5 +1,4 @@
 .container1 {
-
     width: 600px;
     margin: 50px auto;
     padding: 20px;
@@ -17,68 +16,49 @@ h1 {
     font-weight: bold;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-    width: calc(100% - 80px);
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    box-sizing: border-box;
+.profile-info {
+    gap: 15px;
+    display: flex;
+    flex-direction: column; /* Ustawienie każdego wiersza pod sobą */
+    align-items: flex-start; /* Wyrównanie do lewej */
+}
+
+.profile-info p {
+    display: flex;
+    justify-content: flex-start; /* Rozpocznij każdy element od lewej */
+    align-items: center; /* Wyrównanie elementów w pionie */
+    margin: 10px 0; /* Odstęp między wierszami */
+    width: 100%; /* Dopasowanie do szerokości */
+    gap: 70px;
+}
+
+.profile-info strong {
+    min-width: 150px; /* Stała szerokość dla etykiet */
+    margin-right: 10px; /* Odstęp między etykietą a treścią */
+    text-align: left; /* Wyrównanie tekstu */
+}
+.profile-detail {
+    margin-left: 10px; /* Dodanie odstępu od etykiety */
+}
+.span {
+    position: relative;
+    left: 10px;
+}
+#password-display {
+    margin-right: 10px; /* Odstęp między gwiazdkami a ikoną */
 }
 
 button.change-button {
-    display: inline-block;
-    width: 60px;
-    margin-left: 5px;
-    padding: 10px;
-    background-color: #585859;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.3s ease;
+    margin-left: auto; /* Przenieś przycisk zmiany na koniec wiersza */
 }
 
-button.change-button:hover {
-    background-color: #2980b9;
-}
-
-.password-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* Zmiana na flex-start, aby przycisk był blisko pola hasła */
-    margin-bottom: 20px; /* Możesz zostawić ten margines, jeśli chcesz odstęp od innych elementów */
-}
-#password-display {
-    display: inline; /* Upewnij się, że wyświetla się inline */
-    margin: 0; /* Ustaw margines na 0 */
-}
-
-.password-container input[type="password"] {
-    flex-grow: 1;
-    margin-right: 0; /* Upewnij się, że nie ma marginesu po prawej stronie */
-}
-
-.eye-icon {
-    margin-left: 0px;
-    cursor: pointer;
-    font-size: 20px;
-    color: #888;
-    transition: color 0.3s ease;
-}
-
-.eye-icon:hover {
-    color: #444;
-}
 #toggle-password {
-    display: inline; /* Upewnij się, że wyświetla się inline */
-    margin-left: 0; /* Ustaw margines na 0, aby nie było odstępu */
+    margin-left: 10px; /* Odstęp między gwiazdkami a ikoną oka */
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
 }
-
 
 .logout-button {
     display: block;
@@ -89,7 +69,6 @@ button.change-button:hover {
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    border: none;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -104,7 +83,6 @@ button.change-button:hover {
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    border: none;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -113,57 +91,11 @@ button.change-button:hover {
 .logout-button:hover {
     background-color: #e84118;
 }
+
 .profile-box {
     border: 1px solid #ccc; /* Kolor i styl ramki */
     border-radius: 5px; /* Zaokrąglenie rogów */
     padding: 20px; /* Padding wewnętrzny */
     margin: 20px 0; /* Margines górny i dolny */
     background-color: #f9f9f9; /* Kolor tła ramki */
-}
-
-.profile-info {
-    display: block; /* Zmiana na blok, aby elementy były jeden pod drugim */
-}
-
-
-.profile-info p {
-    margin: 10px 0; /* Odstęp między wierszami */
-    display: flex; /* Użycie flex dla p */
-    justify-content: space-between; /* Rozdzielenie tekstu i przycisku */
-    align-items: center; /* Wyrównanie w pionie */
-    width: 100%; /* Ustawienie szerokości na 100% */
-}
-
-.change-button {
-    margin-left: 10px; /* Odstęp od tekstu */
-    padding: 5px 10px; /* Padding wewnętrzny */
-    background-color: #3498db; /* Kolor tła */
-    color: white; /* Kolor tekstu */
-    border: none; /* Bez ramki */
-    border-radius: 5px; /* Zaokrąglenie */
-    cursor: pointer; /* Kursor w postaci wskaźnika */
-    font-size: 14px; /* Rozmiar czcionki */
-    transition: background-color 0.3s ease; /* Efekt przejścia */
-}
-
-
-.change-button:hover {
-    background-color: #2980b9; /* Kolor tła przy najechaniu */
-}
-
-.logout-button {
-    display: block;
-    width: calc(100% - 40px); /* Szerokość z marginesem */
-    margin: 20px auto; /* Margines górny i dolny */
-    padding: 10px;
-    background-color: #ff4757;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px; /* Zaokrąglenie */
-    text-align: center; /* Wyśrodkowanie tekstu */
-}
-
-strong {
-    text-align: left;
-    width: 155px;
 }

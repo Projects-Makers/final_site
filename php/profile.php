@@ -17,22 +17,24 @@ if (!isset($_SESSION['username'])) {
 // Zakładamy, że e-mail jest przechowywany w sesji
 $email = isset($_SESSION['email']) ? htmlspecialchars($_SESSION['email']) : 'Nie ustawiono';
 $password = isset($_SESSION['password']) ? htmlspecialchars($_SESSION['password']) : 'Nie ustawiono';
+$rank = isset($_SESSION['rank']) ? htmlspecialchars($_SESSION['rank']) : 'Nie ustawiono';
 
 // Wyświetl dane profilu użytkownika
 echo '<div class="container1">';
 echo '<h1>Witaj, ' . htmlspecialchars($_SESSION['username']) . '!</h1>';
-echo '<div class="profile-box">'; // Dodany kontener dla ramki
+echo '<div class="profile-box">';
 echo '<div class="profile-info">';
-echo '<p><strong>Nazwa użytkownika:</strong> ' . htmlspecialchars($_SESSION['username']) . ' <button class="change-button">Zmień</button></p>';
-echo '<p><strong>E-mail:</strong> ' . $email . ' <button class="change-button">Zmień</button></p>';
+echo '<p><strong>Nazwa użytkownika:</strong> <span class="2">' . htmlspecialchars($_SESSION['username']) . '</span> <button class="change-button">Zmień</button></p>';
+echo '<p><strong>E-mail:</strong> <span class="2">' . $email . '</span> <button class="change-button">Zmień</button></p>';
 echo '<p><strong>Hasło:</strong> 
-    <span id="password-display" style="display: inline;">********</span> 
-    <button id="toggle-password" onclick="togglePassword()" style="display: inline; margin-left: 0;">👁️</button> 
-    <button class="change-button">Zmień</button>
-</p>'; // Zasłonięte hasło
+    <span id="password-display">********     <button id="toggle-password" onclick="togglePassword()">👁️</button> </span> 
+
+    <button class="change-button">Zmień</button></p>';
 echo '</div>';
 echo '</div>';
-echo '<a class="admin-button" href="#">Panel administracyjny</a>';
+if ($rank == 1) {
+    echo '<a class="admin-button" href="#">Panel administracyjny</a>';
+}
 echo '<a class="logout-button" href="index.php?strona=login/logout">Wyloguj się</a>';
 echo '</div>';
 ?>
