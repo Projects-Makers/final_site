@@ -1,9 +1,13 @@
+<style>
+*{
+	color:black;
+}
+</style>
 <div class="section1">
 <?php
 include("php/sidebar.php");
 ?>
 <div class="center1">
-<div class="mortadelka">
 <hr style="width: 450px; height: 1px; background-color: gray; "></hr>
 <div class="czcionka">
     <?php
@@ -63,7 +67,7 @@ if (mysqli_num_rows($wynikAtrakcje) == 0) {
     echo "<p>Brak atrakcji powiązanych z miastem.</p>";
 } else {
     while ($atrakcja = mysqli_fetch_array($wynikAtrakcje)) {
-        echo '<div class="atrakcja">';
+        echo '<div class="atraction-section">';
         echo '<h3>' . htmlspecialchars($atrakcja["nazwa"]) . '</h3>';
         echo '<hr style="width: 200px; height: 1px; background-color: white; "></hr>';
         echo '<p>Cena: ' . htmlspecialchars($atrakcja["cena"]) . '</p>';
@@ -81,7 +85,6 @@ if (mysqli_num_rows($wynikAtrakcje) == 0) {
 <hr style="width: 450px; height: 1px; background-color: gray; margin-top: 195px;"></hr>
 <div class="czcionka"><b>Noclegi</b></div>
 <hr style="width: 450px; height: 1px; background-color: gray; "></hr>
-</div>
 </div>
 </div>
 </div>

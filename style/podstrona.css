@@ -5,10 +5,6 @@
     margin-top: 0px;
 }
 
-.czcionka {
-    font-size: 36px;
-}
-
 .info1 {
     background-color: #24292e;
     color: white;
@@ -59,13 +55,6 @@ span, p {
     text-align: center; /* Wyśrodkowanie wewnątrz elementu */
 }
 
-.czcionka {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px; /* Odstęp między nazwą a kolejnymi elementami */
-    text-align: center; /* Wyśrodkowanie tekstu */
-}
-
 .info-section {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -97,4 +86,5 @@ span, p {
     border-radius: 10px;
     color: white;
 	margin-right: 10px;
+	float: left;
 }
