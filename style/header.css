@@ -1,0 +1,44 @@
+
+
+.header {
+    top: 220px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 równe kolumny */
+    text-align: center;
+    align-items: center;
+    background: #000; /* Kolor tła (zmieniany przez sekcje) */
+    color: white;
+    padding: 20px 0;
+    position: relative;
+    clip-path: ellipse(50% 20% at 50% 0%); /* Zakrzywienie na górze */
+}
+
+/* Sekcje */
+.section {
+    position: relative;
+    top: 220px;
+    padding: 20px 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Style dla kolorów sekcji */
+.home {
+    background: #8B0000; /* Ciemny czerwony */
+}
+
+.info {
+    background: #000; /* Czarny */
+}
+
+.konto {
+    background: #FF8C00; /* Pomarańczowy */
+}
+
+.mapa {
+    background: #FFB6C1; /* Jasny różowy */
+}
+
+
+

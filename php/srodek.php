@@ -1,4 +1,3 @@
-<div class="baner-zdj"></div>
 <section>
 <center>
 <hr style="width: 500px; border: 2px solid gray;">
