@@ -1,4 +1,4 @@
 <?php
 $conn = mysqli_connect('localhost','root','');
-mysqli_select_db($conn, "miasta");
+mysqli_select_db($conn, "slask");
 ?>
