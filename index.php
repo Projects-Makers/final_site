@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Śląsk</title>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/informacje.css">
 </head>
 <body>
 <?php
