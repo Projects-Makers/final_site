@@ -1,27 +1,30 @@
-// Zmienna przechowująca referencje do formularza
-const formContainer = document.querySelector('.form-container');
-const kontoDiv = document.querySelector('.konto'); // Używamy querySelector, aby wybrać elementy po klasie
+const loginFormContainer = document.getElementById('login-form-container');
+        const registerFormContainer = document.getElementById('register-form-container');
+        const kontoDiv = document.querySelector('.konto'); // Używamy querySelector, aby wybrać elementy po klasie
 
-// Funkcja, która pokazuje formularz
-function showForm() {
-    formContainer.style.display = 'block'; // Pokazuje formularz
-}
+        // Funkcja, która pokazuje formularz logowania
+        function showLoginForm() {
+            loginFormContainer.classList.add('show'); // Pokazujemy formularz logowania
+            registerFormContainer.classList.remove('show'); // Ukrywamy formularz rejestracji
+        }
 
-// Funkcja, która ukrywa formularz
-function hideForm(event) {
-    if (!formContainer.contains(event.target) && event.target !== kontoDiv) {
-        formContainer.style.display = 'none'; // Ukrywa formularz, jeśli kliknięto poza nim
-    }
-}
+        // Funkcja, która pokazuje formularz rejestracji
+        function showRegisterForm() {
+            registerFormContainer.classList.add('show'); // Pokazujemy formularz rejestracji
+            loginFormContainer.classList.remove('show'); // Ukrywamy formularz logowania
+        }
 
-// Dodanie nasłuchiwania kliknięcia na div konto (z klasą konto)
-kontoDiv.addEventListener('click', function() {
-    if (formContainer.style.display === 'block') {
-        formContainer.style.display = 'none'; // Jeśli formularz jest widoczny, ukryj go
-    } else {
-        showForm(); // Jeśli formularz jest ukryty, pokaż go
-    }
-});
+        // Dodanie nasłuchiwania kliknięcia na div konto (z klasą konto)
+        kontoDiv.addEventListener('click', function() {
+            if (loginFormContainer.classList.contains('show') || registerFormContainer.classList.contains('show')) {
+                // Jeśli któryś formularz jest widoczny, ukrywamy go
+                loginFormContainer.classList.remove('show');
+                registerFormContainer.classList.remove('show');
+            } else {
+                // Jeśli żaden formularz nie jest widoczny, pokazujemy formularz logowania
+                showLoginForm();
+            }
+        });
 
-// Dodanie nasłuchiwania na kliknięcia w dokument
-document.addEventListener('click', hideForm);
+        // Inicjalizacja: formularz jest ukryty na początku, nic nie jest pokazane
+    
