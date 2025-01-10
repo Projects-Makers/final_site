@@ -1,9 +1,5 @@
-body{
-    margin: 0;
-    }
-
 :root{
-    --primary-color: white;
+    --primary-color: #f7f1e3;
     --second-color: black;
     --third-color: ;
     --mortadelka-color: rgb(185, 184, 184);

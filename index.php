@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/sidebar.css">
     <link rel="stylesheet" href="style/informacje.css">
+    <link rel="stylesheet" href="style/miasta.css">
 </head>
 <body>
 <?php

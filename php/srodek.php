@@ -4,7 +4,7 @@
 <hr style="width: 40vh; border: 0.2vh solid gray;">
 
 <br>
-<div class="container">
+<div class="container-1">
 <?php 
 require("config.php");
 
@@ -19,7 +19,7 @@ if (mysqli_num_rows($wynikmiasta) == 0) {
     echo "<p>Brak atrakcji powiązanych z miastem.</p>";
 } else {
     while ($miasta = mysqli_fetch_array($wynikmiasta)) {
-        echo '<a href="index.php?strona=informacje&nr=' . $miasta["id_miasta"] . '" class="link"><div class="window-city">';
+        echo '<a href="index.php?strona=informacje&nr=' . $miasta["id_miasta"] . '" class="link"><div class="city-card">';
         echo '<div class="window-foto">';
         $imagePath = 'zdj/' . $miasta["id_miasta"] . '.jpg';
         if (file_exists($imagePath)) {
