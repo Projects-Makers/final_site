@@ -9,8 +9,6 @@
 </head>
 <body>
 <?php
-
-
 if (!isset($_GET["strona"]))
     {$plik = 'srodek';}
 else
@@ -23,12 +21,12 @@ $directory = 'php/';
 if($plik == 'srodek'){
   echo '<div class="baner-zdj"></div>';
 }
-
+echo '<div class="header">';
 include("php/header.php");
-
-
+echo '<section>';
+echo '</div>';
 include("$directory$plik$roz");
-
+echo '</section>';
 ?>
 <script src="javascript/baner.js"></script>
 </body>

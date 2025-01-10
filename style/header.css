@@ -1,5 +1,3 @@
-
-
 .header {
     top: 220px;
     display: grid;
@@ -10,11 +8,11 @@
     color: white;
     padding: 20px 0;
     position: relative;
-    clip-path: ellipse(50% 100% at 50% 0%); /* Zakrzywienie na górze */
+    clip-path: ellipse(50% 100% at 50% 0%);
 }
 
 /* Sekcje */
-.section {
+.section1 {
     position: relative;
     top: 220px;
     padding: 20px 0;
@@ -28,7 +26,7 @@
     background: #8B0000; /* Ciemny czerwony */
 }
 
-.info {
+.info1 {
     background: #000; /* Czarny */
 }
 
@@ -39,6 +37,3 @@
 .mapa {
     background: #FFB6C1; /* Jasny różowy */
 }
-
-
-

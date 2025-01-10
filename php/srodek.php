@@ -1,4 +1,3 @@
-<section>
 <center>
 <hr style="width: 500px; border: 2px solid gray;">
 <div class="czcionka1">MIASTA</div>
@@ -35,4 +34,3 @@ if (mysqli_num_rows($wynikmiasta) == 0) {
     }
 }
 ?>
-</section>
