@@ -22,7 +22,6 @@ $directory = 'php/';
 include("php/login.php");
 
 if($plik == 'srodek'){
-  echo '<div class="baner-zdj"></div>';
 }
 echo'<div class="trzymacz">';
 
