@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/sidebar.css">
     <link rel="stylesheet" href="style/informacje.css">
+    <link rel="stylesheet" href="style/login.css">
 </head>
 <body>
 <?php
@@ -18,6 +19,7 @@ else
 $roz = '.php';
 
 $directory = 'php/';
+include("php/login.php");
 
 if($plik == 'srodek'){
   echo '<div class="baner-zdj"></div>';
@@ -27,15 +29,10 @@ echo'<div class="trzymacz">';
 include("php/sidebar.php");
 echo '<section>';
 include("$directory$plik$roz");
+
 echo '</section></div>';
 ?>
 <script src="javascript/baner.js"></script>
+<script src="javascript/login_show.js"></script>
 </body>
 </html>
-<script>// Przykład przycisku, który rozwija sidebar
-const sidebar = document.querySelector('.sidebar');
-
-sidebar.addEventListener('click', () => {
-    sidebar.classList.toggle('expanded'); // Przełączanie klasy expanded
-});
-</script>

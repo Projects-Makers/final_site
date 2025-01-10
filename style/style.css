@@ -1,12 +1,16 @@
 body{
+    font-family: 'Georgia', serif;
+    background-color: var(--main-bg);
     margin: 0;
+    padding: 0;
+
     }
 
 :root{
-    --primary-color: white;
-    --second-color: black;
-    --third-color: ;
-    --mortadelka-color: rgb(185, 184, 184);
+    --main-bg:#f7f1e3;
+    --card-bg:#fff;
+    --main-font-color:#333;
+    --second-font-color:white;
 }
 
 .baner-zdj {
@@ -27,62 +31,54 @@ body{
     margin-top: 20vh;
 }
 
+h1 {
+    font-size: 36px;
+    color: var(--main-font-color);
+}
+
 section {
     width: calc(100%-7vh);
     height: 100%;
     margin-left: 7vh;
-    background-color: var(--primary-color);
     position: relative;
     z-index: 1;
-}
-
-.centering{
-    margin: auto;
-    padding: auto;
-}
-
-.czcionka1{
-    font-size: 4vh;
-}
-
-.link{
-    text-decoration: none;
-    color: white;
 }
 
 .container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 10px;
+    gap: 5px;
     padding: 10px;
 }
 
-.window-city{
-    width: 28vh;
-    height: 55vh;
-    border-radius: 1vh;
-    background-color: var(--mortadelka-color);
-    float: left;
-    margin-left: 2vh;
+.container a{
+    text-decoration: none;
 }
 
-.img {
-    border-radius: 1vh;
-    width: 24vh;
+.city-card {
+    background-color: var(--card-bg);
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.city-card:hover {
+    transform: scale(1.05);
+}
+
+.city-card img {
+    width: 100%;
     height: auto;
+    border-radius: 4px;
 }
 
-.window-foto{
-    width: auto;
-    padding:1vh 2vh;
+.city-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--main-font-color);
+    margin-top: 10px;
 }
 
-.czcionka2{
-    font-size: 34px;
-}
-
-
-
-.window-city:hover{
-    transform: scale(1.05);    
-}
