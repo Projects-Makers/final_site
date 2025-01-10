@@ -10,7 +10,7 @@
     color: white;
     padding: 20px 0;
     position: relative;
-    clip-path: ellipse(50% 20% at 50% 0%); /* Zakrzywienie na górze */
+    clip-path: ellipse(50% 100% at 50% 0%); /* Zakrzywienie na górze */
 }
 
 /* Sekcje */
