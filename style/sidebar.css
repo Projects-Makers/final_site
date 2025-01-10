@@ -71,6 +71,6 @@
     background-color: rgb(79, 78, 78);
 }
 
-.konto{
+.konto, .mapa-button{
     cursor: pointer;
 }

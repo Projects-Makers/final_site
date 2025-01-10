@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Wybierz elementy
 const mapa = document.getElementById('map');
-const mapaButton = document.getElementById('mapa-button');
+const mapaButton = document.querySelector('mapa-button');
 
 // Funkcja, która przesuwa mapę na top: 200px
 function moveMapToTop() {
