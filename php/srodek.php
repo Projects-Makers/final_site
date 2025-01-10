@@ -28,7 +28,7 @@ if (mysqli_num_rows($wynikmiasta) == 0) {
             echo '<img src="zdj/nic.png" alt="Brak zdjęcia" >';
         }
         echo '<br></div><center>';
-        echo '<div class="czcionka1"><hr style="width: 25vh; border: 0.2vh solid white;">';
+        echo '<div class="czcionka1"><hr style="width: 10vh; border: 0.2vh solid black;">';
         echo '' . htmlspecialchars($miasta["name"]) . '';
         echo '</div>';
         echo '</div></center></a>';
