@@ -3,14 +3,15 @@
 .sidebar {
     position: absolute;
     position: fixed;
-
+    border-top-right-radius: 1vh;
+    border-bottom-right-radius: 1vh;
     top: 30vh;
     width: 7vh;
-    background-color:blanchedalmond;
+    background-color:black;
     color: white;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: normal;
     padding: 1vh;
     height: 60vh;
     z-index: 2;
@@ -19,14 +20,15 @@
 
 .sidebar:hover {
     width: 35vh;
+    align-items:normal;
 }
 
 .sidebar:hover .icon {
-    display: none; /* Pokazanie elementów po rozszerzeniu */
+    display: none; 
 }
 
 .sidebar:hover .extra {
-    display: block; /* Pokazanie dodatkowych elementów */
+    display: block; 
 }
 
 .icon {
@@ -55,16 +57,13 @@
 }
 
 .extra-icon{
+    font-size: 4vh;
     padding: 2px;
     border-radius: 20%;
     margin: 10px 0px;
 }
 
 .extra-icon:hover{
-    background-color: var(--third-color);
+    background-color: var(--second-color);
 }
 
-.sidebar span a {
-    text-decoration: none;
-    color: var(--primary-font-color);
-}

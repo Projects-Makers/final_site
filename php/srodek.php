@@ -4,6 +4,7 @@
 <hr style="width: 40vh; border: 0.2vh solid gray;">
 
 <br>
+<div class="container">
 <?php 
 require("config.php");
 
@@ -34,3 +35,4 @@ if (mysqli_num_rows($wynikmiasta) == 0) {
     }
 }
 ?>
+</div>
