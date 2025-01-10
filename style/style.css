@@ -1,10 +1,10 @@
+
 body{
     font-family: 'Georgia', serif;
     background-color: var(--main-bg);
     margin: 0;
     padding: 0;
-
-    }
+}
 
 :root{
     --main-bg:#f7f1e3;
@@ -12,6 +12,7 @@ body{
     --main-font-color:#333;
     --second-font-color:white;
 }
+
 
 .baner-zdj {
     width: 100%;
