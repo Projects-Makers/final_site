@@ -32,3 +32,10 @@ echo '</section></div>';
 <script src="javascript/baner.js"></script>
 </body>
 </html>
+<script>// Przykład przycisku, który rozwija sidebar
+const sidebar = document.querySelector('.sidebar');
+
+sidebar.addEventListener('click', () => {
+    sidebar.classList.toggle('expanded'); // Przełączanie klasy expanded
+});
+</script>

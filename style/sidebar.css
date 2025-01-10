@@ -1,9 +1,70 @@
 @import 'style.css';
 
-aside{
-    background-color: rgb(131, 52, 52);
-    width: 7vh;
-    height: 70vh;
+.sidebar {
     position: absolute;
+    position: fixed;
+
+    top: 30vh;
+    width: 7vh;
+    background-color:blanchedalmond;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1vh;
+    height: 60vh;
     z-index: 2;
+    
+}
+
+.sidebar:hover {
+    width: 35vh;
+}
+
+.sidebar:hover .icon {
+    display: none; /* Pokazanie elementów po rozszerzeniu */
+}
+
+.sidebar:hover .extra {
+    display: block; /* Pokazanie dodatkowych elementów */
+}
+
+.icon {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.icon img{
+    width:35px;
+}
+
+.extra {
+    display: none; /* Ukryte domyślnie */
+}
+
+.extra img{
+    width: 30px;
+    margin-right: 1vh;
+}
+
+.extra span {
+    font-style: italic;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 4vh;
+}
+
+.extra-icon{
+    padding: 2px;
+    border-radius: 20%;
+    margin: 10px 0px;
+}
+
+.extra-icon:hover{
+    background-color: var(--third-color);
+}
+
+.sidebar span a {
+    text-decoration: none;
+    color: var(--primary-font-color);
 }
