@@ -5,6 +5,7 @@
     <title>Śląsk</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/sidebar.css">
     <link rel="stylesheet" href="style/informacje.css">
 </head>
 <body>
@@ -21,9 +22,12 @@ $directory = 'php/';
 if($plik == 'srodek'){
   echo '<div class="baner-zdj"></div>';
 }
+echo'<div class="trzymacz">';
+
+include("php/sidebar.php");
 echo '<section>';
 include("$directory$plik$roz");
-echo '</section>';
+echo '</section></div>';
 ?>
 <script src="javascript/baner.js"></script>
 </body>

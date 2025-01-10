@@ -20,16 +20,20 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 3;
+}
+
+.trzymacz{
+    margin-top: 300px;
 }
 
 section {
     width: 100%;
     height: 100%;
+    margin-left: 7vh;
     background-color: var(--primary-color);
     position: relative;
     z-index: 1;
-    margin-top: 300px;
 }
 
 .centering{

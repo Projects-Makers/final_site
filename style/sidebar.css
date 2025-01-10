@@ -1,0 +1,9 @@
+@import 'style.css';
+
+aside{
+    background-color: rgb(131, 52, 52);
+    width: 7vh;
+    height: 70vh;
+    position: absolute;
+    z-index: 2;
+}
