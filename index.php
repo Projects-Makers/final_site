@@ -1,56 +1,3 @@
-<?php
-// Włącz wyświetlanie błędów PHP dla łatwiejszego debugowania
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-
-session_start();
-
-// Ustawienie domyślnego pliku, jeśli nie ma parametru "strona" w URL
-if (!isset($_GET["strona"])) {
-    $plik = 'srodek'; // Domyślny plik
-} else {
-    $plik = $_GET["strona"]; // Pobierz nazwę strony z URL
-}
-
-$roz = '.php'; // Rozszerzenie pliku
-$directory = 'php/'; // Katalog z plikami PHP
-
-// Dołączenie pliku login.php
-include("php/login.php");
-
-// Dołączenie sidebaru
-include("php/sidebar.php");
-
-// Zawartość strony, jeśli plik to nie "srodek"
-echo '<section>';
-include("$directory$plik$roz");
-echo '</section>';
-
-// Sesja - zapisz czas wejścia użytkownika
-if (isset($_SESSION['username'])) {
-    $username = $_SESSION['username'];
-    $users = json_decode(file_get_contents('users.json'), true);
-    if (isset($users[$username])) {
-        if (isset($_SESSION['czas_wejscia'])) {
-            $czas_spedzony = $users[$username]['czas_spedzony'];
-            if (!isset($czas_spedzony)) {
-                $czas_spedzony = 0;
-            }
-            $czas_spedzony += (time() - $_SESSION['czas_wejscia']) / 60;
-            $users[$username]['czas_spedzony'] = round($czas_spedzony, 0);
-            file_put_contents('users.json', json_encode($users, JSON_PRETTY_PRINT));
-            unset($_SESSION['czas_wejscia']);
-        } else {
-            $_SESSION['czas_wejscia'] = time();
-        }
-    }
-}
-// Zapisz czas wejścia do sesji
-if (!isset($_SESSION['czas_wejscia'])) {
-    $_SESSION['czas_wejscia'] = time();
-}
-?>
-
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -73,25 +20,54 @@ if (!isset($_SESSION['czas_wejscia'])) {
     <link rel="stylesheet" href="style/slask.css">
 </head>
 <body>
-    <?php
-    if ($plik == 'srodek') {
-        // Możesz dodać kod dla strony "srodek" tutaj
-    }
-    ?>
+<?php
+if (!isset($_GET["strona"]))
+    {$plik = 'srodek';}
+else
+  {$plik = $_GET["strona"];}
 
-    <!-- Mapa -->
-    <div id="mapModal" style="display: none;">
-        <div class="close-button">X</div>
-        <div id="map" style="width: 100%; height: 400px;"></div>
-    </div>
+$roz = '.php';
 
-    <button class="mapa-button">Pokaż mapę</button>
+$directory = 'php/';
+include("php/login.php");
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+if($plik == 'srodek'){
+}
+include("php/sidebar.php");
+echo '<section>';
+include("$directory$plik$roz");
 
-    <script src="javascript/baner.js"></script>
-    <script src="javascript/login_show.js"></script>
-    <script src="php/map.js"></script>
+echo '</section>';
+?>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
+<script src="javascript/baner.js"></script>
+<script src="javascript/login_show.js"></script>
+<script src="php/map.js"></script>
+
+<?php
+if (isset($_SESSION['username'])) {
+  $username = $_SESSION['username'];
+  $users = json_decode(file_get_contents('users.json'), true);
+  if (isset($users[$username])) {
+      if (isset($_SESSION['czas_wejscia'])) {
+          $czas_spedzony = $users[$username]['czas_spedzony'];
+          if (!isset($czas_spedzony)) {
+              $czas_spedzony = 0;
+          }
+          $czas_spedzony += (time() - $_SESSION['czas_wejscia']) / 60;
+          $users[$username]['czas_spedzony'] = round($czas_spedzony, 0);
+          file_put_contents('users.json', json_encode($users, JSON_PRETTY_PRINT));
+          unset($_SESSION['czas_wejscia']);
+      } else {
+          $_SESSION['czas_wejscia'] = time();
+      }
+  }
+}
+// Zapisz czas wejscia do sesji
+if (!isset($_SESSION['czas_wejscia'])) {
+    $_SESSION['czas_wejscia'] = time();
+}
+?>
 </body>
 </html>
