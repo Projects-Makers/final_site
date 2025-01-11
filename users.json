@@ -11,8 +11,17 @@
         "username": "cwel",
         "password": "$2y$10$IbMIj6It0KgJxW8ND3PMOOV5q6iW4RKOQODzFFrRv7mH4UnaWZWqK"
     },
+
     "1": {
         "username": "1",
         "password": "$2y$10$k3NM\/6zgvXIA02.QWEYi..R\/tu67tjQofcbMCV6uqG3Uoq5amCG\/q"
+    },
+    "Purple": {
+        "username": "Purple",
+        "password": "$2y$10$FPJawnhPki5d2ZRyLF.trexGkMbKtGRbl1oIMRFAfzjedPKKuKs0O"
+    },
+    "test": {
+        "username": "test",
+        "password": "$2y$10$h2JaBI1B9Ln6WkgUxSV4uehgdV6HV5qjIK0ITXpe3uPjaOJHn\/xIu"
     }
 }
