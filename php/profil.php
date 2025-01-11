@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['zdjecie_profilowe'])
         if (move_uploaded_file($zdjecie_profilowe_tmp, $zdjecie_profilowe_path)) {
             $users[$username]['zdjecie_profilowe'] = $zdjecie_profilowe_path;
             file_put_contents('users.json', json_encode($users, JSON_PRETTY_PRINT));
-            echo "Zdjęcie profilowe zostało zaktualizowane.";
+            header("Refresh: 0.1; url=index.php?strona=profil");
         } else {
             echo "Błąd podczas przesyłania pliku.";
         }
@@ -70,13 +70,13 @@ if ($rank == 0) {
 
 // Wyświetlanie pozostałych danych użytkownika
 echo '<p>Witaj, ' . $username . '!</p>';
-echo '<p>Twoje dane:</p>';
+echo '<p><h3>Twoje dane:</h3></p>';
 echo '<ul>';
 echo '<li>Login: ' . $username . '</li>';
 echo '<li>Hasło: **********</li>';
 echo '</ul>';
 
-echo '<h2>Statystyki:</h2>';
+echo '<h3>Statystyki:</h3>';
 echo '<ul>';
 echo '<li>Liczba postów: 10</li>';
 echo '<li>Liczba komentarzy: 20</li>';

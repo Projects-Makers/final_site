@@ -13,7 +13,7 @@
         <a href="#"><div class="extra-icon"><img src="icons/shop.png" alt="Map">Sklep</div></a>
         <?php
 if (isset($_SESSION['username'])) {
-    echo '<a href="index.php?strona=profil"><div class="extra-icon konto"><img src="icons/user.png" alt="Map">' . htmlspecialchars($_SESSION['username']) . '</div></a>';
+    echo '<a href="index.php?strona=profil"><div class="extra-icon"><img src="icons/user.png" alt="Map">' . htmlspecialchars($_SESSION['username']) . '</div></a>';
 } else {
     echo '<div class="extra-icon konto"><img src="icons/user.png" alt="Map">Konto</div>';
 }
