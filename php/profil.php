@@ -3,14 +3,11 @@
 ob_start();
 $users = json_decode(file_get_contents('users.json'), true);
 
-
-
 $username = $_SESSION['username'];
 $rank = $_SESSION['rank'];
 $zdjecie_profilowe_path = isset($users[$username]['zdjecie_profilowe']) ? $users[$username]['zdjecie_profilowe'] : null;
 
 // Obsługa przesyłania zdjęcia profilowego
-
 echo '<div class="profil-container">';
 echo '<h1>Twój profil</h1>';
 
@@ -19,7 +16,6 @@ if ($zdjecie_profilowe_path) {
     echo '<div class="zdjecie-profilowe" style="position: relative;">';
     echo '<img src="' . $zdjecie_profilowe_path . '" alt="Zdjęcie profilowe" style="cursor: pointer;" onclick="document.getElementById(\'edit-photo-form\').style.display=\'block\'">';
     echo '</div>';
-    
 } else {
     echo '<form method="POST" enctype="multipart/form-data">';
     echo '<label for="zdjecie_profilowe">Dodaj zdjęcie profilowe:</label>';
@@ -27,6 +23,7 @@ if ($zdjecie_profilowe_path) {
     echo '<button type="submit">Zapisz</button>';
     echo '</form>';
 }
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['zdjecie_profilowe'])) {
     $zdjecie_profilowe = $_FILES['zdjecie_profilowe'];
     $zdjecie_profilowe_tmp = $zdjecie_profilowe['tmp_name'];
@@ -55,6 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['zdjecie_profilowe'])
         echo "Nieprawidłowy typ pliku lub za duży rozmiar.";
     }
 }
+
 // Formularz do edytowania zdjęcia
 echo '<form id="edit-photo-form" method="POST" enctype="multipart/form-data" style="display: none;">';
 echo '<label for="zdjecie_profilowe_edit">Zmień zdjęcie profilowe:</label>';
@@ -73,8 +71,20 @@ echo '<p>Witaj, ' . $username . '!</p>';
 echo '<p><h3>Twoje dane:</h3></p>';
 echo '<ul>';
 echo '<li>Login: ' . $username . '</li>';
-echo '<li>Hasło: **********</li>';
+echo '<li>Hasło: ********** <button type="button" onclick="togglePasswordForm()">Zmień hasło</button></li>';
 echo '</ul>';
+echo '<div id="password-change-form" style="display: none;">';
+echo '<h3>Zmień hasło</h3>';
+echo '<form method="POST" action="">';
+echo '<label for="current_password">Aktualne hasło:</label>';
+echo '<input type="password" name="current_password" id="current_password" required>';
+echo '<label for="new_password">Nowe hasło:</label>';
+echo '<input type="password" name="new_password" id="new_password" required>';
+echo '<label for="confirm_new_password">Potwierdź nowe hasło:</label>';
+echo '<input type="password" name="confirm_new_password" id="confirm_new_password" required>';
+echo '<button type="submit" name="change_password">Zmień hasło</button>';
+echo '</form>';
+echo '</div>';
 
 echo '<h3>Statystyki:</h3>';
 echo '<ul>';
@@ -87,6 +97,31 @@ if ($rank == 1) {
     echo '<a href="index.php?strona=admin"><div class="admin-panel">Panel Administracyjny</div></a>';
 }
 
+// Formularz do zmiany hasła
+
+
+if (isset($_POST['change_password'])) {
+    $current_password = $_POST['current_password'];
+    $new_password = $_POST['new_password'];
+    $confirm_new_password = $_POST['confirm_new_password'];
+
+    // Sprawdzanie, czy aktualne hasło jest poprawne
+    if (password_verify($current_password, $users[$username]['password'])) {
+        // Sprawdzanie, czy nowe hasło jest takie samo
+        if ($new_password === $confirm_new_password) {
+            // Aktualizacja hasła
+            $hashed_new_password = password_hash($new_password, PASSWORD_DEFAULT);
+            $users[$username]['password'] = $hashed_new_password;
+            file_put_contents('users.json', json_encode($users, JSON_PRETTY_PRINT));
+            echo '<p style="color: green;">Hasło zostało zmienione pomyślnie!</p>';
+        } else {
+            echo '<p style="color: red;">Nowe hasła muszą być takie same!</p>';
+        }
+    } else {
+        echo '<p style="color: red;">Błędne aktualne hasło!</p>';
+    }
+}
+
 echo '<form method="post">';
 echo '<button class="wyloguj-button" name="wyloguj">Wyloguj się</button>';
 echo '</form>';
@@ -96,6 +131,15 @@ if (isset($_POST['wyloguj'])) {
     header('Location: index.php');
     exit;
 }
+
 echo '</div>';
 ob_end_flush();
+
 ?>
+
+<script>
+function togglePasswordForm() {
+    var form = document.getElementById('password-change-form');
+    form.style.display = form.style.display === 'none' ? 'block' : 'none';
+}
+</script>
