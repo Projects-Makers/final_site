@@ -64,11 +64,15 @@
 .extra-icon:first-child{
     margin-top: 10px;
 }
-
-
-   
+  
 .extra-icon:hover{
     background-color: rgb(79, 78, 78);
+}
+
+.zdj-profilowe{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
 }
 
 .konto, .mapa-button{

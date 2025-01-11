@@ -16,7 +16,8 @@
         "username": "Purple",
         "password": "$2y$10$FPJawnhPki5d2ZRyLF.trexGkMbKtGRbl1oIMRFAfzjedPKKuKs0O",
         "rank": 1,
-        "czas_spedzony": 0
+        "czas_spedzony": 16,
+        "zdjecie_profilowe": "zdjecia_profilowe\/Purple.png"
     },
     "test": {
         "username": "test",
@@ -34,7 +35,7 @@
         "username": "5",
         "password": "$2y$10$1UPUeTSpvcyh4itNUTCaXO4AX8whG0rCoEP3VGmXdQaLtlJsrWoB.",
         "rank": 0,
-        "czas_spedzony": 0
+        "czas_spedzony": 1
     },
     "Gniot": {
         "username": "Gniot",
