@@ -1,4 +1,9 @@
+
 <?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start(); // Inicjalizacja sesji
+}
+
 // Zmienna do przechowywania komunikatów
 $message = "";
 
@@ -22,12 +27,10 @@ if (isset($_POST['register'])) {
     $confirm_password = $_POST['confirm_password'];
 
     if ($password === $confirm_password) {
-        // Sprawdź, czy użytkownik już istnieje
         $users = json_decode(file_get_contents('users.json'), true);
         if (isset($users[$username])) {
             $message = "Użytkownik o tej nazwie już istnieje!";
         } else {
-            // Zapisz nowego użytkownika
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
             $users[$username] = ['username' => $username, 'password' => $hashed_password];
             file_put_contents('users.json', json_encode($users, JSON_PRETTY_PRINT));
@@ -39,14 +42,20 @@ if (isset($_POST['register'])) {
 }
 
 function login($username, $password) {
+    // Upewnij się, że sesja jest uruchomiona
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+
     $users = json_decode(file_get_contents('users.json'), true);
     if (isset($users[$username]) && password_verify($password, $users[$username]['password'])) {
-        $_SESSION['username'] = $username;
+        $_SESSION['username'] = $username; // Zapisanie loginu do sesji
         return true;
     }
     return false;
 }
 ?>
+
         <div class="form-container" id="login-form-container">
             <h2>Logowanie</h2>
             <form method="POST" action="index.php" id="login-form">
