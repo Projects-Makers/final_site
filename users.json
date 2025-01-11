@@ -1,27 +1,37 @@
 {
     "2": {
         "username": "2",
-        "password": "$2y$10$lkWWiq6XWYHGZQFcgppAXOTsFGTyXIiMK2t1kr9Ca.sL71vCTpR5K"
+        "password": "$2y$10$lkWWiq6XWYHGZQFcgppAXOTsFGTyXIiMK2t1kr9Ca.sL71vCTpR5K",
+        "rank": 0
     },
     "3": {
         "username": "3",
-        "password": "$2y$10$cvya5VCvx5TfEEarXKs3k.S\/SUN6KFgAxgQGYynG.Xrtp5GrveoqK"
+        "password": "$2y$10$cvya5VCvx5TfEEarXKs3k.S\/SUN6KFgAxgQGYynG.Xrtp5GrveoqK",
+        "rank": 0
     },
     "cwel": {
         "username": "cwel",
-        "password": "$2y$10$IbMIj6It0KgJxW8ND3PMOOV5q6iW4RKOQODzFFrRv7mH4UnaWZWqK"
+        "password": "$2y$10$IbMIj6It0KgJxW8ND3PMOOV5q6iW4RKOQODzFFrRv7mH4UnaWZWqK",
+        "rank": 1
     },
-
     "1": {
         "username": "1",
-        "password": "$2y$10$k3NM\/6zgvXIA02.QWEYi..R\/tu67tjQofcbMCV6uqG3Uoq5amCG\/q"
+        "password": "$2y$10$k3NM\/6zgvXIA02.QWEYi..R\/tu67tjQofcbMCV6uqG3Uoq5amCG\/q",
+        "rank": 0
     },
     "Purple": {
         "username": "Purple",
-        "password": "$2y$10$FPJawnhPki5d2ZRyLF.trexGkMbKtGRbl1oIMRFAfzjedPKKuKs0O"
+        "password": "$2y$10$FPJawnhPki5d2ZRyLF.trexGkMbKtGRbl1oIMRFAfzjedPKKuKs0O",
+        "rank": 0
     },
     "test": {
         "username": "test",
-        "password": "$2y$10$h2JaBI1B9Ln6WkgUxSV4uehgdV6HV5qjIK0ITXpe3uPjaOJHn\/xIu"
+        "password": "$2y$10$h2JaBI1B9Ln6WkgUxSV4uehgdV6HV5qjIK0ITXpe3uPjaOJHn\/xIu",
+        "rank": 0
+    },
+    "4": {
+        "username": "4",
+        "password": "$2y$10$gywRqbD3PdIk\/ab4XnGtne3tH64Mbag1nmjaNm29Wm5LOWjucUdZm",
+        "rank": 0
     }
 }

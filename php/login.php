@@ -1,7 +1,4 @@
-
 <?php
-
-
 session_start();
 
 // Zmienna do przechowywania komunikatów
@@ -27,12 +24,14 @@ if (isset($_POST['register'])) {
     $confirm_password = $_POST['confirm_password'];
 
     if ($password === $confirm_password) {
+        // Sprawdź, czy użytkownik już istnieje
         $users = json_decode(file_get_contents('users.json'), true);
         if (isset($users[$username])) {
             $message = "Użytkownik o tej nazwie już istnieje!";
         } else {
+            // Zapisz nowego użytkownika
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-            $users[$username] = ['username' => $username, 'password' => $hashed_password];
+            $users[$username] = ['username' => $username, 'password' => $hashed_password, 'rank' => 0];
             file_put_contents('users.json', json_encode($users, JSON_PRETTY_PRINT));
             $message = "Rejestracja przebiegła pomyślnie! Możesz się teraz zalogować.";
         }
@@ -50,6 +49,7 @@ function login($username, $password) {
     $users = json_decode(file_get_contents('users.json'), true);
     if (isset($users[$username]) && password_verify($password, $users[$username]['password'])) {
         $_SESSION['username'] = $username; // Zapisanie loginu do sesji
+        $_SESSION['rank'] = $users[$username]['rank'];
         return true;
     }
     return false;
