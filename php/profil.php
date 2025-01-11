@@ -70,9 +70,9 @@ if ($rank == 0) {
 echo '<p>Witaj, ' . $username . '!</p>';
 echo '<p><h3>Twoje dane:</h3></p>';
 echo '<ul>';
-echo '<li>Login: ' . $username . '</li>';
-echo '<li>Hasło: ********** <button type="button" onclick="togglePasswordForm()">Zmień hasło</button></li>';
+echo '<li>Login: ' . $username . ' <button type="button" onclick="toggleNicknameForm()">Zmień nazwę użytkownika</button></li>';
 echo '</ul>';
+echo '<li>Hasło: ********** <button type="button" onclick="togglePasswordForm()">Zmień hasło</button></li>';
 echo '<div id="password-change-form" style="display: none;">';
 echo '<h3>Zmień hasło</h3>';
 echo '<form method="POST" action="">';
@@ -83,6 +83,14 @@ echo '<input type="password" name="new_password" id="new_password" required>';
 echo '<label for="confirm_new_password">Potwierdź nowe hasło:</label>';
 echo '<input type="password" name="confirm_new_password" id="confirm_new_password" required>';
 echo '<button type="submit" name="change_password">Zmień hasło</button>';
+echo '</form>';
+echo '</div>';
+echo '<div id="nickname-change-form" style="display: none;">';
+echo '<h3>Zmień nazwę użytkownika</h3>';
+echo '<form method="POST" action="">';
+echo '<label for="new_nickname">Nowa nazwa użytkownika:</label>';
+echo '<input type="text" name="new_nickname" id="new_nickname" required>';
+echo '<button type="submit" name="change_nickname">Zmień nazwę</button>';
 echo '</form>';
 echo '</div>';
 
@@ -97,8 +105,37 @@ if ($rank == 1) {
     echo '<a href="index.php?strona=admin"><div class="admin-panel">Panel Administracyjny</div></a>';
 }
 
-// Formularz do zmiany hasła
+// Formularz zmiany hasła
 
+
+echo '<form method="post">';
+echo '<button class="wyloguj-button" name="wyloguj">Wyloguj się</button>';
+echo '</form>';
+
+if (isset($_POST['wyloguj'])) {
+    session_destroy();
+    header('Location: index.php');
+    exit;
+}
+
+echo '</div>';
+
+if (isset($_POST['change_nickname'])) {
+    $new_nickname = $_POST['new_nickname'];
+
+    // Sprawdzanie, czy nazwa użytkownika już istnieje
+    if (isset($users[$new_nickname])) {
+        echo '<p style="color: red;">Nazwa użytkownika już istnieje. Wybierz inną.</p>';
+    } else {
+        // Zmiana nazwy użytkownika
+        $users[$new_nickname] = $users[$username];
+        unset($users[$username]);
+        $_SESSION['username'] = $new_nickname; // Aktualizacja sesji
+
+        file_put_contents('users.json', json_encode($users, JSON_PRETTY_PRINT));
+        echo '<p style="color: green;">Nazwa użytkownika została zmieniona pomyślnie!</p>';
+    }
+}
 
 if (isset($_POST['change_password'])) {
     $current_password = $_POST['current_password'];
@@ -122,22 +159,16 @@ if (isset($_POST['change_password'])) {
     }
 }
 
-echo '<form method="post">';
-echo '<button class="wyloguj-button" name="wyloguj">Wyloguj się</button>';
-echo '</form>';
-
-if (isset($_POST['wyloguj'])) {
-    session_destroy();
-    header('Location: index.php');
-    exit;
-}
-
-echo '</div>';
 ob_end_flush();
 
 ?>
 
 <script>
+function toggleNicknameForm() {
+    var form = document.getElementById('nickname-change-form');
+    form.style.display = form.style.display === 'none' ? 'block' : 'none';
+}
+
 function togglePasswordForm() {
     var form = document.getElementById('password-change-form');
     form.style.display = form.style.display === 'none' ? 'block' : 'none';
