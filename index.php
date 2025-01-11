@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
+    <meta http-equiv="refresh" content="60">
+    <script>
+        setInterval(function() {
+            location.reload();
+        }, 60000); // 60000 to 1 minuta w milisekundach
+    </script>
     <meta charset="UTF-8">
     <title>Śląsk</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
@@ -39,5 +45,30 @@ echo '</section>';
 <script src="javascript/baner.js"></script>
 <script src="javascript/login_show.js"></script>
 <script src="javascript/map.js"></script>
+
+<?php
+if (isset($_SESSION['username'])) {
+  $username = $_SESSION['username'];
+  $users = json_decode(file_get_contents('users.json'), true);
+  if (isset($users[$username])) {
+      if (isset($_SESSION['czas_wejscia'])) {
+          $czas_spedzony = $users[$username]['czas_spedzony'];
+          if (!isset($czas_spedzony)) {
+              $czas_spedzony = 0;
+          }
+          $czas_spedzony += (time() - $_SESSION['czas_wejscia']) / 60;
+          $users[$username]['czas_spedzony'] = round($czas_spedzony, 0);
+          file_put_contents('users.json', json_encode($users, JSON_PRETTY_PRINT));
+          unset($_SESSION['czas_wejscia']);
+      } else {
+          $_SESSION['czas_wejscia'] = time();
+      }
+  }
+}
+// Zapisz czas wejscia do sesji
+if (!isset($_SESSION['czas_wejscia'])) {
+    $_SESSION['czas_wejscia'] = time();
+}
+?>
 </body>
 </html>

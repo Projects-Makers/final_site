@@ -31,7 +31,7 @@ if (isset($_POST['register'])) {
         } else {
             // Zapisz nowego użytkownika
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-            $users[$username] = ['username' => $username, 'password' => $hashed_password, 'rank' => 0];
+            $users[$username] = ['username' => $username, 'password' => $hashed_password, 'rank' => 0, 'czas_spedzony' =>0];
             file_put_contents('users.json', json_encode($users, JSON_PRETTY_PRINT));
             $message = "Rejestracja przebiegła pomyślnie! Możesz się teraz zalogować.";
         }

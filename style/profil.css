@@ -36,7 +36,7 @@
 }
 
 .wyloguj-button {
-    background-color: #4CAF50;
+    background-color: #b82222 !important;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -45,13 +45,23 @@
 }
 
 .wyloguj-button:hover {
-    background-color: #3e8e41;
+    background-color: #cf5858;
+}
+.rank-1{
+    color: red;
+    text-decoration: bold;
+}
+.rank-0{
+    color: black;
+    text-decoration: bold;
 }
 
+
 .admin-panel {
-    width: 12%;
+    width: 15%;
     padding: 15px 20px;
     margin-bottom: 10px;
+    margin-top: 10px;
     color: white;
     background-color: black !important;
     text-decoration: none;
@@ -63,4 +73,16 @@
 
 a {
     text-decoration: none;
+}
+
+.zdjecie-profilowe {
+    margin-bottom: 20px;
+}
+
+.zdjecie-profilowe img {
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 20%;
+    border: 2px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
