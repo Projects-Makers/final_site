@@ -41,7 +41,7 @@ if ($rank == 0) {
 echo '<p>Witaj, ' . $username . '!</p>';
 echo '<p><h3>Twoje dane:</h3></p>';
 echo '<ul>';
-echo '<li>Login: ' . $username . ' <button type="button" onclick="toggleNicknameForm()" class="btn-edit">Edytuj</button></li>';
+echo '<li>Nazwa uzytkownika: ' . $username . ' <button type="button" onclick="toggleNicknameForm()" class="btn-edit">Edytuj</button></li>';
 echo '</ul>';
 
 // Formularz zmiany nazwy użytkownika
@@ -149,8 +149,6 @@ if (isset($_POST['change_password'])) {
         } else {
             echo '<p style="color: red;">Nowe hasła muszą być takie same!</p>';
         }
-    } else {
-        echo '<p style="color: red;">Błędne aktualne hasło!</p>';
     }
 }
 
