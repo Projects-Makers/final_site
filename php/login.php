@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 // Zmienna do przechowywania komunikatów
 $message = "";
 

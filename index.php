@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style/sidebar.css">
     <link rel="stylesheet" href="style/informacje.css">
     <link rel="stylesheet" href="style/login.css">
+    <link rel="stylesheet" href="style/profil.css">
 </head>
 <body>
 <?php
