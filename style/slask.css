@@ -1,11 +1,67 @@
-.baner{
-    background-image: url("../zdj/baner.jpg");
-    width: 80vh;
+.baner-container1 {
+    width: 100%;
+    max-width: 1750px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.baner-container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #d1cfcf;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px auto;
+    float: right;
+}
+
+.baner {
+    background-image: url("../zdj/baner.jpg"); /* Ścieżka do zdjęcia banera */
+    width: 100%;
+    max-width: 80vh;
     height: 45vh;
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 10px;
     border: 2px solid #000;
-    margin: 10px;
     margin-top: 20px;
+}
+
+/* Responsywność */
+@media screen and (max-width: 768px) {
+    .baner-container1 {
+        padding: 15px;
+    }
+
+    .baner-container {
+        width: 90%;
+    }
+
+    .baner {
+        width: 90%;
+        height: 35vh;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .baner-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .baner {
+        width: 100%;
+        height: 30vh;
+    }
+
+    .baner-container1 {
+        margin: 20px 10px;
+        padding: 10px;
+    }
 }
