@@ -9,9 +9,8 @@
 }
 
 .baner-container {
-    width: 100%;
-    height: 38.5%;
-    max-width: 600px;
+    width: 90vh;
+    height: 38.5vh;
     padding: 20px;
     background-color: #d1cfcf;
     border: 1px solid #ddd;

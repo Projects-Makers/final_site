@@ -32,7 +32,7 @@ if (isset($_SESSION['username'])) {
 <div id="mapModal" class="modal">
     <div class="modal-content">
         <span class="close-button">&times;</span>
-        <div id="map" style="width: 100%; height: 400px;"></div>
+        <div id="map" style="width: 100%; height: 95%;"></div>
     </div>
 </div>
 

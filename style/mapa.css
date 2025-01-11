@@ -33,11 +33,11 @@
 /* Treść modala */
 .modal-content {
     background-color: #fff;
-    margin: 10% auto;
+    margin: 10vh auto 10% auto;
     padding: 20px;
     border-radius: 8px;
     width: 80%;
-    max-width: 600px;
+    height: 80%;
 }
 
 /* Przycisk zamykania */
@@ -69,3 +69,4 @@
     margin: 5px 0;
     font-size: 14px;
 }
+
