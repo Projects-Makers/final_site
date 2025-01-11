@@ -11,13 +11,6 @@
         "rank": 0,
         "czas_spedzony": 0
     },
-    "cwel": {
-        "username": "cwel",
-        "password": "$2y$10$1WOKNZyn7JVM8OaPDKAmZ.1021fy2hin7cby8k8XKobNv2D0gwK0C",
-        "rank": 1,
-        "czas_spedzony": 69,
-        "zdjecie_profilowe": "zdjecia_profilowe\/cwel.png"
-    },
     "1": {
         "username": "1",
         "password": "$2y$10$k3NM\/6zgvXIA02.QWEYi..R\/tu67tjQofcbMCV6uqG3Uoq5amCG\/q",
@@ -53,5 +46,12 @@
         "password": "$2y$10$Wr8ivGQgEd8vgEoza\/P8QeRwiCW9bmDpYO95MkInPCUMZG39kVyCS",
         "rank": 1,
         "czas_spedzony": 8
+    },
+    "cwel": {
+        "username": "cwel",
+        "password": "$2y$10$1WOKNZyn7JVM8OaPDKAmZ.1021fy2hin7cby8k8XKobNv2D0gwK0C",
+        "rank": 1,
+        "czas_spedzony": 77,
+        "zdjecie_profilowe": "zdjecia_profilowe\/cwel.png"
     }
 }
