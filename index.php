@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="style/login.css">
     <link rel="stylesheet" href="style/profil.css">
     <link rel="stylesheet" href="style/mapa.css">
+    <link rel="stylesheet" href="style/slask.css">
 </head>
 <body>
 <?php

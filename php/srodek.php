@@ -1,4 +1,10 @@
-
+<div class="baner-container1">
+<hr style="width:40vh; border: 0.2vh solid gray;">
+<center><h1>Śląsk</h1></center>    
+<hr style="width: 40vh; border: 0.2vh solid gray;">
+<div class="baner-container"></div>
+<div class="baner"></div>
+</div>
 <hr style="width:40vh; border: 0.2vh solid gray;">
     <center><h1>MIASTA</h1></center>
 <hr style="width: 40vh; border: 0.2vh solid gray;">

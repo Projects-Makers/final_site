@@ -1,0 +1,11 @@
+.baner{
+    background-image: url("../zdj/baner.jpg");
+    width: 80vh;
+    height: 45vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    border: 2px solid #000;
+    margin: 10px;
+    margin-top: 20px;
+}
