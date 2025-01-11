@@ -8,7 +8,7 @@
     <div class="icon"><img src="icons/cogwheel.png" alt="Settings"></div>
 
     <div class="extra">
-        <a href="index.php?strona=srodek"><div class="extra-icon"><img src="icons/home.png" alt="Home">Głowna</div></a>
+        <a href="index.php?strona=srodek"><div class="extra-icon"><img src="icons/home.png" alt="Home">Główna</div></a>
         <div class="extra-icon mapa-button">
     <img src="icons/map.png" alt="Map"> Mapa
 </div>
