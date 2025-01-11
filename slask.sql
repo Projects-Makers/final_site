@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sty 11, 2025 at 04:59 PM
+-- Generation Time: Sty 11, 2025 at 07:16 PM
 -- Wersja serwera: 10.4.32-MariaDB
 -- Wersja PHP: 8.2.12
 
@@ -125,6 +125,26 @@ INSERT INTO `miasta` (`id_miasta`, `name`, `population`, `land`, `lng`, `lat`, `
 (9, 'Bielsko-Biała', NULL, NULL, NULL, NULL, '', NULL),
 (10, 'Chorzów\r\n', NULL, NULL, NULL, NULL, '', NULL);
 
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `restauracje`
+--
+
+CREATE TABLE `restauracje` (
+  `id_restauracje` int(11) NOT NULL,
+  `nazwa` text NOT NULL,
+  `cena` text NOT NULL,
+  `lp` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `restauracje`
+--
+
+INSERT INTO `restauracje` (`id_restauracje`, `nazwa`, `cena`, `lp`) VALUES
+(1, 'ws', 'as', 1);
+
 --
 -- Indeksy dla zrzutów tabel
 --
@@ -142,6 +162,12 @@ ALTER TABLE `miasta`
   ADD PRIMARY KEY (`id_miasta`);
 
 --
+-- Indeksy dla tabeli `restauracje`
+--
+ALTER TABLE `restauracje`
+  ADD PRIMARY KEY (`id_restauracje`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -156,6 +182,12 @@ ALTER TABLE `atrakcje`
 --
 ALTER TABLE `miasta`
   MODIFY `id_miasta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `restauracje`
+--
+ALTER TABLE `restauracje`
+  MODIFY `id_restauracje` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
