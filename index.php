@@ -56,11 +56,9 @@ if (!isset($_SESSION['czas_wejscia'])) {
 <head>
     <meta http-equiv="refresh" content="60">
     <script>
-if (window.location.search == '?strona=profil') {
-    setInterval(function() {
-        window.location.reload();
-    }, 60000);
-}
+        setInterval(function() {
+            location.reload();
+        }, 60000); // 60000 to 1 minuta w milisekundach
     </script>
     <meta charset="UTF-8">
     <title>Śląsk</title>
