@@ -17,7 +17,7 @@ if (isset($_SESSION['username'])) {
 if (isset($_SESSION['username'])) {
     echo '<a href="index.php?strona=profil"><div class="icon"><img src="' . $zdjecie_profilowe_path . '" alt="Profilowe" class="zdj-profilowe">'. '</div></a>';
 } else {
-    echo '<div class="extra-icon konto"><img src="icons/user.png" alt="Map">Konto</div>';
+    echo '<div class="icon"><img src="icons/user.png" alt="Map"></div>';
 }
 ?>
     <div class="icon"><img src="icons/cogwheel.png" alt="Settings"></div>
