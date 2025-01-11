@@ -10,13 +10,13 @@
     <meta charset="UTF-8">
     <title>Śląsk</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
-
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/sidebar.css">
     <link rel="stylesheet" href="style/informacje.css">
     <link rel="stylesheet" href="style/login.css">
     <link rel="stylesheet" href="style/profil.css">
+    <link rel="stylesheet" href="style/mapa.css">
 </head>
 <body>
 <?php
@@ -32,8 +32,6 @@ include("php/login.php");
 
 if($plik == 'srodek'){
 }
-
-include("php/map.php");
 include("php/sidebar.php");
 echo '<section>';
 include("$directory$plik$roz");
@@ -44,7 +42,7 @@ echo '</section>';
 
 <script src="javascript/baner.js"></script>
 <script src="javascript/login_show.js"></script>
-<script src="javascript/map.js"></script>
+<script src="php/map.js"></script>
 
 <?php
 if (isset($_SESSION['username'])) {

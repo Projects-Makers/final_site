@@ -9,7 +9,18 @@
 
     <div class="extra">
         <a href="index.php?strona=srodek"><div class="extra-icon"><img src="icons/home.png" alt="Home">Głowna</div></a>
-        <div class="extra-icon mapa-button"><img src="icons/map.png" alt="Map">Mapa</div>
+        <div class="extra-icon mapa-button">
+    <img src="icons/map.png" alt="Map"> Mapa
+</div>
+
+<!-- Modal z mapą -->
+<div id="mapModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <div id="map" style="width: 100%; height: 400px;"></div>
+    </div>
+</div>
+
         <a href="#"><div class="extra-icon"><img src="icons/shop.png" alt="Map">Sklep</div></a>
         <?php
 if (isset($_SESSION['username'])) {
