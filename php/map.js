@@ -18,6 +18,28 @@ document.addEventListener('DOMContentLoaded', function () {
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '© OpenStreetMap'
         }).addTo(map);
+
+        // Pobierz dane z serwera i dodaj markery
+        fetch('get_markers.php')
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(marker => {
+                    const { lat, lng, description } = marker;
+
+                    // Dodaj marker do mapy
+                    const mapMarker = L.marker([lat, lng]).addTo(map);
+
+                    // Dodaj popup do markera
+                    mapMarker.bindPopup(`
+                        <div class="popup-content">
+                            <h3>${description}</h3>
+                            <p>Latitude: ${lat}</p>
+                            <p>Longitude: ${lng}</p>
+                        </div>
+                    `);
+                });
+            })
+            .catch(error => console.error('Błąd podczas pobierania danych:', error));
     }
 
     // Pokazanie modala z mapą
