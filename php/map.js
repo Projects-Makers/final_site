@@ -20,26 +20,41 @@ document.addEventListener('DOMContentLoaded', function () {
         }).addTo(map);
 
         // Pobierz dane z serwera i dodaj markery
-        fetch('get_markers.php')
-            .then(response => response.json())
-            .then(data => {
-                data.forEach(marker => {
-                    const { lat, lng, description } = marker;
+        fetchMarkersFromDatabase();
+    }
 
-                    // Dodaj marker do mapy
-                    const mapMarker = L.marker([lat, lng]).addTo(map);
-
-                    // Dodaj popup do markera
-                    mapMarker.bindPopup(`
-                        <div class="popup-content">
-                            <h3>${description}</h3>
-                            <p>Latitude: ${lat}</p>
-                            <p>Longitude: ${lng}</p>
-                        </div>
-                    `);
-                });
+    // Funkcja pobierająca markery z bazy danych
+    function fetchMarkersFromDatabase() {
+        fetch('index.php?strona=get_markers')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Błąd sieci: ${response.status}`);
+                }
+                return response.json(); // Oczekujemy danych w formacie JSON
             })
-            .catch(error => console.error('Błąd podczas pobierania danych:', error));
+            .then(data => {
+                if (Array.isArray(data) && data.length > 0) {
+                    data.forEach(marker => {
+                        const { lat, lng, description } = marker;
+
+                        if (lat && lng) {
+                            const mapMarker = L.marker([lat, lng]).addTo(map);
+                            mapMarker.bindPopup(`
+                                <div class="popup-content">
+                                    <h3>${description}</h3>
+                                    <p>Latitude: ${lat}</p>
+                                    <p>Longitude: ${lng}</p>
+                                </div>
+                            `);
+                        } else {
+                            console.error(`Nieprawidłowe dane markera: ${JSON.stringify(marker)}`);
+                        }
+                    });
+                } else {
+                    console.warn('Brak danych markerów w bazie.');
+                }
+            })
+            .catch(error => console.error('Błąd podczas pobierania markerów:', error));
     }
 
     // Pokazanie modala z mapą
