@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sty 11, 2025 at 01:33 PM
+-- Generation Time: Sty 11, 2025 at 04:59 PM
 -- Wersja serwera: 10.4.32-MariaDB
 -- Wersja PHP: 8.2.12
 
@@ -118,7 +118,12 @@ INSERT INTO `miasta` (`id_miasta`, `name`, `population`, `land`, `lng`, `lat`, `
 (2, 'Gliwice', 181000, 133.73000, 50.297610, 18.676580, 'Gliwice to miasto na prawach powiatu w województwie śląskim, znane z przemysłu oraz jako ważny ośrodek naukowy. Leży na Wyżynie Śląskiej, nad rzeką Kłodnicą. Miasto pełni istotną rolę w aglomeracji górnośląskiej i jest ważnym centrum technologicznym.', 1),
 (3, 'Zabrze', 170000, 80.50000, 18.790000, 50.320000, 'Zabrze to miasto w Górnośląskim Okręgu Przemysłowym, znane z przemysłu węglowego oraz jako ośrodek naukowy. W Zabrzu znajduje się Politechnika Śląska, a także liczne zabytki przemysłowe.', 1),
 (4, 'Bytom', 167000, 69.60000, 18.932000, 50.347000, 'Bytom to miasto o dużym znaczeniu historycznym i przemysłowym. Słynie z tradycji górniczych i tekstylnych, a także z pięknej architektury. Miasto przechodzi transformację w kierunku rozwoju sektora usługowego.', 1),
-(5, 'Ruda Śląska', 140000, 77.60000, 18.870000, 50.290000, 'Ruda Śląska to miasto w Górnośląskim Okręgu Przemysłowym, znane z przemysłu węglowego. Miasto przechodzi transformację, stawiając na nowoczesną infrastrukturę i jakość życia.', 1);
+(5, 'Ruda Śląska', 140000, 77.60000, 18.870000, 50.290000, 'Ruda Śląska to miasto w Górnośląskim Okręgu Przemysłowym, znane z przemysłu węglowego. Miasto przechodzi transformację, stawiając na nowoczesną infrastrukturę i jakość życia.', 1),
+(6, 'Częstochowa', NULL, NULL, NULL, NULL, '', NULL),
+(7, 'Rybnik', NULL, NULL, NULL, NULL, '', NULL),
+(8, 'Jastrzębie-Zdrój', NULL, NULL, NULL, NULL, '', NULL),
+(9, 'Bielsko-Biała', NULL, NULL, NULL, NULL, '', NULL),
+(10, 'Chorzów\r\n', NULL, NULL, NULL, NULL, '', NULL);
 
 --
 -- Indeksy dla zrzutów tabel
@@ -150,7 +155,7 @@ ALTER TABLE `atrakcje`
 -- AUTO_INCREMENT for table `miasta`
 --
 ALTER TABLE `miasta`
-  MODIFY `id_miasta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_miasta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
