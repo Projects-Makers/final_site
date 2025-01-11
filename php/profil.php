@@ -1,18 +1,15 @@
 <?php
 
+ob_start();
 $users = json_decode(file_get_contents('users.json'), true);
 
-if (!isset($_SESSION['username'])) {
-    header('Location: index.php');
-    exit;
-}
+
 
 $username = $_SESSION['username'];
 $rank = $_SESSION['rank'];
 $zdjecie_profilowe_path = isset($users[$username]['zdjecie_profilowe']) ? $users[$username]['zdjecie_profilowe'] : null;
 
 // Obsługa przesyłania zdjęcia profilowego
-
 
 echo '<div class="profil-container">';
 echo '<h1>Twój profil</h1>';
@@ -99,6 +96,6 @@ if (isset($_POST['wyloguj'])) {
     header('Location: index.php');
     exit;
 }
-
 echo '</div>';
+ob_end_flush();
 ?>
