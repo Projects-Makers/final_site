@@ -3,17 +3,12 @@
         "username": "2",
         "password": "$2y$10$lkWWiq6XWYHGZQFcgppAXOTsFGTyXIiMK2t1kr9Ca.sL71vCTpR5K",
         "rank": 0,
-        "czas_spedzony": 3
-    },
-    "3": {
-        "username": "3",
-        "password": "$2y$10$cvya5VCvx5TfEEarXKs3k.S\/SUN6KFgAxgQGYynG.Xrtp5GrveoqK",
-        "rank": 0,
-        "czas_spedzony": 0
+        "czas_spedzony": 6,
+        "zdjecie_profilowe": "zdjecia_profilowe\/2.jpg"
     },
     "1": {
         "username": "1",
-        "password": "$2y$10$k3NM\/6zgvXIA02.QWEYi..R\/tu67tjQofcbMCV6uqG3Uoq5amCG\/q",
+        "password": "$2y$10$V9IWxUu9UbSPFYSYK9P7ne0m.JDF\/.QuHn\/N2\/YujhUUCzYGOhd66",
         "rank": 0,
         "czas_spedzony": 0
     },
@@ -47,11 +42,18 @@
         "rank": 1,
         "czas_spedzony": 8
     },
+    "maciek": {
+        "username": "3",
+        "password": "$2y$10$cvya5VCvx5TfEEarXKs3k.S\/SUN6KFgAxgQGYynG.Xrtp5GrveoqK",
+        "rank": 0,
+        "czas_spedzony": 0,
+        "zdjecie_profilowe": "zdjecia_profilowe\/3.png"
+    },
     "cwel": {
         "username": "cwel",
-        "password": "$2y$10$1WOKNZyn7JVM8OaPDKAmZ.1021fy2hin7cby8k8XKobNv2D0gwK0C",
+        "password": "$2y$10$qzEmRCR8BkQdTYu1S8qdiOfluuvdaClERMBGOQrjTMpvAVgrUGwYO",
         "rank": 1,
-        "czas_spedzony": 77,
+        "czas_spedzony": 89,
         "zdjecie_profilowe": "zdjecia_profilowe\/cwel.png"
     }
 }

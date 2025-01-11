@@ -41,7 +41,7 @@ if ($rank == 0) {
 echo '<p>Witaj, ' . $username . '!</p>';
 echo '<p><h3>Twoje dane:</h3></p>';
 echo '<ul>';
-echo '<li>Login: ' . $username . ' <button type="button" onclick="toggleNicknameForm()">Zmień nazwę użytkownika</button></li>';
+echo '<li>Login: ' . $username . ' <button type="button" onclick="toggleNicknameForm()" class="btn-edit">Edytuj</button></li>';
 echo '</ul>';
 
 // Formularz zmiany nazwy użytkownika
@@ -55,7 +55,28 @@ echo '</form>';
 echo '</div>';
 
 // Formularz zmiany hasła
-echo '<li>Hasło: ********** <button type="button" onclick="togglePasswordForm()">Zmień hasło</button></li>';
+echo '<ul>';
+echo '<li>Hasło: ********** <button type="button" onclick="togglePasswordForm()" class="btn-logout">Edytuj</button></li>';
+if (isset($_POST['change_password'])) {
+    $current_password = $_POST['current_password'];
+    $new_password = $_POST['new_password'];
+    $confirm_new_password = $_POST['confirm_new_password'];
+
+    // Sprawdzanie, czy aktualne hasło jest poprawne
+    if (password_verify($current_password, $users[$username]['password'])) {
+        // Sprawdzanie, czy nowe hasło jest takie same
+        if ($new_password === $confirm_new_password) {
+            // Aktualizacja hasła
+            $hashed_new_password = password_hash($new_password, PASSWORD_DEFAULT);
+            $users[$username]['password'] = $hashed_new_password;
+            file_put_contents('users.json', json_encode($users, JSON_PRETTY_PRINT));
+            echo '<p style="color: green;">Hasło zostało zmienione pomyślnie!</p>';
+        } else {
+            echo '<p style="color: red;">Nowe hasła muszą być takie same!</p>';
+        }
+    } 
+}
+echo '</ul>';
 echo '<div id="password-change-form" style="display: none;">';
 echo '<h3>Zmień hasło</h3>';
 echo '<form method="POST" action="">';
@@ -107,6 +128,7 @@ if (isset($_POST['change_nickname'])) {
 
         file_put_contents('users.json', json_encode($users, JSON_PRETTY_PRINT));
         echo '<p style="color: green;">Nazwa użytkownika została zmieniona pomyślnie!</p>';
+        header("Refresh: 0.1; url=index.php?strona=profil");
     }
 }
 
@@ -129,6 +151,36 @@ if (isset($_POST['change_password'])) {
         }
     } else {
         echo '<p style="color: red;">Błędne aktualne hasło!</p>';
+    }
+}
+
+// Obsługa dodawania zdjęcia profilowego
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['zdjecie_profilowe'])) {
+    $zdjecie_profilowe = $_FILES['zdjecie_profilowe'];
+    $zdjecie_profilowe_tmp = $zdjecie_profilowe['tmp_name'];
+    $zdjecie_profilowe_type = $zdjecie_profilowe['type'];
+    $zdjecie_profilowe_size = $zdjecie_profilowe['size'];
+    $allowed_types = ['image/jpeg', 'image/png', 'image/gif'];
+
+    // Upewnij się, że folder istnieje
+    $upload_dir = __DIR__ . '/zdjecia_profilowe';
+    if (!is_dir($upload_dir)) {
+        mkdir($upload_dir, 0777, true);
+    }
+
+    // Walidacja pliku
+    if (in_array($zdjecie_profilowe_type, $allowed_types) && $zdjecie_profilowe_size <= 2000000) {
+        $ext = pathinfo($zdjecie_profilowe['name'], PATHINFO_EXTENSION);
+        $zdjecie_profilowe_path = 'zdjecia_profilowe/' . $username . '.' . $ext;
+        if (move_uploaded_file($zdjecie_profilowe_tmp, $zdjecie_profilowe_path)) {
+            $users[$username]['zdjecie_profilowe'] = $zdjecie_profilowe_path;
+            file_put_contents('users.json', json_encode($users, JSON_PRETTY_PRINT));
+            header("Refresh: 0.1; url=index.php?strona=profil");
+        } else {
+            echo "Błąd podczas przesyłania pliku.";
+        }
+    } else {
+        echo "Nieprawidłowy typ pliku lub za duży rozmiar.";
     }
 }
 
