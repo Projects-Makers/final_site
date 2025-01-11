@@ -3,7 +3,7 @@
         "username": "2",
         "password": "$2y$10$lkWWiq6XWYHGZQFcgppAXOTsFGTyXIiMK2t1kr9Ca.sL71vCTpR5K",
         "rank": 0,
-        "czas_spedzony": 0
+        "czas_spedzony": 3
     },
     "3": {
         "username": "3",
@@ -47,5 +47,11 @@
         "password": "$2y$10$1UPUeTSpvcyh4itNUTCaXO4AX8whG0rCoEP3VGmXdQaLtlJsrWoB.",
         "rank": 0,
         "czas_spedzony": 0
+    },
+    "Gniot": {
+        "username": "Gniot",
+        "password": "$2y$10$Wr8ivGQgEd8vgEoza\/P8QeRwiCW9bmDpYO95MkInPCUMZG39kVyCS",
+        "rank": 0,
+        "czas_spedzony": 1
     }
 }
