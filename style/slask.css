@@ -1,6 +1,6 @@
 .baner-container1 {
     width: 100%;
-    max-width: 1750px;
+    width: 180vh;
     margin: 40px auto;
     padding: 20px;
     background-color: #ffffff;
@@ -11,6 +11,7 @@
 
 .baner-container {
     width: 100%;
+    height: 38.5%;
     max-width: 600px;
     padding: 20px;
     background-color: #d1cfcf;
@@ -19,6 +20,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 10px auto;
     float: right;
+    overflow-y: scroll;
 }
 
 .baner {
