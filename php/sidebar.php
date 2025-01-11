@@ -1,4 +1,10 @@
+<?php
+$users = json_decode(file_get_contents('users.json'), true);
 
+$username = $_SESSION['username'];
+$rank = $_SESSION['rank'];
+$zdjecie_profilowe_path = isset($users[$username]['zdjecie_profilowe']) ? $users[$username]['zdjecie_profilowe'] : null;
+?>
 
 <aside class="sidebar">
     <div class="icon"><img src="icons/home.png" alt="Home"></div>
@@ -24,7 +30,7 @@
         <a href="#"><div class="extra-icon"><img src="icons/shop.png" alt="Map">Sklep</div></a>
         <?php
 if (isset($_SESSION['username'])) {
-    echo '<a href="index.php?strona=profil"><div class="extra-icon"><img src="icons/user.png" alt="Map">' . htmlspecialchars($_SESSION['username']) . '</div></a>';
+    echo '<a href="index.php?strona=profil"><div class="extra-icon"><img src="' . $zdjecie_profilowe_path . '" alt="Profilowe" class="zdj-profilowe">' . htmlspecialchars($_SESSION['username']) . '</div></a>';
 } else {
     echo '<div class="extra-icon konto"><img src="icons/user.png" alt="Map">Konto</div>';
 }
