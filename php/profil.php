@@ -38,7 +38,7 @@ if ($rank == 0) {
 }
 
 // Wyświetlanie danych użytkownika
-echo '<p>Witaj, ' . $username . '!</p>';
+echo '<p>Witaj, ' . ucfirst($username) . '!</p>';
 echo '<p><h3>Twoje dane:</h3></p>';
 echo '<ul>';
 echo '<li>Nazwa użytkownika: ' . $username . ' <button type="button" onclick="toggleNicknameForm()" class="btn-edit">Edytuj</button></li>';
