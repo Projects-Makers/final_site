@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
             center: [50.2649, 19.0238], // Środek woj. śląskiego
             zoom: 10,
             maxZoom: 13,
-            minZoom: 6,
+            minZoom: 9,
             maxBounds: L.latLngBounds([49.5, 17.5], [51.5, 20.5]) // Granice dla regionu
         });
 
@@ -35,22 +35,24 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(data => {
                 if (Array.isArray(data) && data.length > 0) {
                     data.forEach(marker => {
-                        const { lat, lng, description } = marker;
+                        const { lat, lng, description, name, id_miasta } = marker;
 
                         if (lat && lng) {
                             const mapMarker = L.marker([lat, lng]).addTo(map);
 
+                            const moreInfoLink = `index.php?strona=informacje&nr=${id_miasta}`;
+
                             mapMarker.bindPopup(`
                                 <div class="popup-content">
+                                    <h2>${name}</h2>
                                     <h3>${description}</h3>
-                                    <p>Latitude: ${lat}</p>
-                                    <p>Longitude: ${lng}</p>
+                                    <a href="${moreInfoLink}"><div class="view">Więcej informacji</div></a>
                                 </div>
                             `);
 
                             // Dodaj obsługę kliknięcia na marker
                             mapMarker.on('click', function () {
-                                map.setView([lat, lng], 13); // Przybliż na marker z zoomem 13
+                                map.setView([lat, lng], 13, { animate: true }); // Przybliż na marker z animacją
                             });
                         } else {
                             console.error(`Nieprawidłowe dane markera: ${JSON.stringify(marker)}`);
@@ -62,7 +64,6 @@ document.addEventListener('DOMContentLoaded', function () {
             })
             .catch(error => console.error('Błąd podczas pobierania markerów:', error));
     }
-
     // Pokazanie modala z mapą
     mapButton.addEventListener('click', function () {
         mapModal.style.display = 'block';
