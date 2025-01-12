@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Funkcja pobierająca markery z bazy danych
     function fetchMarkersFromDatabase() {
-        fetch('index.php?strona=get_markers')
+        fetch('php/get_markers.php')
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`Błąd sieci: ${response.status}`);
@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                         if (lat && lng) {
                             const mapMarker = L.marker([lat, lng]).addTo(map);
+
                             mapMarker.bindPopup(`
                                 <div class="popup-content">
                                     <h3>${description}</h3>
@@ -46,6 +47,11 @@ document.addEventListener('DOMContentLoaded', function () {
                                     <p>Longitude: ${lng}</p>
                                 </div>
                             `);
+
+                            // Dodaj obsługę kliknięcia na marker
+                            mapMarker.on('click', function () {
+                                map.setView([lat, lng], 13); // Przybliż na marker z zoomem 13
+                            });
                         } else {
                             console.error(`Nieprawidłowe dane markera: ${JSON.stringify(marker)}`);
                         }

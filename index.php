@@ -1,3 +1,9 @@
+<?php
+if (isset($_GET['strona']) && $_GET['strona'] === 'get_markers') {
+    include 'php/get_markers.php';
+    exit; // Zatrzymujemy dalsze przetwarzanie, aby nie ładować reszty strony
+}
+?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -21,53 +27,51 @@
 </head>
 <body>
 <?php
-if (!isset($_GET["strona"]))
-    {$plik = 'srodek';}
-else
-  {$plik = $_GET["strona"];}
-
-$roz = '.php';
-
 $directory = 'php/';
-include("php/login.php");
 
-if($plik == 'srodek'){
+// Wybór pliku do załadowania
+if (!isset($_GET["strona"])) {
+    $plik = 'srodek';
+} else {
+    $plik = $_GET["strona"];
 }
-include("php/sidebar.php");
-echo '<section>';
-include("$directory$plik$roz");
 
-echo '</section>';
-?>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+// Sprawdź, czy plik istnieje
+$sciezka_pliku = "$directory$plik.php";
+if (file_exists($sciezka_pliku)) {
+    include("php/login.php"); // Obsługa logowania
+    include("php/sidebar.php"); // Pasek boczny
+    echo '<section>';
+    include($sciezka_pliku); // Główny plik strony
+    echo '</section>';
+} else {
+    echo '<section><h1>404 - Nie znaleziono strony</h1></section>';
+}
 
-<script src="javascript/baner.js"></script>
-<script src="javascript/login_show.js"></script>
-<script src="php/map.js"></script>
-
-<?php
+// Obsługa czasu spędzonego przez użytkownika na stronie
 if (isset($_SESSION['username'])) {
-  $username = $_SESSION['username'];
-  $users = json_decode(file_get_contents('users.json'), true);
-  if (isset($users[$username])) {
-      if (isset($_SESSION['czas_wejscia'])) {
-          $czas_spedzony = $users[$username]['czas_spedzony'];
-          if (!isset($czas_spedzony)) {
-              $czas_spedzony = 0;
-          }
-          $czas_spedzony += (time() - $_SESSION['czas_wejscia']) / 60;
-          $users[$username]['czas_spedzony'] = round($czas_spedzony, 0);
-          file_put_contents('users.json', json_encode($users, JSON_PRETTY_PRINT));
-          unset($_SESSION['czas_wejscia']);
-      } else {
-          $_SESSION['czas_wejscia'] = time();
-      }
-  }
+    $username = $_SESSION['username'];
+    $users = json_decode(file_get_contents('users.json'), true);
+    if (isset($users[$username])) {
+        if (isset($_SESSION['czas_wejscia'])) {
+            $czas_spedzony = $users[$username]['czas_spedzony'] ?? 0;
+            $czas_spedzony += (time() - $_SESSION['czas_wejscia']) / 60;
+            $users[$username]['czas_spedzony'] = round($czas_spedzony, 0);
+            file_put_contents('users.json', json_encode($users, JSON_PRETTY_PRINT));
+            unset($_SESSION['czas_wejscia']);
+        } else {
+            $_SESSION['czas_wejscia'] = time();
+        }
+    }
 }
-// Zapisz czas wejscia do sesji
+// Zapisz czas wejścia do sesji, jeśli jeszcze nie istnieje
 if (!isset($_SESSION['czas_wejscia'])) {
     $_SESSION['czas_wejscia'] = time();
 }
 ?>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="javascript/baner.js"></script>
+<script src="javascript/login_show.js"></script>
+<script src="php/map.js"></script>
 </body>
 </html>

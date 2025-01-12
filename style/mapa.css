@@ -55,13 +55,13 @@
 
 .popup-content {
     font-family: Arial, sans-serif;
+    text-align: center;
     color: #333;
 }
 
 .popup-content h3 {
-    margin: 0;
+    margin: 0 0 5px;
     font-size: 16px;
-    font-weight: bold;
     color: #007BFF;
 }
 
@@ -69,4 +69,23 @@
     margin: 5px 0;
     font-size: 14px;
 }
+
+.zoom-button {
+    display: inline-block;
+    padding: 8px 12px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.zoom-button:hover {
+    background-color: #218838;
+}
+
 
