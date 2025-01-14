@@ -57,5 +57,11 @@
         "rank": 1,
         "czas_spedzony": 1123,
         "zdjecie_profilowe": "zdjecia_profilowe\/cwel.png"
+    },
+    "nie": {
+        "username": "nie",
+        "password": "$2y$10$Ep3ZdOM.NIePMafs\/mFA4O6xX.GSh0R\/kbUHdMBEsKPytfhz5cLxi",
+        "rank": 0,
+        "czas_spedzony": 13
     }
 }
