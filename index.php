@@ -18,6 +18,7 @@ if (isset($_GET['strona']) && $_GET['strona'] === 'get_markers') {
     <link rel="stylesheet" href="style/profil.css">
     <link rel="stylesheet" href="style/mapa.css">
     <link rel="stylesheet" href="style/slask.css">
+    <link rel="stylesheet" href="style/settings.css">
 </head>
 <body>
 <?php
