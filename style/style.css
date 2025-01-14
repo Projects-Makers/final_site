@@ -26,8 +26,6 @@ section {
     width: calc(100%-7vh);
     height: 100%;
     margin-left: 7vh;
-    position: relative;
-    z-index: 1;
 }
 
 .container{
@@ -57,7 +55,7 @@ section {
 
 .city-card img {
     width: 100%;
-    height: auto;
+    height:auto;
     border-radius: 4px;
 }
 
