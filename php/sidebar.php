@@ -46,7 +46,7 @@ if (isset($_SESSION['username'])) {
 }
 ?>
 
-        <a href="#"><div class="extra-icon"><img src="icons/cogwheel.png" alt="Map">Ustawienia</div></a>
+        <a href="index.php?strona=settings"><div class="extra-icon"><img src="icons/cogwheel.png" alt="Map">Ustawienia</div></a>
     </div>
 
 </aside>
