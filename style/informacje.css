@@ -14,3 +14,46 @@
 .info:hover{
     transform: scale(1.05);
 }
+
+.container-info{
+    margin-top: 5px;
+    gap: 5px;
+    padding: 10px;
+    height:64vh;
+    width: 100%;
+    overflow-x: scroll; /* Umożliwia przewijanie poziome */
+    overflow-y: hidden;
+    white-space: nowrap; /* Zapobiega zawijaniu */
+}
+
+
+.city-card-info {
+    display: inline-block;
+    margin: 0px 15px;
+    background-color: var(--card-bg);
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;  
+    width: 200px;
+    height: 550px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    vertical-align: top; /* Wyrównanie do góry */
+}
+
+
+.city-card-info:hover {
+    transform: scale(1.05);
+}
+
+.city-card-info img {
+    display: block;
+    width: 100%;
+    height:80%;
+    border-radius: 4px;
+}
+
+.text{
+    margin-top: 20px;
+    text-wrap:stable;
+}
