@@ -1,5 +1,4 @@
 /* Styl dla modala */
-
 #mapModal {
     display: none; /* Ukryty domyślnie */
     position: fixed;
@@ -9,15 +8,16 @@
     width: 100%;
     height: 100%;
     overflow: hidden; /* Ukrycie zawartości wychodzącej poza modal */
-    background-color: rgba(0, 0, 0, 0.5); /* Przezroczyste tło */
+    background-color: rgba(0, 0, 0, 0.7); /* Lekko ciemniejsze tło */
+    transition: background-color 0.3s ease; /* Animacja przyciemniania tła */
 }
 
 #map {
     width: 100%; /* Ustawienie szerokości mapy */
     height: 100%; /* Ustawienie wysokości mapy */
+    border-radius: 8px; /* Zaokrąglenie rogów mapy */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Cień wokół mapy */
 }
-
-
 .modal {
     display: none; /* Ukryty domyślnie */
     position: fixed;
@@ -33,13 +33,12 @@
 /* Treść modala */
 .modal-content {
     background-color: #fff;
-    margin: 10% auto;
+    margin: 10vh auto 10% auto;
     padding: 20px;
     border-radius: 8px;
     width: 80%;
-    max-width: 600px;
+    height: 80%;
 }
-
 /* Przycisk zamykania */
 .close-button {
     color: #aaa;
@@ -47,25 +46,118 @@
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
+    transition: color 0.3s ease;
 }
 
 .close-button:hover {
     color: #000;
 }
 
+/* Styl popupu */
 .popup-content {
     font-family: Arial, sans-serif;
+    text-align: center;
     color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Cień wokół popupu */
+}
+
+.popup-content h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #007BFF;
 }
 
 .popup-content h3 {
-    margin: 0;
+    margin: 0 0 5px;
     font-size: 16px;
-    font-weight: bold;
-    color: #007BFF;
+    color: #333;
 }
 
 .popup-content p {
     margin: 5px 0;
     font-size: 14px;
+}
+
+/* Przycisk do zoomowania */
+.zoom-button {
+    display: inline-block;
+    padding: 8px 12px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.zoom-button:hover {
+    background-color: #218838;
+    transform: scale(1.05); /* Powiększenie przycisku */
+}
+
+.zoom-button:active {
+    transform: scale(1); /* Przywrócenie do normalnego rozmiaru po kliknięciu */
+}
+
+/* Styl dla markerów */
+.leaflet-marker-icon {
+    border-radius: 50%; /* Zaokrąglenie markerów */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Cień wokół markerów */
+    transition: transform 0.3s ease;
+}
+
+.leaflet-marker-icon:hover {
+    transform: scale(1.2); /* Powiększenie markera po najechaniu */
+}
+
+/* Styl dla ikony */
+.leaflet-div-icon {
+    background-color: #ff6f61; /* Kolor markerów */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+    color: white;
+}
+
+/* Styl dla ikony po kliknięciu */
+.leaflet-div-icon:hover {
+    transform: scale(1.1); /* Powiększenie przy najechaniu */
+    background-color: #ff3d30;
+}
+
+/* Animacja dla modala */
+#mapModal {
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#mapModal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#mapModal.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Dodanie tła do przycisku w popupie */
+.popup-content .zoom-button {
+    background-color: #007BFF; /* Kolor przycisku */
+}
+
+.popup-content .zoom-button:hover {
+    background-color: #0056b3;
+}
+.view {
+    background-color: #007BFF;
+    border-radius: 15px;
+    color: white;
 }

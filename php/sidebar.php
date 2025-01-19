@@ -6,6 +6,7 @@ if (isset($_SESSION['username'])) {
     $username = $_SESSION['username'];
     $rank = $_SESSION['rank'];
     $zdjecie_profilowe_path = isset($users[$username]['zdjecie_profilowe']) ? $users[$username]['zdjecie_profilowe'] : null;
+    $skrocone = substr($username, 0, 9);
 }
 ?>
 
@@ -32,20 +33,20 @@ if (isset($_SESSION['username'])) {
 <div id="mapModal" class="modal">
     <div class="modal-content">
         <span class="close-button">&times;</span>
-        <div id="map" style="width: 100%; height: 400px;"></div>
+        <div id="map" style="width: 100%; height: 95%;"></div>
     </div>
 </div>
 
         <a href="#"><div class="extra-icon"><img src="icons/shop.png" alt="Map">Sklep</div></a>
         <?php
 if (isset($_SESSION['username'])) {
-    echo '<a href="index.php?strona=profil"><div class="extra-icon"><img src="' . $zdjecie_profilowe_path . '" alt="Profilowe" class="zdj-profilowe">' . htmlspecialchars($_SESSION['username']) . '</div></a>';
+    echo '<a href="index.php?strona=profil"><div class="extra-icon"><img src="' . $zdjecie_profilowe_path . '" alt="Profilowe" class="zdj-profilowe">' . htmlspecialchars($skrocone) . '</div></a>';
 } else {
     echo '<div class="extra-icon konto"><img src="icons/user.png" alt="Map">Konto</div>';
 }
 ?>
 
-        <a href="#"><div class="extra-icon"><img src="icons/cogwheel.png" alt="Map">Ustawienia</div></a>
+        <a href="index.php?strona=settings"><div class="extra-icon"><img src="icons/cogwheel.png" alt="Map">Ustawienia</div></a>
     </div>
 
 </aside>

@@ -16,7 +16,7 @@
         "username": "Purple",
         "password": "$2y$10$FPJawnhPki5d2ZRyLF.trexGkMbKtGRbl1oIMRFAfzjedPKKuKs0O",
         "rank": 1,
-        "czas_spedzony": 33,
+        "czas_spedzony": 80,
         "zdjecie_profilowe": "zdjecia_profilowe\/Purple.png"
     },
     "test": {
@@ -51,11 +51,17 @@
         "czas_spedzony": 0,
         "zdjecie_profilowe": "zdjecia_profilowe\/3.png"
     },
-    "cwel": {
+    "Mr_Okruch": {
         "username": "cwel",
         "password": "$2y$10$8\/8On9Z\/5Lu6eYDDaiVHkudBB4od5xfj3LkNVhsJbchaRhT1PTLtK",
         "rank": 1,
-        "czas_spedzony": 186,
+        "czas_spedzony": 1137,
         "zdjecie_profilowe": "zdjecia_profilowe\/cwel.png"
+    },
+    "nie": {
+        "username": "nie",
+        "password": "$2y$10$Ep3ZdOM.NIePMafs\/mFA4O6xX.GSh0R\/kbUHdMBEsKPytfhz5cLxi",
+        "rank": 0,
+        "czas_spedzony": 13
     }
 }
