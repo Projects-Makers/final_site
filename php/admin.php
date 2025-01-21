@@ -1,6 +1,7 @@
 <div class="profil-container">
-ajkdvuijdhs <p>
-fgvhbndjsfg 
-<p>vsdjfuyy ehsufhg 
-<br>dsjfnj dsgfgbjdmsfnju
+    <center>
+    <a href="index.php?strona=table"><div class="add">ADD</div></a>
+    <a href="index.php?strona=table"><div class="edit">EDIT</div></a>
+    <a href="index.php?strona=table"><div class="remove">REMOVE</div></a>
+    </center>
 </div>

@@ -1,0 +1,62 @@
+.add {
+    width: 60%;
+    height: 30px;
+    padding-top: 10px;
+    border-radius: 10px;
+    background-color: lime;
+    margin: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.edit {
+    width: 60%;
+    height: 30px;
+    padding-top: 10px;
+    border-radius: 10px;
+    background-color: gray;
+    margin: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.remove {
+    width: 60%;
+    height: 30px;
+    padding-top: 10px;
+    border-radius: 10px;
+    background-color: red;
+    margin: 10px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.table {
+    width: 60%;
+    height: 30px;
+    padding-top: 10px;
+    border-radius: 10px;
+    background-color: blue;
+    margin: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.remove:hover{
+    transition: scale(1.05);
+}
+
+.sigmna-container{
+    width: 50%;
+    height: 30px;
+    background-color: aqua;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+#new-buttons {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}

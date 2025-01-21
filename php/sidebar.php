@@ -40,7 +40,7 @@ if (isset($_SESSION['username'])) {
         <a href="#"><div class="extra-icon"><img src="icons/shop.png" alt="Map">Sklep</div></a>
         <?php
 if (isset($_SESSION['username'])) {
-    echo '<a href="index.php?strona=profil"><div class="extra-icon"><img src="' . $zdjecie_profilowe_path . '" alt="Profilowe" class="zdj-profilowe">' . htmlspecialchars($skrocone) . '</div></a>';
+    echo '<a href="index.php?strona=profil"><div class="extra-icon"><img src="' . $zdjecie_profilowe_path . '"class="zdj-profilowe">' . htmlspecialchars($skrocone) . '</div></a>';
 } else {
     echo '<div class="extra-icon konto"><img src="icons/user.png" alt="Map">Konto</div>';
 }

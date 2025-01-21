@@ -41,7 +41,7 @@
         "username": "Gniot",
         "password": "$2y$10$Wr8ivGQgEd8vgEoza\/P8QeRwiCW9bmDpYO95MkInPCUMZG39kVyCS",
         "rank": 1,
-        "czas_spedzony": 103,
+        "czas_spedzony": 2161,
         "zdjecie_profilowe": "zdjecia_profilowe\/Gniot.jpg"
     },
     "maciek": {
@@ -63,5 +63,11 @@
         "password": "$2y$10$Ep3ZdOM.NIePMafs\/mFA4O6xX.GSh0R\/kbUHdMBEsKPytfhz5cLxi",
         "rank": 0,
         "czas_spedzony": 13
+    },
+    "cwel": {
+        "username": "cwel",
+        "password": "$2y$10$a01LmMIySxoi7R5b8mJoNu3ywckbVYT67KWgBqIa97xZ9vDwlvDvy",
+        "rank": 0,
+        "czas_spedzony": 1
     }
 }
