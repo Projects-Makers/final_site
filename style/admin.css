@@ -43,8 +43,20 @@
     font-weight: bold;
 }
 
+.table:hover{
+    transform: scale(1.05);
+}
+
 .remove:hover{
-    transition: scale(1.05);
+    transform: scale(1.05);
+}
+
+.add:hover{
+    transform: scale(1.05);
+}
+
+.edit:hover{
+    transform: scale(1.05);
 }
 
 .sigmna-container{
