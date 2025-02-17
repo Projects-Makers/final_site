@@ -1,14 +1,59 @@
-<div class="settings-container">
-    <h2>Ustawienia motywu</h2>
-    <div class="theme-switcher">
-        <button class="theme-button" id="light-theme" onclick="setTheme('light')">Jasny</button>
-        <button class="theme-button" id="dark-theme" onclick="setTheme('dark')">Ciemny</button>
+<main class="settings">
+        
+<aside class="sidebar-settings">
+            <a href="#account">Ustawienia konta</a>
+            <a href="#privacy">Prywatność</a>
+            <a href="#notifications">Powiadomienia</a>
+        </aside>
+<div class="container-settings">
+        
+        
+        <section class="content">
+            <div id="account" class="section">
+                <h2>Ustawienia konta</h2>
+                <label>Numer telefonu:</label>
+                <input type="text" placeholder="Dodaj numer telefonu">
+                <button>Zapisz</button>
+                
+                <label>Adres e-mail:</label>
+                <input type="email" placeholder="Dodaj adres e-mail">
+                <button>Zapisz</button>
+                
+                <h2>Personalizacja</h2>
+                <label>Motyw:</label>
+                <select id="theme-selector">
+                    <option value="bright">🌞 Jasny</option>
+                    <option value="dark">🌙 Ciemny</option>
+                </select>
+                
+                <label>Język:</label>
+                <select>
+                    <option>🇬🇧 English</option>
+                    <option>🇵🇱 Polski</option>
+                    <option>🇩🇪 Deutsch</option>
+                    <option>🇫🇷 Français</option>
+                    <option>🇪🇸 Español</option>
+                    <option>🇯🇵 日本語</option>
+                </select>
+            </div>
+            
+            <div id="privacy" class="section">
+                <h2>Prywatność</h2>
+                <p>Opcje prywatności </p>
+            </div>
+            
+            <div id="notifications" class="section">
+                <h2>Powiadomienia</h2>
+                <div class="toggle"></div>
+                    <label for="email">Powiadomienia e-mail</label>
+                    <input type="checkbox" id="email">
+                </div>
+        <div class="toggle">
+            <label for="sms">Powiadomienia SMS</label>
+            <input type="checkbox" id="sms">
+        </div>
+
+            </div>
+        </section>
     </div>
-    <script>
-        function setTheme(theme) {
-            document.cookie = "theme=" + theme + "; expires=Fri, 31 Dec 9999 23:59:59 GMT";
-            document.body.classList.remove('theme-light', 'theme-dark');
-            document.body.classList.add('theme-' + theme);
-        }
-    </script>
-</div>
+    </main>

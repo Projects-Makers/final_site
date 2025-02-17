@@ -69,5 +69,9 @@ if (!isset($_SESSION['czas_wejscia'])) {
 <script src="javascript/baner.js"></script>
 <script src="javascript/login_show.js"></script>
 <script src="javascript/map.js"></script>
+<script src="javascript/theme_toggle.js"></script>
+    
+
+</script>
 </body>
 </html>
