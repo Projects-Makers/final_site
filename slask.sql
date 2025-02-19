@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 19, 2025 at 09:35 AM
+-- Generation Time: Feb 19, 2025 at 09:53 AM
 -- Wersja serwera: 10.4.32-MariaDB
 -- Wersja PHP: 8.2.12
 
@@ -173,7 +173,14 @@ INSERT INTO `restauracje` (`id`, `nazwa`, `cena`, `lokalizacja`, `godz`, `opis`,
 (2, '', '2', '2', '2', '1', 2),
 (3, '3', '3', '3', '3', '3', 3),
 (4, '', '4', '4', '4', '1', 4),
-(5, '', '6', '6', '6', '1', 6);
+(5, '', '6', '6', '6', '1', 6),
+(6, '', 'Przystawki od 29 zł, zupy od 18 zł, dania główne takie jak lasagne bolońska za 38 zł, polędwica woło', 'ul. Feliksa Bocheńskiego 109, 40-816 Katowice', 'Poniedziałek – Piątek: 12:00 – 22:00 Sobota: 12:00 – 22:00 Niedziela: 09:00 – 18:00', '1', 1),
+(7, '', 'Desery od 15 zł, obiady śląskie od 40 zł.', 'ul. Świętego Jana 7, 40-012 Katowice', 'Codziennie: 10:00 – 22:00', '1', 1),
+(8, '', 'Pizza od 28 zł, makarony od 35 zł.', 'ul. Mariacka 25, 40-014 Katowice', 'Poniedziałek – Czwartek: 13:00 – 22:00 Piątek – Niedziela: 13:00 – 23:00', '1', 1),
+(9, '', 'Burgery od 32 zł, dodatki od 10 zł.', 'ul. Młyńska 11, 40-098 Katowice', 'Codziennie: 12:00 – 23:00', '1', 1),
+(10, '', 'Dania główne od 35 zł, zupy od 18 zł.', 'ul. Staromiejska 11, 40-013 Katowice', 'Codziennie: 12:00 – 22:00', '1', 1),
+(11, '', 'Zestawy sushi od 49 zł, pojedyncze rolki od 18 zł.', 'ul. Warszawska 23, 40-009 Katowice', 'Poniedziałek – Sobota: 12:00 – 22:00 Niedziela: 13:00 – 21:00', '1', 1),
+(12, '', 'Dania główne od 45 zł, desery od 20 zł.', 'ul. Kościuszki 101, 40-525 Katowice', 'Codziennie: 12:00 – 22:00', '1', 1);
 
 --
 -- Indeksy dla zrzutów tabel
@@ -217,7 +224,7 @@ ALTER TABLE `miasta`
 -- AUTO_INCREMENT for table `restauracje`
 --
 ALTER TABLE `restauracje`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
