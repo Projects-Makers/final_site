@@ -9,30 +9,36 @@ body{
 
 :root{
     --main-bg:#f7f1e3;
+    --second-bg:white;
     --card-bg:#fff;
-    --main-font-color:#333;
-    --second-font-color:white;
+    --font-color:white;
+    --reverse-font-color:black;
     --mortadelka-color: rgb(194, 182, 182);
+    --button-color: #3e3e3e;
 }
 
 html[data-theme="dark"]{
     --main-bg:#333;
+    --second-bg:rgb(128, 125, 125);
     --card-bg:#444;
-    --main-font-color:#fff;
-    --second-font-color:#ccc;
+    --font-color:white;
+    --reverse-font-color:black;
     --mortadelka-color: rgb(194, 182, 182);
+    --button-color: #bbb5b5;
 }
 
 html[data-theme="bright"]{
     --main-bg:#f7f1e3;
+    --second-bg:white;
     --card-bg:#fff;
-    --main-font-color:#333;
-    --second-font-color:white;
+    --font-color:black;
+    --reverse-font-color:white;
     --mortadelka-color: rgb(194, 182, 182);
+    --button-color: #3e3e3e;
 }
-h1 {
+.Title {
     font-size: 36px;
-    color: var(--main-font-color);
+    color: var(--font-color);
 }
 
 section {
@@ -75,7 +81,7 @@ section {
 .city-name {
     font-size: 18px;
     font-weight: bold;
-    color: var(--main-font-color);
+    color: var(--font-color);
     margin-top: 10px;
 }
 
