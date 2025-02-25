@@ -70,8 +70,20 @@ if (!isset($_SESSION['czas_wejscia'])) {
 <script src="javascript/login_show.js"></script>
 <script src="javascript/map.js"></script>
 <script src="javascript/theme_toggle.js"></script>
-    
+<script src="javascript/translation.js"></script>
+<script>
+        // Ładowanie wybranego języka po załadowaniu strony
+        document.addEventListener('DOMContentLoaded', () => {
+            const language = localStorage.getItem('selectedLanguage') || 'en'; // Domyślnie angielski
+            loadTranslations(language); // Załaduj tłumaczenia
+        });
 
+        // Zmiana języka
+        function changeLanguage() {
+            const language = document.getElementById('language-selector').value;
+            localStorage.setItem('selectedLanguage', language); // Zapisz wybór w localStorage
+            loadTranslations(language); // Zmień tłumaczenia
+        }
 </script>
 </body>
 </html>
