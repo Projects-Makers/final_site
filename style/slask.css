@@ -1,14 +1,21 @@
+@import 'style.css';
+
 .baner-container1 {
     width: 180vh;
     margin: 40px auto;
     padding: 20px;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
+    background-color: var(--second-bg);
+    border: 1px solid var(--second-bg);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.baner-container h1{
+    color: black;
+}
+
 .baner-container {
+    color: black;
     width: 90vh;
     height: 38.5vh;
     padding: 20px;

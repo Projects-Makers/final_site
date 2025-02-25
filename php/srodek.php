@@ -29,7 +29,7 @@
 
 
 <hr style="width:40vh; border: 0.2vh solid gray;">
-    <center><h1>MIASTA</h1></center>
+    <center><h1 class="Title">MIASTA</h1></center>
 <hr style="width: 40vh; border: 0.2vh solid gray;">
 
 <br>

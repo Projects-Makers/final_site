@@ -16,10 +16,10 @@
 }
 
 .container-info{
-    margin-top: 5px;
+    margin-top: 25px;
     gap: 5px;
     padding: 10px;
-    height:64vh;
+    height:68vh;
     width: 100%;
     overflow-x: scroll; /* Umożliwia przewijanie poziome */
     overflow-y: hidden;
@@ -43,7 +43,7 @@
 
 
 .city-card-info:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .city-card-info img {
@@ -56,4 +56,17 @@
 .text{
     margin-top: 20px;
     text-wrap:stable;
+    color: var(--font-color);
+}
+
+.czcionka1{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--font-color);
+    margin-top: 10px;
+}
+
+.hr-czcionki1{
+    width: 30vh; 
+    border: 0.2vh solid var(--button-color);
 }

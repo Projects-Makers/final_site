@@ -19,14 +19,14 @@
     width: 200px;
     padding: 20px;
     background: var(--card-bg);
-    color: var(--main-font-color);
+    color: var(--font-color);
     border-radius: 8px;
     position: fixed;
 }
 
 .sidebar-settings a {
     display: block;
-    color: white;
+    color: var(--font-color);
     text-decoration: none;
     padding: 10px;
     border-bottom: 1px solid #555;
@@ -41,13 +41,18 @@
     padding: 20px;
 }
 
+.content label {
+    color: var(--font-color);
+}
+
 .section {
     margin-bottom: 20px;
 }
 
-h2 {
+.settings h2 {
     border-bottom: 2px solid #ddd;
     padding-bottom: 5px;
+    color: var(--font-color);
 }
 
 input {
@@ -67,8 +72,8 @@ select, button
     border-radius: 5px;
 }
 button {
-    background: #3e3e3e;
-    color: white;
+    background: var(--button-color);
+    color: var(--reverse-font-color);
     border: none;
     cursor: pointer;
 }

@@ -2,8 +2,8 @@
     "2": {
         "username": "2",
         "password": "$2y$10$lkWWiq6XWYHGZQFcgppAXOTsFGTyXIiMK2t1kr9Ca.sL71vCTpR5K",
-        "rank": 0,
-        "czas_spedzony": 6,
+        "rank": 1,
+        "czas_spedzony": 22,
         "zdjecie_profilowe": "zdjecia_profilowe\/2.jpg"
     },
     "1": {
@@ -41,7 +41,7 @@
         "username": "Gniot",
         "password": "$2y$10$Wr8ivGQgEd8vgEoza\/P8QeRwiCW9bmDpYO95MkInPCUMZG39kVyCS",
         "rank": 1,
-        "czas_spedzony": 2161,
+        "czas_spedzony": 43976,
         "zdjecie_profilowe": "zdjecia_profilowe\/Gniot.jpg"
     },
     "maciek": {
@@ -49,11 +49,11 @@
         "password": "$2y$10$cvya5VCvx5TfEEarXKs3k.S\/SUN6KFgAxgQGYynG.Xrtp5GrveoqK",
         "rank": 0,
         "czas_spedzony": 0,
-        "zdjecie_profilowe": "zdjecia_profilowe\/3.png"
-    },
-    "Mr_Okruch": {
-        "username": "cwel",
-        "password": "$2y$10$8\/8On9Z\/5Lu6eYDDaiVHkudBB4od5xfj3LkNVhsJbchaRhT1PTLtK",
+        "zdjecie_profilowe": "zdjecia_profilowe\/3.png" 
+    },  
+    "Mr_Okruch": {  
+        "username": "cwel", 
+        "password": "$2y$10$8\/8On9Z\/5Lu6eYDDaiVHkudBB4od5x    fj3LkNVhsJbchaRhT1PTLtK",
         "rank": 1,
         "czas_spedzony": 9804,
         "zdjecie_profilowe": "zdjecia_profilowe\/cwel.png"
@@ -69,5 +69,11 @@
         "password": "$2y$10$a01LmMIySxoi7R5b8mJoNu3ywckbVYT67KWgBqIa97xZ9vDwlvDvy",
         "rank": 0,
         "czas_spedzony": 1
+    },
+    "8": {
+        "username": "8",
+        "password": "$2y$10$RApiDkrl5VjmJ\/louI0..ORgXvIRLW6Ria0e3gof4iAqjOffTqP3a",
+        "rank": 0,
+        "czas_spedzony": 0
     }
 }
