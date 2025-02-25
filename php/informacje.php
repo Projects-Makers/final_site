@@ -13,7 +13,7 @@ $nr = $_GET["nr"];
 $wynik = mysqli_query($conn,"SELECT * from atrakcje where lp = $nr");
 while ($wiersz = mysqli_fetch_array($wynik)){
     
-    echo '<div class="city-card-info">';
+    echo '<a href="index.php?strona=p_p&nr=' . $wiersz["id"] . '"><div class="city-card-info">';
     $imagePath = 'zdj_atrakcje/' . $wiersz["id"] . '.jpg';
     if (file_exists($imagePath)) {
         echo '<img src="' . $imagePath . '" alt="' . $wiersz["nazwa"] . '">';
@@ -22,7 +22,7 @@ while ($wiersz = mysqli_fetch_array($wynik)){
     }
     echo '<div class="text">' . $wiersz["nazwa"] . '';
     echo '<p>' . $wiersz["cena"] . '</div>';
-    echo '</div>';
+    echo '</div></a>';
 }
 ?>
 </div>
