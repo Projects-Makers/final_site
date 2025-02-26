@@ -47,6 +47,15 @@ section {
     margin-left: 7vh;
 }
 
+.przyklad{
+	text-align: left;
+}
+
+.zdjecie1{
+	float:left;
+	text-align: right;
+}
+
 .container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

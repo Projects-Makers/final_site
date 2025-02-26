@@ -1,5 +1,4 @@
 <div class="profil-container">
-<center>
 <form method="post" action="index.php?strona=panel/add-at">
         <p> Nazwa: <input type="text" name="xnazwa" size="40" maxlength="55" required></p>
         <p> Cena: <input type="text" name="xcena" size="30" maxlength="55" required></p>
@@ -23,5 +22,4 @@
            <input type="reset" value="..::Wyczyść opis::..">
         </p>
     </form>
-</center>
 </div>
