@@ -17,8 +17,8 @@
 		
 		echo'<tr>';
 			echo '<td>' . $wiersz['nazwa'] . '</td>';
-			echo'<td>' . $wiersz['name'] . '</td>';
-			echo'<td>Edit</td>';
+			echo'<td>' . $wiersz['name'] . '</td></a>';
+			echo'<td><a href="index.php?strona=panel/edit-at1">Edit</td>';
 		echo'</tr>';
 		
 	}

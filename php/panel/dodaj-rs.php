@@ -2,7 +2,10 @@
 <center>
 <form method="post" action="index.php?strona=panel/add-rs">
     <p> Nazwa: <input type="text" name="xnazwa" size="40" maxlength="100" required></p>
-    <p> Miasto: 
+        <p> Cena: <input type="text" name="xcena" size="30" maxlength="100" required></p>
+        <p> Lokalizacja: <input type="text" name="xlok" size="4" maxlength="100"  required></p>
+        <p> Godz: <input type="text" name="xgodz" size="7" maxlength="100" required></p>
+        <p> Miasto: 
         <select name="xmiasto" required>
             <?php
             require("config.php");
@@ -13,10 +16,6 @@
             ?>
         </select>	
     </p>
-
-        <p> Cena: <input type="text" name="xcena" size="30" maxlength="100" required></p>
-        <p> Lokalizacja: <input type="text" name="xlok" size="4" maxlength="100"  required></p>
-        <p> Godz: <input type="text" name="xgodz" size="7" maxlength="100" required></p>
         <p>Opis:<br>
             <textarea name="xopis" cols="70" rows="5" required></textarea>
         </p>
