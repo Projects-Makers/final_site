@@ -9,9 +9,10 @@ $xgodz = $_POST["xgodz"];
 $xmiasto = $_POST["xmiasto"];
 
 // Sprawdź liczbę kolumn w tabeli book
-$wynik = mysqli_query($conn, "INSERT INTO restauracje  VALUES ('','$xnazwa', '$xcena', '$xlok', '$xgodz', '$xmiasto', '$xopis')");
+$wynik = mysqli_query($conn, "INSERT INTO restauracje  VALUES ('','$xtyt', '$xcena', '$xlok', '$xgodz',  '$xopis', '$xmiasto')");
+
+
 
 
 header("Location: index.php?strona=srodek");
-
 ?>

@@ -3,7 +3,7 @@
         "username": "2",
         "password": "$2y$10$lkWWiq6XWYHGZQFcgppAXOTsFGTyXIiMK2t1kr9Ca.sL71vCTpR5K",
         "rank": 1,
-        "czas_spedzony": 22,
+        "czas_spedzony": 62,
         "zdjecie_profilowe": "zdjecia_profilowe\/2.jpg"
     },
     "1": {
@@ -49,10 +49,10 @@
         "password": "$2y$10$cvya5VCvx5TfEEarXKs3k.S\/SUN6KFgAxgQGYynG.Xrtp5GrveoqK",
         "rank": 0,
         "czas_spedzony": 0,
-        "zdjecie_profilowe": "zdjecia_profilowe\/3.png" 
-    },  
-    "Mr_Okruch": {  
-        "username": "cwel", 
+        "zdjecie_profilowe": "zdjecia_profilowe\/3.png"
+    },
+    "Mr_Okruch": {
+        "username": "cwel",
         "password": "$2y$10$8\/8On9Z\/5Lu6eYDDaiVHkudBB4od5x    fj3LkNVhsJbchaRhT1PTLtK",
         "rank": 1,
         "czas_spedzony": 9804,
