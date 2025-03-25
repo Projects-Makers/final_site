@@ -42,7 +42,7 @@ while ($wiersz = mysqli_fetch_array($wynik)){
      if (file_exists($imagePath)) {
          echo '<a href="index.php?strona=#&nr=' . $wiersz["id"] . '"><img src="' . $imagePath . '"></a>';
      } else {
-        echo '<img src="zdj/nic.png">';
+        echo '<img src="zdj/nic.jpg">';
      }
      echo '' . $wiersz["nazwa"] . '';
      echo '</div></div>';
