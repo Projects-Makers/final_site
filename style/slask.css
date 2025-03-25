@@ -29,7 +29,7 @@
 }
 
 .baner {
-    background-image: url("../zdj/baner.jpg"); /* Ścieżka do zdjęcia banera */
+    background-image: url("../zdj/baner.webp"); /* Ścieżka do zdjęcia banera */
     width: 100%;
     max-width: 80vh;
     height: 45vh;

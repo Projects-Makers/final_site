@@ -20,7 +20,8 @@
         </div>
 
         <!-- Baner ze zdjęciem -->
-        <div class="baner"></div>
+        <div class="baner">
+		</div>
     </div>
 </div>
 
@@ -53,11 +54,11 @@ if (mysqli_num_rows($wynikmiasta) == 0) {
 
 
         echo '<div class="window-foto">';
-        $imagePath = 'zdj/' . $miasta["id_miasta"] . '.jpg';
+        $imagePath = 'zdj/' . $miasta["id_miasta"] . '.webp';
         if (file_exists($imagePath)) {
             echo '<img src="' . $imagePath . '" alt="' . $miasta["name"] . '" class="img">';
         } else {
-            echo '<img src="zdj/nic.png" alt="Brak zdjęcia" >';
+            echo '<img src="zdj/nic.webp" alt="Brak zdjęcia" >';
         }
         echo '<br></div><center>';
         echo '<div class="city-name">' . $miasta["name"] . '</div>';
