@@ -30,10 +30,11 @@ if (isset($_GET['id'])) {
             <?php
             $wynik = mysqli_query($conn,"SELECT * FROM miasta");
             while ($miersz = mysqli_fetch_array($wynik)) {
-                echo '<option value="' . $miersz["id_miasta"] . '" ' . ($miersz["id_miasta"] == $wiersz['id_miasta'] ? 'selected' : '') . '>' . $miersz["name"] .'</option>';
+                $selected = ($miersz["id_miasta"] == $wiersz['lp']) ? 'selected' : '';
+                echo '<option value="' . $miersz["id_miasta"] . '" ' . $selected . '>' . $miersz["name"] . '</option>';
             }
             ?>
-        </select>	
+        </select>  
     </p>
         <p>Opis:<br>
             <textarea name="xopis" cols="70" rows="5" required><?php echo $wiersz['opis']; ?></textarea>
