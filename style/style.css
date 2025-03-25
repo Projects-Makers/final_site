@@ -1,5 +1,5 @@
-
-body{
+/* Style podstawowe */
+body {
     font-family: 'Georgia', serif;
     background-color: var(--main-bg);
     margin: 0;
@@ -7,74 +7,75 @@ body{
     overflow-x: hidden;
 }
 
-:root{
-    --main-bg:#f7f1e3;
-    --second-bg:white;
-    --card-bg:#fff;
-    --font-color:white;
-    --reverse-font-color:black;
+:root {
+    --main-bg: #f7f1e3;
+    --second-bg: white;
+    --card-bg: #fff;
+    --font-color: white;
+    --reverse-font-color: black;
     --mortadelka-color: rgb(194, 182, 182);
     --button-color: #3e3e3e;
+    --hr-border-color: gray; /* Dodaj zmienną dla koloru linii */
 }
 
-html[data-theme="dark"]{
-    --main-bg:#333;
-    --second-bg:rgb(128, 125, 125);
-    --card-bg:#444;
-    --font-color:white;
-    --reverse-font-color:black;
+/* Dla ciemnego motywu */
+html[data-theme="dark"] {
+    --main-bg: #333;
+    --second-bg: rgb(128, 125, 125);
+    --card-bg: #444;
+    --font-color: white;
+    --reverse-font-color: black;
     --mortadelka-color: rgb(194, 182, 182);
     --button-color: #bbb5b5;
 }
 
-html[data-theme="bright"]{
-    --main-bg:#f7f1e3;
-    --second-bg:white;
-    --card-bg:#fff;
-    --font-color:black;
-    --reverse-font-color:white;
+/* Dla jasnego motywu */
+html[data-theme="bright"] {
+    --main-bg: #f7f1e3;
+    --second-bg: white;
+    --card-bg: #fff;
+    --font-color: black;
+    --reverse-font-color: white;
     --mortadelka-color: rgb(194, 182, 182);
     --button-color: #3e3e3e;
 }
+
+/* Style nagłówków */
 .Title {
     font-size: 36px;
     color: var(--font-color);
+    text-align: center;
 }
 
+/* Sekcja główna */
 section {
-    width: calc(100%-7vh);
+    width: calc(100% - 7vh);
     height: 100%;
     margin-left: 7vh;
 }
 
-.przyklad{
-	text-align: left;
-}
-
-.zdjecie1{
-	float:left;
-	text-align: right;
-}
-
-.container{
+/* Container dla miast */
+.container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 5px;
     padding: 10px;
 }
 
-.container a{
+.container a {
     text-decoration: none;
 }
 
+/* Karta miasta */
 .city-card {
     background-color: var(--card-bg);
     border: 2px solid #ccc;
     border-radius: 8px;
-    padding: 20px;  
+    padding: 20px;
     width: 200px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
+    will-change: transform;
 }
 
 .city-card:hover {
@@ -83,7 +84,7 @@ section {
 
 .city-card img {
     width: 100%;
-    height:auto;
+    height: auto;
     border-radius: 4px;
 }
 
@@ -94,3 +95,9 @@ section {
     margin-top: 10px;
 }
 
+/* Styl dla linii */
+hr {
+    width: 40vh;
+    border: 0.2vh solid var(--hr-border-color);
+    margin: 20px auto;
+}
