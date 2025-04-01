@@ -1,38 +1,5 @@
-.add {
-    color: var(--reverse-font-color);
-    width: 60%;
-    height: 30px;
-    padding-top: 10px;
-    border-radius: 10px;
-    background-color: lime;
-    margin: 10px;
-    text-align: center;
-    font-weight: bold;
-    display: flex;
-    justify-content: space-evenly;
+.title-miasto {
     cursor: pointer;
-}
-
-.add img{
-    width: 5%;
-    height: auto;
-}
-
-.edit {
-    color: var(--reverse-font-color);
-    width: 60%;
-    height: 30px;
-    padding-top: 10px;
-    border-radius: 10px;
-    background-color: gray;
-    margin: 10px;
-    text-align: center;
-    font-weight: bold;
-    cursor: pointer;
-
-}
-
-.remove {
     color: var(--reverse-font-color);
     width: 60%;
     height: 30px;
@@ -42,50 +9,32 @@
     margin: 10px;
     text-align: center;
     font-weight: bold;
-    cursor: pointer;
-
 }
 
-.rozwin{
+.miasto-rozwin {
     display: none;
-}
-
-.table {
-    width: 60%;
-    height: 30px;
-    padding-top: 10px;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 20px;
+    background-color: #f0f0f0;
     border-radius: 10px;
-    background-color: var(--button-color);
-    color: var(--reverse-font-color);
-    margin: 10px;
-    text-align: center;
-    font-weight: bold;
+    margin-top: 10px;
+    transition: max-height 0.5s ease-out;  /* Płynne rozwijanie */
+    max-height: 0;  /* Domyślnie ukryte */
+    overflow: hidden;  /* Ukrywa zawartość, gdy jest zwinięta */
 }
 
-.table:hover{
-    transform: scale(1.05);
-    background-color: var(--button-color);
-    filter: brightness(0.8); 
-
+.miasto-rozwin.open {
+    display: flex;
+    max-height: 1000px;  /* Wartość, która będzie wystarczająca, aby rozwinąć zawartość */
+    padding-bottom: 10px;  /* Dodajemy przestrzeń na dole */
 }
 
-.remove:hover{
-    transform: scale(1.05);
+.nazwa {
+    padding: 10px 0;
 }
 
-.add:hover{
-    transform: scale(1.05);
+.nazwa-link {
+    padding: 1vh 4vh;
+    border-left: var(--reverse-font-color) solid;
 }
-
-.edit:hover{
-    transform: scale(1.05);
-}
-
-.sigmna-container{
-    width: 50%;
-    height: 30px;
-    background-color: aqua;
-    margin: 10px;
-    border-radius: 10px;
-}
-
