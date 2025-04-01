@@ -40,12 +40,12 @@ if (isset($_SESSION['username'])) {
 
         <a href="#"><div class="extra-icon" id="shop"><img src="icons/shop.png" alt="Shop">Sklep</div></a>
         <?php
-        if (isset($_SESSION['username'])) {
-            echo '<a href="index.php?strona=profil"><div class="extra-icon"><img src="' . $zdjecie_profilowe_path . '" alt="Profilowe" class="zdj-profilowe">' . htmlspecialchars($skrocone) . '</div></a>';
-        } else {
-            echo '<div class="extra-icon konto" id="account"><img src="zdjecia_profilowe/user.png" alt="User">Konto</div>';
-        }
-        ?>
+if (isset($_SESSION['username'])) {
+    echo '<a href="index.php?strona=profil"><div class="extra-icon"><img src="' . $zdjecie_profilowe_path . '" alt="Profilowe" class="zdj-profilowe">' . htmlspecialchars($skrocone) . '</div></a>';
+} else {
+    echo '<div class="extra-icon konto" id="account"><img src="icons/user.png" alt="User">Konto</div>';
+}
+?>
 
         <a href="index.php?strona=settings"><div class="extra-icon" id="settings"><img src="icons/cogwheel.png" alt="Settings">Ustawienia</div></a>
     </div>
