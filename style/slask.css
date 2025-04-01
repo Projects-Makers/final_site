@@ -27,6 +27,23 @@
     border: 2px solid #000;
     margin-top: 20px;
 }
+.baner-podstrona {
+    width: 100%;
+    max-width: 80vh;
+    height: 45vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    border: 2px solid #000;
+    margin-top: 20px;
+	margin-right: 100%;
+}
+
+.baner-podstrona img{
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+}
 
 .title-centered{
     display: flex;

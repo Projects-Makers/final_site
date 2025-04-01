@@ -68,8 +68,7 @@ while ($wiersz = mysqli_fetch_array($wynik)){
         echo '<img src="zdj_atrakcje/nic.webp" alt="Brak zdjęcia">';
     }
     echo '<div class="text">' . $wiersz["nazwa"] . '';
-    echo '<p>' . $wiersz["cena"] . '</div>';
-    echo '</div></a>';
+    echo '</div></a></div>';
 }
 ?>
 </div>
