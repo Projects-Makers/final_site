@@ -2,7 +2,7 @@
     <center>
         
         <div class="add" onclick="toggleVisibility('add-rozwin')">
-            <img src="icons/add.png" alt="">ADD<img src="icons/add.png" alt="">
+            ADD
         </div>
 
         <div class="add-rozwin rozwin">
@@ -16,9 +16,9 @@
         </div>
 
         <div class="edit-rozwin rozwin">
-            <a href="index.php?strona=panel/dodaj-at"><div class="table">Atrakcje</div></a>
-            <a href="index.php?strona=panel/dodaj-mi"><div class="table">Miasta</div></a>
-            <a href="index.php?strona=panel/dodaj-rs"><div class="table">Restauracje</div></a>
+            <a href="index.php?strona=panel/edit-at"><div class="table">Atrakcje</div></a>
+            <a href="index.php?strona=panel/edit-mi"><div class="table">Miasta</div></a>
+            <a href="index.php?strona=panel/edit-rs"><div class="table">Restauracje</div></a>
         </div>
 
         <div class="remove" onclick="toggleVisibility('remove-rozwin')">
@@ -26,9 +26,9 @@
         </div>
 
         <div class="remove-rozwin rozwin">
-            <a href="index.php?strona=panel/dodaj-at"><div class="table">Atrakcje</div></a>
-            <a href="index.php?strona=panel/dodaj-mi"><div class="table">Miasta</div></a>
-            <a href="index.php?strona=panel/dodaj-rs"><div class="table">Restauracje</div></a>
+            <a href="index.php?strona=panel/remove-at"><div class="table">Atrakcje</div></a>
+            <a href="index.php?strona=panel/remove-mi"><div class="table">Miasta</div></a>
+            <a href="index.php?strona=panel/remove-rs"><div class="table">Restauracje</div></a>
         </div>
 
     </center>
