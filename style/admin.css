@@ -1,40 +1,259 @@
-.title-miasto {
-    cursor: pointer;
-    color: var(--reverse-font-color);
+.add {
+    color: black;
     width: 60%;
     height: 30px;
     padding-top: 10px;
     border-radius: 10px;
+    background-color: lime;
+    margin: 10px;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-evenly;
+}
+.title-miasto {
+    cursor: pointer;
+}
+
+.add img{
+    width: 5%;
+    height: auto;
+}
+
+.edit {
+    color: black;
+    width: 60%;
+    height: 30px;
+    padding-top: 10px;
+    border-radius: 10px;
+    background-color: gray;
+    margin: 10px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+.remove {
+    color:black;
+    width: 60%;
+    height: 30px;
+    margin: 10px;
+    padding-top: 10px;
+
     background-color: red;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+.miasto-rozwin {
+    display: none;
+}
+
+.table {
+    width: 60%;
+    height: 30px;
+    padding-top: 10px;
+    flex-direction: column;
+    width: 60%;
+    padding-left: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    background-color: var(--button-color);
+    color: var(--reverse-font-color);
     margin: 10px;
     text-align: center;
     font-weight: bold;
 }
 
-.miasto-rozwin {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    padding-left: 20px;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    margin-top: 10px;
-    transition: max-height 0.5s ease-out;  /* Płynne rozwijanie */
-    max-height: 0;  /* Domyślnie ukryte */
-    overflow: hidden;  /* Ukrywa zawartość, gdy jest zwinięta */
+.table:hover{
+    transform: scale(1.05);
+    background-color: var(--button-color);
+    filter: brightness(0.8); 
+
 }
 
+.remove:hover{
+    transform: scale(1.05);
+    margin-top: 10px;
+}
+
+.add:hover{
+    transform: scale(1.05);
+}
 .miasto-rozwin.open {
     display: flex;
     max-height: 1000px;  /* Wartość, która będzie wystarczająca, aby rozwinąć zawartość */
     padding-bottom: 10px;  /* Dodajemy przestrzeń na dole */
 }
 
+.edit:hover{
+    transform: scale(1.05);
+}
 .nazwa {
     padding: 10px 0;
 }
 
+.sigmna-container{
+    width: 50%;
+    height: 30px;
+    background-color: aqua;
+    margin: 10px;
+    border-radius: 10px;
+}
 .nazwa-link {
     padding: 1vh 4vh;
     border-left: var(--reverse-font-color) solid;
+}
+
+
+/* Ogólny styl kontenera dla formularzy */
+.profil-container-dodaj{
+    max-width: 80%;
+    margin: 40px auto;
+    background: var(--second-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+/* Przycisk powrotu */
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #6a5acd;
+    color: white;
+    padding: 20px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background 0.3s ease;
+}
+
+.back-button:hover {
+    background: #5a4ecf;
+}
+
+.form-container-1 {
+    margin: 0 auto;
+    padding: 20px;
+    background: var(--second-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Nagłówek formularza */
+.form-container-1 h2 {
+    color: #444;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Stylizacja etykiet */
+.form-container-1 label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+/* Stylizacja pól wejściowych */
+.form-container-1 input, .form-container-1 textarea, .form-container-1 select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+/* Efekt focus dla pól formularza */
+.form-container-1 input:focus, .form-container-1 textarea:focus, .form-container-1 select:focus {
+    border-color: #6a5acd;
+    outline: none;
+}
+
+/* Stylizacja przycisków */
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.form-buttons input {
+    width: 48%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.form-buttons input[type="submit"] {
+    background-color: #6a5acd;
+    color: white;
+}
+
+.form-buttons input[type="reset"] {
+    background-color: #ddd;
+    color: #333;
+}
+
+.form-buttons input:hover {
+    transform: scale(1.05);
+}
+
+.form-buttons input[type="submit"]:hover {
+    background-color: #5a4ecf;
+}
+
+.form-buttons input[type="reset"]:hover {
+    background-color: #bbb;
+}
+
+.profil-container-remove {
+    max-width: 80%;
+    margin: 40px auto;
+    background: var(--second-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+.profil-container-remove form {
+    margin: 0 auto;
+    padding: 20px;
+    background: var(--second-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profil-container-remove select, .profil-container-remove input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.profil-container-remove input[type="submit"], .profil-container-remove input[type="reset"] {
+    width: 45%;
+    cursor: pointer;
+    background-color: #f04;
+    color: white;
+    border: none;
+    transition: 0.3s;
+}
+.profil-container-remove input[type="submit"]:hover, .profil-container-remove input[type="reset"]:hover {
+    background-color: #c03;
 }

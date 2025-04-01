@@ -1,25 +1,39 @@
-<div class="profil-container">
-<form method="post" action="index.php?strona=panel/add-at">
-        <p> Nazwa: <input type="text" name="xnazwa" size="40" maxlength="55" required></p>
-        <p> Cena: <input type="text" name="xcena" size="30" maxlength="55" required></p>
-        <p> Lokalizacja: <input type="text" name="xlok" size="4" maxlength="4"  required></p>
-        <p> Godz: <input type="text" name="xgodz" size="7" maxlength="14" required></p>
-        <p> Miasto: 
-        <select name="xmiasto" required>
+<div class="profil-container-dodaj">
+
+<a href="index.php?strona=admin" class="back-button">← Powrót do panelu</a>
+
+    <form method="post" action="index.php?strona=panel/add-at" class="form-container-1">
+        <h2>Dodaj Atrakcję</h2>
+
+        <label for="xnazwa">Nazwa:</label>
+        <input type="text" id="xnazwa" name="xnazwa" maxlength="55" required>
+
+        <label for="xcena">Cena:</label>
+        <input type="text" id="xcena" name="xcena" maxlength="55" required>
+
+        <label for="xlok">Lokalizacja:</label>
+        <input type="text" id="xlok" name="xlok" maxlength="4" required>
+
+        <label for="xgodz">Godziny otwarcia:</label>
+        <input type="text" id="xgodz" name="xgodz" maxlength="14" required>
+
+        <label for="xmiasto">Miasto:</label>
+        <select id="xmiasto" name="xmiasto" required>
             <?php
             require("config.php");
-            $wynik = mysqli_query($conn,"SELECT * FROM miasta");
+            $wynik = mysqli_query($conn, "SELECT * FROM miasta");
             while ($wiersz = mysqli_fetch_array($wynik)) {
-                echo '<option value="' . $wiersz["id_miasta"] . '">'. $wiersz["name"] .'</option>';
+                echo '<option value="' . $wiersz["id_miasta"] . '">' . $wiersz["name"] . '</option>';
             }
             ?>
-        </select>	
-    </p>
-        <p>Opis:<br>
-            <textarea name="xopis" cols="70" rows="5" required></textarea>
-        </p>
-        <p><input type="submit" value="Dodaj atrakcje->">
-           <input type="reset" value="..::Wyczyść opis::..">
-        </p>
+        </select>
+
+        <label for="xopis">Opis:</label>
+        <textarea id="xopis" name="xopis" rows="5" required></textarea>
+
+        <div class="form-buttons">
+            <input type="submit" value="Dodaj atrakcję">
+            <input type="reset" value="Wyczyść">
+        </div>
     </form>
 </div>

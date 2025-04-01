@@ -1,4 +1,4 @@
-<div class="profil-container">
+<div class="profil-container-dodaj">
     <center>
         
         <div class="add" onclick="toggleVisibility('add-rozwin')">
@@ -36,16 +36,13 @@
 
 <script>
 function toggleVisibility(className) {
-    // Najpierw ukrywamy wszystkie sekcje
     var allSections = document.querySelectorAll('.rozwin');
     allSections.forEach(function(section) {
         section.style.display = 'none';
     });
     
-    // Teraz pokazujemy tylko sekcję, na którą kliknięto
     const element = document.querySelector('.' + className);
     
-    // Jeśli element jest już widoczny, to go zwijamy, inaczej rozwijamy
     if (element.style.display === 'block') {
         element.style.display = 'none';
     } else {
