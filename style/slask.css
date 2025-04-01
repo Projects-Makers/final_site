@@ -17,7 +17,7 @@
 
 
 .baner {
-    background-image: url("../zdj/baner.webp"); /* Ścieżka do zdjęcia banera */
+    background-image: url("../zdj/baner.webp");
     width: 100%;
     max-width: 80vh;
     height: 45vh;
@@ -53,7 +53,7 @@
 /* Responsywność */
 @media screen and (max-width: 768px) {
     .baner-container1 {
-        padding: 15px;
+        height: 50vh;
     }
 
     .baner-container {

@@ -1,7 +1,57 @@
 <div class="profil-container">
     <center>
-    <a href="index.php?strona=table"><div class="add">ADD</div></a>
-    <a href="index.php?strona=table1"><div class="edit">EDIT</div></a>
-    <a href="index.php?strona=table2"><div class="remove">REMOVE</div></a>
+        
+        <div class="add" onclick="toggleVisibility('add-rozwin')">
+            <img src="icons/add.png" alt="">ADD<img src="icons/add.png" alt="">
+        </div>
+
+        <div class="add-rozwin rozwin">
+            <a href="index.php?strona=panel/dodaj-at"><div class="table">Atrakcje</div></a>
+            <a href="index.php?strona=panel/dodaj-mi"><div class="table">Miasta</div></a>
+            <a href="index.php?strona=panel/dodaj-rs"><div class="table">Restauracje</div></a>
+        </div>
+
+        <div class="edit" onclick="toggleVisibility('edit-rozwin')">
+            EDIT
+        </div>
+
+        <div class="edit-rozwin rozwin">
+            <a href="index.php?strona=panel/dodaj-at"><div class="table">Atrakcje</div></a>
+            <a href="index.php?strona=panel/dodaj-mi"><div class="table">Miasta</div></a>
+            <a href="index.php?strona=panel/dodaj-rs"><div class="table">Restauracje</div></a>
+        </div>
+
+        <div class="remove" onclick="toggleVisibility('remove-rozwin')">
+            REMOVE
+        </div>
+
+        <div class="remove-rozwin rozwin">
+            <a href="index.php?strona=panel/dodaj-at"><div class="table">Atrakcje</div></a>
+            <a href="index.php?strona=panel/dodaj-mi"><div class="table">Miasta</div></a>
+            <a href="index.php?strona=panel/dodaj-rs"><div class="table">Restauracje</div></a>
+        </div>
+
     </center>
 </div>
+
+<script>
+function toggleVisibility(className) {
+    // Najpierw ukrywamy wszystkie sekcje
+    var allSections = document.querySelectorAll('.rozwin');
+    allSections.forEach(function(section) {
+        section.style.display = 'none';
+    });
+    
+    // Teraz pokazujemy tylko sekcję, na którą kliknięto
+    const element = document.querySelector('.' + className);
+    
+    // Jeśli element jest już widoczny, to go zwijamy, inaczej rozwijamy
+    if (element.style.display === 'block') {
+        element.style.display = 'none';
+    } else {
+        element.style.display = 'block';
+    }
+}
+
+
+</script>
