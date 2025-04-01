@@ -60,7 +60,7 @@ $nr = $_GET["nr"];
 $wynik = mysqli_query($conn,"SELECT * from atrakcje where lp = $nr");
 while ($wiersz = mysqli_fetch_array($wynik)){
     
-    echo '<a href="index.php?strona=p_p&nr=' . $wiersz["id"] . '"><div class="city-card-info">';
+    echo '<a href="index.php?strona=p_p_a&nr=' . $wiersz["id"] . '"><div class="city-card-info">';
     $imagePath = 'zdj_atrakcje/' . $wiersz["id"] . '.webp';
     if (file_exists($imagePath)) {
         echo '<img src="' . $imagePath . '" alt="' . $wiersz["nazwa"] . '">';
@@ -72,6 +72,7 @@ while ($wiersz = mysqli_fetch_array($wynik)){
 }
 ?>
 </div>
+<div class="container-info-restauracje">
 <hr class="hr-czcionki1">
 <div class="czcionka1">Restauracje</div>
 <hr class="hr-czcionki1">
@@ -79,19 +80,17 @@ while ($wiersz = mysqli_fetch_array($wynik)){
 require("config.php");
 
 $nr = $_GET["nr"];
-echo '<div class="container-info">';
 $wynik = mysqli_query($conn,"SELECT * from restauracje where lp = $nr");
 while ($wiersz = mysqli_fetch_array($wynik)){
-    echo '<div class="city-card-info">';
-     $imagePath = '../zdj_atrakcje/' . $wiersz["id"] . '.webp';
-     echo '<div class="city-card">';
-     if (file_exists($imagePath)) {
-         echo '<a href="index.php?strona=#&nr=' . $wiersz["id"] . '"><img src="' . $imagePath . '"></a>';
-     } else {
-        echo '<img src="zdj/nic.webp">';
-     }
-     echo '' . $wiersz["nazwa"] . '';
-     echo '</div></div>';
+    echo '<a href="index.php?strona=p_p_r&nr=' . $wiersz["lp"] . '"><div class="city-card-info">';
+    $imagePath = 'zdj_restauracje/' . $wiersz["id"] . '.webp';
+    if (file_exists($imagePath)) {
+        echo '<img src="' . $imagePath . '" alt="' . $wiersz["nazwa"] . '">';
+    } else {
+        echo '<img src="zdj_atrakcje/nic.webp" alt="Brak zdjęcia">';
+    }
+    echo '<div class="text">' . $wiersz["nazwa"] . '';
+    echo '</div></a></div>';
  }
 ?>
 </div>
