@@ -31,7 +31,7 @@
 <?php 
 require("config.php");
 
-$querymiasta = "SELECT id_miasta, name FROM miasta";  // Ograniczenie zapytania do potrzebnych kolumn
+$querymiasta = "SELECT id_miasta, name FROM miasta";  
 $wynikmiasta = mysqli_query($conn, $querymiasta);
 
 if (!$wynikmiasta) {
@@ -42,8 +42,8 @@ if (mysqli_num_rows($wynikmiasta) == 0) {
     echo "<p>Brak atrakcji powiązanych z miastem.</p>";
 } else {
     while ($miasta = mysqli_fetch_array($wynikmiasta)) {
-        echo '<a href="index.php?strona=informacje&nr=' . htmlspecialchars($miasta["id_miasta"]) . '">';
-        echo '<div class="city-card">';
+        ?><div class="city-card" onclick="window.location.href='index.php?strona=informacje&nr=<?php echo $miasta['id_miasta']?>';">
+            <?php
         echo '<div class="window-foto">';
         $imagePath = 'zdj/' . $miasta["id_miasta"] . '.webp';
         if (file_exists($imagePath)) {
@@ -53,7 +53,7 @@ if (mysqli_num_rows($wynikmiasta) == 0) {
         }
         echo '</div><center>';
         echo '<div class="city-name">' . htmlspecialchars($miasta["name"]) . '</div>';
-        echo '</div></center></a>';
+        echo '</div></center>';
     }
 }
 ?>

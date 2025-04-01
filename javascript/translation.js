@@ -6,11 +6,11 @@ function loadTranslations(language) {
             const langTranslations = translations[language];
             
             // Sidebar
-            // document.getElementById('home').innerHTML = `<img src="assets/icons/home-white.png" alt="Home" class="icons-theme"> ${langTranslations.home}`;
-            // document.getElementById('map').innerHTML = `<img src="assets/icons/settings-white.png" alt="Settings" class="icons-theme"> ${langTranslations.map}`;
-            // document.getElementById('shop').innerHTML = `<img src="assets/icons/subscribe-white.png" alt="Subscriptions" class="icons-theme"> ${langTranslations.shop}`;
-            // document.getElementById('account').innerHTML = `<img src="assets/icons/history-white.png" alt="History" class="icons-theme"> ${langTranslations.account}`;
-            // document.getElementById('settings').innerHTML = `<img src="assets/icons/playlist-white.png" alt="Playlist" class="icons-theme"> ${langTranslations.settings}`;
+            document.getElementById('home').innerHTML = `<img src="icons/home.png" alt="Home"> ${langTranslations.home}`;
+            document.getElementById('map').innerHTML = `<img src="icons/map.png" alt="Map"> ${langTranslations.map}`;
+            document.getElementById('shop').innerHTML = `<img src="icons/shop.png" alt="Map"> ${langTranslations.shop}`;
+            document.getElementById('account').innerHTML = `<img src="icons/map.png" alt="Map"> ${langTranslations.account}`;
+            document.getElementById('settings').innerHTML = `<img src="icons/cogwheel.png" alt="Map"> ${langTranslations.settings}`;
 
 
 

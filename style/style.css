@@ -7,15 +7,20 @@ body {
     overflow-x: hidden;
 }
 
+
+a{
+    text-decoration: none;
+}
+
 :root {
     --main-bg: #f7f1e3;
     --second-bg: white;
     --card-bg: #fff;
-    --font-color: white;
+    --font-color: black;
     --reverse-font-color: black;
     --mortadelka-color: rgb(194, 182, 182);
     --button-color: #3e3e3e;
-    --hr-border-color: gray; /* Dodaj zmienną dla koloru linii */
+    --hr-border-color: gray; 
 }
 
 /* Dla ciemnego motywu */
@@ -76,6 +81,7 @@ section {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
     will-change: transform;
+    cursor: pointer;
 }
 
 .city-card:hover {
@@ -97,7 +103,7 @@ section {
 
 /* Styl dla linii */
 hr {
-    width: 40vh;
+    width: 80%;
     border: 0.2vh solid var(--hr-border-color);
     margin: 20px auto;
 }
