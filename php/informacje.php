@@ -1,6 +1,6 @@
 <section>
 <center>
-<div class="baner-container1">
+<div class="podstrona_a">
     <hr style="width:40vh; border: 0.2vh solid gray;">
     <center><h1>
 	<?php
