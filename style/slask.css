@@ -8,6 +8,17 @@
     border: 1px solid var(--second-bg);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	
+}
+
+.baner-container2 {
+    width: 90%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: var(--second-bg);
+    border: 1px solid var(--second-bg);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .podstrona_a {

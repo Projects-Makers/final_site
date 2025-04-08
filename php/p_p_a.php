@@ -1,14 +1,31 @@
 <section>
-<div class="baner-container1">
+<div class="baner-container2">
+<div class="city-card-info">
+<?php
+require("config.php");
 
-<div class="text-left">
-jhavgsghfsydghuysdgyufgysudghfygdsyugfyudsgyufgydsgfyugsdyufgyudsgfy
-jhavgsghfsydghuysdgyufgysudghfygdsyugfyudsgyufgydsgfyugsdyufgyudsgfy
-jhavgsghfsydghuysdgyufgysudghfygdsyugfyudsgyufgydsgfyugsdyufgyudsgfy
-jhavgsghfsydghuysdgyufgysudghfygdsyugfyudsgyufgydsgfyugsdyufgyudsgfy
-jhavgsghfsydghuysdgyufgysudghfygdsyugfyudsgyufgydsgfyugsdyufgyudsgfy
-jhavgsghfsydghuysdgyufgysudghfygdsyugfyudsgyufgydsgfyugsdyufgyudsgfy
-</div>
-</div>
+$nr = $_GET["nr"];
 
+$wynik = mysqli_query($conn,"SELECT * from atrakcje where id = $nr");
+$wiersz = mysqli_fetch_array($wynik);
+    
+    $imagePath = 'zdj_atrakcje/' . $wiersz["id"] . '.webp';
+    if (file_exists($imagePath)) {
+        echo '<img src="' . $imagePath . '"">';
+    } else {
+        echo '<img src="zdj_atrakcje/nic.webp" alt="Brak zdjęcia">';
+    }
+    echo '</div>';
+
+?>
+<center>
+<?php
+require("config.php");
+$nr = $_GET["nr"];
+$wynik = mysqli_query($conn,"SELECT * from atrakcje where id = $nr");
+$wiersz = mysqli_fetch_array($wynik);
+echo '' . $wiersz["nazwa"] . '';
+?>
+</center>
+</div>	
 </section>
