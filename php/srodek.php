@@ -1,10 +1,11 @@
-<!-- Zoptymalizowany HTML -->
 <div class="baner-container1">
     <hr class="banner-divider">
     <h1 class="title-centered">Śląsk</h1>
     <hr class="banner-divider">
     
     <div class="content-wrapper">
+    <div class="baner"></div>
+
         <div class="baner-container">
             <h2>Województwo Śląskie</h2>
             <p>Śląsk to jeden z najważniejszych regionów Polski...</p>
@@ -19,7 +20,6 @@
             <p>Stolicą województwa Śląskiego są Katowice...</p>
         </div>
 
-        <div class="baner"></div>
     </div>
 </div>
 

@@ -18,7 +18,6 @@ $wiersz = mysqli_fetch_array($wynik);
     echo '</div>';
 
 ?>
-<center>
 <?php
 require("config.php");
 $nr = $_GET["nr"];
@@ -26,6 +25,5 @@ $wynik = mysqli_query($conn,"SELECT * from atrakcje where id = $nr");
 $wiersz = mysqli_fetch_array($wynik);
 echo '' . $wiersz["nazwa"] . '';
 ?>
-</center>
 </div>	
 </section>
