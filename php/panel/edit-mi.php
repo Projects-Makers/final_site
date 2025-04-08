@@ -1,59 +1,73 @@
 <?php
+// Wczytanie pliku konfiguracyjnego z połączeniem do bazy danych
 require("config.php");
 ?>
 
-<div class="profil-container">
-    <center>
-        <?php
-        // Pobieramy wszystkie miasta
-        $miastaQuery = mysqli_query($conn, "SELECT * FROM miasta");
+<div class="profil-container-dodaj">
+<a href="index.php?strona=admin" class="back-button">← Powrót do panelu</a>
 
-        while ($miasto = mysqli_fetch_array($miastaQuery)) {
-            // Dodajemy unikalny id dla każdego miasta, np. za pomocą id_miasta
-            echo '<div class="title-miasto" id="miasto-' . $miasto['id_miasta'] . '" onclick="toggleCity(' . $miasto['id_miasta'] . ')">' . $miasto['name'] . '</div>';
-            
-            // Pobieramy atrakcje z danego miasta
-            $atrakcjeQuery = mysqli_query($conn, "SELECT * FROM atrakcje WHERE lp = " . $miasto['id_miasta']);
-            
-            // Tworzymy kontener na atrakcje, który będzie początkowo ukryty
-            echo '<div class="title-miasto-rozwin miasto-rozwin" id="city-' . $miasto['id_miasta'] . '" >';
+	
+<form class="edit-form" onsubmit="return false;">
+	<input type="search" id="search-attraction" name="szukaj" placeholder="Szukaj miasta..." class="search-bar">
+	<input type="reset" id="search-button" value="Wyczyść">
+</form>
 
-            while ($atrakcje = mysqli_fetch_array($atrakcjeQuery)) {
-                // Ścieżka do zdjęcia restauracji
-                $imagePath = 'zdj_atrakcje/' . $atrakcje["id"] . '.webp';
-
-                // Rozwijany kontener z restauracjami
-                echo '<div class="miasto-rozwin">';
-
-                // Sprawdzamy, czy zdjęcie istnieje
-                echo '<div class="nazwa">';
-                if (file_exists($imagePath)) {
-                    echo '<img src="' . $imagePath . '" alt="' . $atrakcje["nazwa"] . '">';
-                } else {
-                    echo '<img src="zdj_atrakcje/nic.png" alt="Brak zdjęcia">';
-                }
-                echo $atrakcje['nazwa'];
-                echo '</div>';
-                echo '<div class="nazwa-link"><a href="index.php?strona=panel/edit-rs1&id=' . $atrakcje['id'] . '">Edit</a></div>';
-                echo '</div>';
-            }
-
-            echo '</div>';  // Zamyka title-miasto-rozwin
-        }
-        ?>
-    </center>
+	<div id="no-results" style="display: none; text-align: center; margin-top: 20px; font-weight: bold;">
+    Brak wyników
 </div>
-<script>
-    // Funkcja do rozwijania i zwijania sekcji
-    function toggleCity(cityId) {
-        // Znajdujemy kontener z atrakcjami tego miasta
-        var cityContainer = document.getElementById('city-' + cityId);
+<?php
+				echo'<hr class="banner-divider">';
 
-        // Przełączamy klasę 'open', aby zmienić max-height
-        if (cityContainer.classList.contains('open')) {
-            cityContainer.classList.remove('open');  // Ukryj
+		$wynik = mysqli_query($conn, "SELECT * from miasta");
+
+
+		while ($wiersz = mysqli_fetch_array($wynik)) {
+
+			echo '<div class="miasto-item-box">';
+			echo '<div class="miasto-item">' . $wiersz['name'] . '</div>';
+			echo '<div class="miasto-item-link"><a href="index.php?strona=panel/edit-mi1&id=' . $wiersz['id_miasta'] . '">Edit</a></div></div>';
+		}
+		?>
+</div>
+
+<script>
+document.getElementById('search-attraction').addEventListener('input', function () {
+    const searchTerm = this.value.toLowerCase();
+
+    // znajdź wszystkie nagłówki miast i kontenery z atrakcjami
+    const allHeaders = document.querySelectorAll('.title-centered-edit');
+    const allDividers = document.querySelectorAll('.banner-divider');
+    const allGroups = []; // grupy między nagłówkami
+
+    let currentGroup = [];
+
+    const attractionBoxes = document.querySelectorAll('.miasto-item-box');
+    attractionBoxes.forEach((box, index) => {
+        const text = box.querySelector('.miasto-item').textContent.toLowerCase();
+
+        if (text.includes(searchTerm)) {
+            box.style.display = 'flex';
         } else {
-            cityContainer.classList.add('open');  // Pokaż
+            box.style.display = 'none';
         }
-    }
+    });
+
+    // ukryj nagłówki miast, które nie mają żadnej widocznej atrakcji
+    allHeaders.forEach((header, i) => {
+        let hasVisible = false;
+        let sibling = header.nextElementSibling;
+
+        while (sibling && !sibling.classList.contains('title-centered-edit')) {
+            if (sibling.classList.contains('miasto-item-box') && sibling.style.display !== 'none') {
+                hasVisible = true;
+            }
+            sibling = sibling.nextElementSibling;
+        }
+
+        header.style.display = hasVisible ? 'block' : 'none';
+        if (allDividers[i * 2]) allDividers[i * 2].style.display = hasVisible ? 'block' : 'none'; // górny divider
+        if (allDividers[i * 2 + 1]) allDividers[i * 2 + 1].style.display = hasVisible ? 'block' : 'none'; // dolny divider
+    });
+});
 </script>
+

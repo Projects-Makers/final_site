@@ -11,17 +11,17 @@ if (isset($_SESSION['username'])) {
 ?>
 
 <aside class="sidebar">
-    <div class="icon"><img src="icons/home.png" alt="Home"></div>
-    <div class="icon"><img src="icons/map.png" alt="Map"></div>
+    <div class="icon"><a href="index.php?strona=srodek"><img src="icons/home.png" alt="Home"></a></div>
+    <div class="icon"><img src="icons/map.png" alt="Map" id="mapModalButton"></div>
     <div class="icon"><img src="icons/shop.png" alt="Shop"></div>
     <?php
 if (isset($_SESSION['username'])) {
     echo '<a href="index.php?strona=profil"><div class="icon"><img src="' . $zdjecie_profilowe_path . '" alt="Profilowe" class="zdj-profilowe">'. '</div></a>';
 } else {
-    echo '<div class="icon"><img src="icons/user.png" alt="Map"></div>';
+    echo '<div class="icon"><a href="index.php?strona=profil"><img src="icons/user.png" alt="Map"></a></div>';
 }
 ?>
-<div class="icon"><img src="icons/cogwheel.png" alt="Settings"></div>
+<div class="icon"><a href="index.php?strona=settings"><img src="icons/cogwheel.png" alt="Settings"></a></div>
 
     <div class="extra">
         <a href="index.php?strona=srodek"><div class="extra-icon" id="home"><img src="icons/home.png" alt="Home">Główna</div></a>

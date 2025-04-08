@@ -1,4 +1,3 @@
-<section>
 <div class="baner-container1">
 
 <div class="text-left">
@@ -10,5 +9,3 @@ jhavgsghfsydghuysdgyufgysudghfygdsyugfyudsgyufgydsgfyugsdyufgyudsgfy
 jhavgsghfsydghuysdgyufgysudghfygdsyugfyudsgyufgydsgfyugsdyufgyudsgfy
 </div>
 </div>
-
-</section>

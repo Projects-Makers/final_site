@@ -18,18 +18,6 @@
     
 }
 
-.sidebar:hover {
-    width: auto;
-}
-
-.sidebar:hover .icon {
-    display: none; 
-}
-
-.sidebar:hover .extra {
-    display: block; 
-    align-items: normal;
-}
 
 .icon {
     font-size: 24px;
@@ -77,4 +65,20 @@
 
 .konto, .mapa-button{
     cursor: pointer;
+}
+
+@media screen and (min-width: 769px) {
+    .sidebar:hover {
+        width: auto;
+    }
+    
+    .sidebar:hover .icon {
+        display: none; 
+    }
+    
+    .sidebar:hover .extra {
+        display: block; 
+        align-items: normal;
+    }
+    
 }
