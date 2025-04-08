@@ -1,0 +1,42 @@
+.lacznik {
+  display: flex;
+  justify-content: flex-start; /* Ustawienie zawartości na początek (po lewej stronie) */
+  align-items: center; /* Wyśrodkowanie elementów w pionie */
+  width: 100%;
+  padding: 20px; /* Dodanie paddingu dla lepszego wyglądu */
+}
+
+.zdjecie12 {
+  margin-right: 20px; /* Odstęp między obrazkiem a tekstem */
+}
+
+.informacje1 {
+  flex: 1; /* Umożliwia rozciągnięcie tekstu na dostępne miejsce */
+  text-align: center; /* Wyśrodkowanie tekstu w elemencie */
+  margin-top: -2%;
+  margin-right: 10%;
+  border-radius: 10px;
+  font-size: 26px;
+}
+
+/* Style dla tabeli */
+.tabela {
+  width: 80%;
+  margin: 20px auto; /* Wyśrodkowanie tabeli */
+  border-collapse: collapse; /* Umożliwia złączenie obramowania komórek */
+}
+
+.tabela th, .tabela td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd; /* Obramowanie komórek tabeli */
+}
+
+.tabela th {
+  background-color: yellow; /* Kolor tła dla nagłówków tabeli */
+  color: black; /* Kolor tekstu w nagłówkach */
+}
+
+.tabela td {
+  background-color: #f9f9f9; /* Kolor tła dla danych w tabeli */
+}

@@ -1,27 +1,27 @@
 <div class="baner-container1">
+	<center>
     <hr class="banner-divider">
     <h1 class="title-centered">Śląsk</h1>
     <hr class="banner-divider">
-    
+</center>
     <div class="content-wrapper">
-    <div class="baner"></div>
-
+        <div class="baner"></div>
         <div class="baner-container">
             <h2>Województwo Śląskie</h2>
             <p>Śląsk to jeden z najważniejszych regionów Polski...</p>
-            
+
             <h3>Geografia</h3>
             <p>Województwo Śląskie znajduje się w południowej części Polski...</p>
-            
+
             <h3>Historia</h3>
             <p>Śląsk ma bogatą historię...</p>
-            
+
             <h3>Katowice</h3>
             <p>Stolicą województwa Śląskiego są Katowice...</p>
         </div>
-
     </div>
 </div>
+
 
 <hr class="banner-divider">
 <h1 class="title-centered">MIASTA</h1>
