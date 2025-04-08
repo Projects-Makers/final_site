@@ -36,7 +36,7 @@
 		$nr = $_GET["nr"];
 		$wynik = mysqli_query($conn,"SELECT * from miasta where id_miasta = $nr");
 		while ($wiersz = mysqli_fetch_array($wynik)){
-		    $imagePath = 'zdj/' . $wiersz["id_miasta"] . '.webp';
+		    $imagePath = 'zdj_miasta/' . $wiersz["id_miasta"] . '.webp';
 		if (file_exists($imagePath)) {
         echo '<img src="' . $imagePath . '" alt="' . $wiersz["name"] . '">';
 		} else {
