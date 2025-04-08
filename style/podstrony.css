@@ -13,8 +13,10 @@
 .informacje1 {
   flex: 1; /* Umożliwia rozciągnięcie tekstu na dostępne miejsce */
   text-align: center; /* Wyśrodkowanie tekstu w elemencie */
-  margin-top: -5%;
+  margin-top: -2%;
   margin-right: 10%;
+  border-radius: 10px;
+  font-size: 26px;
 }
 
 /* Style dla tabeli */

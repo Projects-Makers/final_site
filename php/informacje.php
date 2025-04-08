@@ -16,7 +16,7 @@
     <hr style="width: 40vh; border: 0.2vh solid gray;">
     
     <div class="content-wrapper">
-        <div class="baner-container">
+        <div class="baner-container4">
 		<hr style="width:40vh; border: 0.2vh solid gray;">
         <h2>Opis</h2>
 		<hr style="width:40vh; border: 0.2vh solid gray;">
