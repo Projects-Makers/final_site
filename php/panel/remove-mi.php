@@ -1,3 +1,6 @@
+<?php
+require("config.php");
+?>
 <div class="profil-container-remove">
 
 <a href="index.php?strona=admin" class="back-button">← Powrót do panelu</a>
