@@ -49,7 +49,7 @@
 
 }
 
-.miasto-rozwin {
+.rozwin {
     display: none;
 }
 
@@ -113,6 +113,7 @@
 /* Ogólny styl kontenera dla formularzy */
 .profil-container-dodaj{
     max-width: 80%;
+    min-height: 90px;
     margin: 40px auto;
     background: var(--second-bg);
     padding: 20px;
@@ -256,4 +257,78 @@
 }
 .profil-container-remove input[type="submit"]:hover, .profil-container-remove input[type="reset"]:hover {
     background-color: #c03;
+}
+
+.edit-form {
+    width: 80%;
+    float: right;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 20px;
+}
+
+.edit-form .search-bar {
+	padding: 8px 12px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	width: 90%;
+}
+
+.edit-form #search-button {
+    width: 20%;
+	padding: 8px 16px;
+	font-size: 16px;
+	border: none;
+	border-radius: 6px;
+	background-color: red;
+	color: white;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.edit-form #search-button:hover {
+	background-color: #0056b3;
+}
+
+
+title-centered-edit {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--reverse-font-color);
+    
+}
+
+.miasto-item-box{
+    font-size: large;
+    margin-top: 1vh;
+    padding: 1vh 4vh;
+    background-color: var(--button-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 1vh;
+    align-items: center;
+    cursor: pointer;
+}
+
+.miasto-item-box:hover{
+    transform: scale(1.02);
+    background-color: var(--button-color);
+    filter: brightness(0.8); 
+}
+
+.miasto-item-link{
+    padding: 1vh 4vh;
+    border-left: var(--reverse-font-color) solid;
+    color: var(--reverse-font-color);
+    font-size: large;
+    text-decoration: none;
+} 
+
+.miasto-item-link a{
+    color: black;
 }

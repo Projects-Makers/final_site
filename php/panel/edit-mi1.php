@@ -22,27 +22,30 @@ if (isset($_GET['id'])) {
 }
 ?>
 
-<div class="profil-container">
-<center>
-<form method="post" action="index.php?strona=panel/edit-mi11">
-        <input type="hidden" name="id" value="<?php echo $wiersz['id_miasta']; ?>">
+<div class="profil-container-dodaj">
+    <a href="index.php?strona=admin" class="back-button">← Powrót do panelu</a>
+
+    <form method="post" action="index.php?strona=panel/edit-mi11" class="form-container-1">
+        <h2>Edytuj Miasto</h2>
 
         <!-- City Name -->
-        <p> Nazwa: <input type="text" name="xnazwa" size="40" maxlength="55" required value="<?php echo $wiersz['name']; ?>"></p>
+        <label for="xnazwa">Nazwa:</label>
+        <input type="text" id="xnazwa" name="xnazwa" maxlength="55" required value="<?php echo $wiersz['name']; ?>">
 
         <!-- City Lat and Lng (show current city data) -->
-        <p> Szerokość geograficzna (Lat): <input type="text" name="xlat" size="30" maxlength="55" value="<?php echo $wiersz['lat']; ?>" readonly></p>
-        <p> Długość geograficzna (Lng): <input type="text" name="xlng" size="30" maxlength="55" value="<?php echo $wiersz['lng']; ?>" readonly></p>
+        <label for="xlat">Szerokość geograficzna (Lat):</label>
+        <input type="text" id="xlat" name="xlat" maxlength="55" value="<?php echo $wiersz['lat']; ?>" readonly>
+
+        <label for="xlng">Długość geograficzna (Lng):</label>
+        <input type="text" id="xlng" name="xlng" maxlength="55" value="<?php echo $wiersz['lng']; ?>" readonly>
 
         <!-- Description -->
-        <p>Opis:<br>
-            <textarea name="xopis" cols="70" rows="5" required><?php echo $wiersz['description']; ?></textarea>
-        </p>
+        <label for="xopis">Opis:</label>
+        <textarea id="xopis" name="xopis" rows="5" required><?php echo $wiersz['description']; ?></textarea>
 
-        <!-- Form Actions -->
-        <p><input type="submit" value="Zaktualizuj miasto->">
-           <input type="reset" value="..::Wyczyść opis::..">
-        </p>
+        <div class="form-buttons">
+            <input type="submit" value="Zaktualizuj miasto">
+            <input type="reset" value="Wyczyść">
+        </div>
     </form>
-</center>
 </div>
