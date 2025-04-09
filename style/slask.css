@@ -33,7 +33,7 @@
 }
 
 .text-left{
-	float: left;
+	float left
 }
 
 .baner-container h1{
@@ -89,19 +89,7 @@
         overflow-y: scroll;
 		margin-top: -25.5%;
     }
-    .baner-container4 {
-        color: black;
-        width: 80vh;
-        height: 38.5vh;
-        padding: 20px;
-        background-color: #d1cfcf;
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        margin: 10px auto;
-        float: right;
-        overflow-y: scroll;
-    }
+    
 }
 
 /* Responsywność */
