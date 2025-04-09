@@ -24,6 +24,7 @@ if (isset($_GET['id'])) {
         <h2>Edytuj Atrakcję</h2>
 
         <!-- Attraction Name -->
+        <input type="hidden" name="id" value="<?php echo $id; ?>">
         <label for="xnazwa">Nazwa:</label>
         <input type="text" id="xnazwa" name="xnazwa" size="40" maxlength="55" required value="<?php echo $wiersz['nazwa']; ?>">
 
