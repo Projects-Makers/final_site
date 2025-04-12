@@ -1,9 +1,7 @@
 <div class="baner-container1">
-	<center>
     <hr class="banner-divider">
     <h1 class="title-centered">Śląsk</h1>
     <hr class="banner-divider">
-</center>
     <div class="content-wrapper">
         <div class="baner"></div>
         <div class="baner-container">

@@ -17,18 +17,16 @@
 
 .container-info{
     margin-top: 25px;
-    gap: 5px;
     padding: 10px;
-    height:68vh;
+    height:auto;
     width: 90%;
 	
 }
 
 .container-info-restauracje{
-    margin-top: 20%;
     gap: 5px;
     padding: 10px;
-    height:68vh;
+    height:auto;
     width: 90%;
 	
 }
@@ -41,7 +39,7 @@
     border-radius: 8px;
     padding: 20px;  
     width: 200px;
-    height: 70%;
+    height:500px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
     vertical-align: top; /* Wyrównanie do góry */
@@ -72,8 +70,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
     vertical-align: top; /* Wyrównanie do góry */
-	float: left;
-}
+    }
 
 .city-card-info:hover {
     transform: scale(1.02);
@@ -86,20 +83,5 @@
     border-radius: 4px;
 }
 
-.text{
-    margin-top: 20px;
-    text-wrap:stable;
-    color: black;
-}
 
-.czcionka1{
-    font-size: 20px;
-    font-weight: bold;
-    color: var(--font-color);
-    margin-top: 10px;
-}
 
-.hr-czcionki1{
-    width: 30vh; 
-    border: 0.2vh solid var(--button-color);
-}

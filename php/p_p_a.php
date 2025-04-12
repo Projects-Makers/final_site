@@ -1,8 +1,8 @@
-<section>
-    <div class="baner-container2">
+<a href="index.php?strona=informacje&nr=<?php echo $_GET["l"];?>" class="back-button">← Powrót do wyboru</a>
+<div class="baner-container2">
         <div class="lacznik">
             <div class="zdjecie12">
-                <div class="city-card-info">
+                <div class="baner-podstrona">
                     <?php
                     require("config.php");
 
@@ -21,7 +21,8 @@
                 </div>
             </div>
             <div class="informacje1">
-                <hr class="hr-czcionki1">
+            <hr class="banner-divider">
+                <h1 class="title-centered">
                 <?php
                 require("config.php");
                 $nr = $_GET["nr"];
@@ -29,7 +30,9 @@
                 $wiersz = mysqli_fetch_array($wynik);
                 echo '' . $wiersz["nazwa"] . '';
                 ?>
-                <hr class="hr-czcionki1">
+                </h1>
+		<hr class="banner-divider">
+
                 <?php
                 require("config.php");
                 $nr = $_GET["nr"];
@@ -80,4 +83,3 @@
             </div>
         </div>
     </div>
-</section>

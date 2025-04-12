@@ -1,3 +1,5 @@
+@media screen and (min-width:769px){
+
 .lacznik {
   display: flex;
   justify-content: flex-start; /* Ustawienie zawartości na początek (po lewej stronie) */
@@ -19,6 +21,37 @@
   font-size: 26px;
 }
 
+
+.baner-container2 {
+  width: 90%;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: var(--second-bg);
+  border: 1px solid var(--second-bg);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+}
+@media screen and (max-width:768px){
+
+  .baner-container2 {
+    width: 80%;
+    margin: 40px 0;
+    padding: 20px;
+    background-color: var(--second-bg);
+    border: 1px solid var(--second-bg);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.informacje1 {
+  flex: 1; /* Umożliwia rozciągnięcie tekstu na dostępne miejsce */
+  text-align: center; /* Wyśrodkowanie tekstu w elemencie */
+  border-radius: 10px;
+}
+
+
+}
 /* Style dla tabeli */
 .tabela {
   width: 80%;

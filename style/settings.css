@@ -50,6 +50,11 @@
     margin-right: 20%;
 }
 
+.section1 {
+    margin-bottom: 20px;
+    margin-right: 20%;
+}
+
 .settings h2 {
     width: 90%;
     border-bottom: 2px solid #ddd;
@@ -58,7 +63,7 @@
 }
 
 .content input {
-    width: 60%;
+    width: 70%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
@@ -84,4 +89,7 @@
     background: #575757;
 }
 
+.toggle1{
+    display: flex;
+}
 

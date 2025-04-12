@@ -62,6 +62,8 @@ section {
     width: calc(100% - 7vh);
     height: 100%;
     margin-left: 9vh;
+    padding: 0 auto;
+
 
 }
 

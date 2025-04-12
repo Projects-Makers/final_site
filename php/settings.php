@@ -1,10 +1,6 @@
 <main class="settings">
         
-<aside class="sidebar-settings">
-            <a href="#account" id="aside-account-settings">Ustawienia konta</a>
-            <a href="#privacy" id="aside-privacy">Prywatność</a>
-            <a href="#notifications" id="aside-notification">Powiadomienia</a>
-        </aside>
+
 <div class="container-settings">
         
         
@@ -42,13 +38,13 @@
                 <p>Opcje prywatności </p>
             </div>
             
-            <div class="section">
+            <div class="section1">
                 <h2 id="notification">Powiadomienia</h2>
-                <div class="toggle"></div>
+                <div class="toggle1"></div>
                     <label for="email" id="email-notification">Powiadomienia e-mail</label>
                     <input type="checkbox" id="email">
                 </div>
-        <div class="toggle">
+        <div class="toggle1">
             <label for="sms" id="SMS-notification">Powiadomienia SMS</label>
             <input type="checkbox" id="sms">
         </div>

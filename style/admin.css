@@ -124,18 +124,24 @@
 }
 
 /* Przycisk powrotu */
-.back-button {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: #6a5acd;
-    color: white;
-    padding: 20px 24px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 18px;
-    transition: background 0.3s ease;
-}
+
+    .back-button {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background: #6a5acd;
+        color: white;
+        padding: 20px 24px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 18px;
+        transition: background 0.3s ease;
+    }
+    
+
+
+
+
 
 .back-button:hover {
     background: #5a4ecf;
@@ -235,9 +241,8 @@
 .profil-container-remove form {
     margin: 0 auto;
     padding: 20px;
-    background: var(--second-bg);
+    background: transparent;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .profil-container-remove select, .profil-container-remove input {
@@ -259,35 +264,72 @@
     background-color: #c03;
 }
 
-.edit-form {
-    width: 80%;
-    float: right;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 10px;
-	margin-bottom: 20px;
+@media  screen  and (min-width: 769px) {
+    .edit-form {
+        width: 80%;
+        float: right;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    .edit-form .search-bar {
+        padding: 8px 12px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        width: 90%;
+    }
+    
+    .edit-form #search-button {
+        width: 20%;
+        padding: 8px 16px;
+        font-size: 16px;
+        border: none;
+        border-radius: 6px;
+        background-color: red;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
 }
 
-.edit-form .search-bar {
-	padding: 8px 12px;
-	font-size: 16px;
-	border: 1px solid #ccc;
-	border-radius: 6px;
-	width: 90%;
+@media screen and (max-width: 768px) {
+    .edit-form {
+        width: 55%;
+        float: right;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .edit-form .search-bar {
+        padding: 8px 12px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        width: 65%;
+    }
+
+    .edit-form #search-button {
+        width: 30%;
+        padding: 8px 16px;
+        font-size: 16px;
+        border: none;
+        border-radius: 6px;
+        background-color: red;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
 }
 
-.edit-form #search-button {
-    width: 20%;
-	padding: 8px 16px;
-	font-size: 16px;
-	border: none;
-	border-radius: 6px;
-	background-color: red;
-	color: white;
-	cursor: pointer;
-	transition: background-color 0.3s ease;
-}
+
+
+
 
 .edit-form #search-button:hover {
 	background-color: #0056b3;
