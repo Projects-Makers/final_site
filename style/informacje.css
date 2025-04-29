@@ -14,12 +14,14 @@
 .info:hover{
     transform: scale(1.05);
 }
+@media screen and (min-width:769px){
 
 .container-info{
     margin-top: 25px;
     padding: 10px;
     height:auto;
     width: 90%;
+    gap: 15px;
 	
 }
 
@@ -82,6 +84,73 @@
     height:80%;
     border-radius: 4px;
 }
+}
 
 
+@media screen and (max-width:768px){
 
+    .container-info{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 5px;
+        padding: 10px;
+        
+    }
+    
+    .container-info-restauracje{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 5px;
+        padding: 10px;
+        
+    }
+    
+    .city-card-info {
+        background-color: var(--card-bg);
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        padding: 20px;
+        width: 200px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+        will-change: transform;
+        margin-left: auto;
+        margin-right: auto;
+        cursor: pointer;
+    }
+    
+    .marginseki{
+        margin-top: 100%;
+    }
+    
+    .city-card-info1 img {
+        display: block;
+        width: 100%;
+        height:100%;
+        border-radius: 4px;
+    }
+    
+    .city-card-info1 {
+        display: inline-block;
+        margin: 0px 15px;
+        background-color: var(--card-bg);
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        padding: 20px;  
+        width: 200px;
+        height: 400px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+        vertical-align: top; /* Wyrównanie do góry */
+        }
+    
+    .city-card-info:hover {
+        transform: scale(1.02);
+    }
+    
+    .city-card-info img {
+        display: block;
+        width: 100%;
+        height:80%;
+        border-radius: 4px;
+    }}
