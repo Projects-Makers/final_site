@@ -55,10 +55,11 @@
 </div>
 </div>
 
-<div class="container-info">
 <hr class="banner-divider">
     <h1 class="title-centered">Atrakcje</h1>
     <hr class="banner-divider">
+<div class="container-info">
+
 <?php
 require("config.php");
 
