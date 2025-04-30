@@ -89,7 +89,7 @@ require("config.php");
 $nr = $_GET["nr"];
 $wynik = mysqli_query($conn,"SELECT * from restauracje where lp = $nr");
 while ($wiersz = mysqli_fetch_array($wynik)){
-    echo '<a href="index.php?strona=p_p_r&l=' . $nr . '&nr=' . $wiersz["lp"] . '"><div class="city-card-info">';
+    echo '<a href="index.php?strona=p_p_r&l=' . $nr . '&nr=' . $wiersz["id"] . '"><div class="city-card-info">';
     $imagePath = 'zdj_restauracje/' . $wiersz["id"] . '.webp';
     if (file_exists($imagePath)) {
         echo '<img src="' . $imagePath . '" alt="' . $wiersz["nazwa"] . '">';
