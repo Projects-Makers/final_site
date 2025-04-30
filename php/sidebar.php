@@ -43,7 +43,7 @@ if (isset($_SESSION['username'])) {
 if (isset($_SESSION['username'])) {
     echo '<a href="index.php?strona=profil"><div class="extra-icon"><img src="' . $zdjecie_profilowe_path . '" alt="Profilowe" class="zdj-profilowe">' . htmlspecialchars($skrocone) . '</div></a>';
 } else {
-    echo '<div class="extra-icon konto" id="account"><img src="icons/user.png" alt="User">Konto</div>';
+    echo '<div class="extra-icon konto"><img src="icons/user.png" alt="User">Konto</div>';
 }
 ?>
 
