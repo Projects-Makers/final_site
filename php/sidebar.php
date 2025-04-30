@@ -37,13 +37,25 @@ if (isset($_SESSION['username'])) {
                 <div id="map" style="width: 100%; height: 95%;"></div>
             </div>
         </div>
-
-        <a href="#"><div class="extra-icon" id="shop"><img src="icons/shop.png" alt="Shop">Sklep</div></a>
+	<script>
+	<style>
+        button {
+            all: unset; 
+            cursor: pointer; 
+        }
+	</script>
+    <style>
+        button {
+            all: unset;
+            cursor: pointer; 
+        }
+	</style>
+        <button onclick="trip()"><div class="extra-icon" id="shop"><img src="icons/shop.png" alt="Shop">Sklep</div></button>
         <?php
 if (isset($_SESSION['username'])) {
     echo '<a href="index.php?strona=profil"><div class="extra-icon"><img src="' . $zdjecie_profilowe_path . '" alt="Profilowe" class="zdj-profilowe">' . htmlspecialchars($skrocone) . '</div></a>';
 } else {
-    echo '<div class="extra-icon konto"><img src="icons/user.png" alt="User">Konto</div>';
+    echo '<div class="extra-icon konto"><img src="icons/user.png" alt="User">Konto</div></a>';
 }
 ?>
 
