@@ -56,8 +56,8 @@
 </div>
 
 <hr class="banner-divider">
-    <h1 class="title-centered">Atrakcje</h1>
-    <hr class="banner-divider">
+<h1 class="title-centered">Atrakcje</h1>
+<hr class="banner-divider">
 <div class="container-info">
 
 <?php
@@ -80,10 +80,9 @@ while ($wiersz = mysqli_fetch_array($wynik)){
 }
 ?>
 </div>
-<div class="container-info-restauracje">
 <hr class="banner-divider">
-    <h1 class="title-centered">Restauracje</h1>
-    <hr class="banner-divider">
+<h1 class="title-centered">Restauracje</h1>
+<hr class="banner-divider">
 <?php
 require("config.php");
 
