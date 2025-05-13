@@ -117,3 +117,34 @@ hr {
     border: 0.2vh solid var(--hr-border-color);
     margin: 20px auto;
 }
+
+#shop-modal{
+    display: none; /* Ukryty domyślnie */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Przezroczyste tło */
+}
+
+#shop-modal.show{
+        display: block;
+}
+
+.sklep{
+    background-color: var(--button-color);
+    margin: 10vh auto 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    border: var(--card-bg) solid 5px;
+    width: 80%;
+    height: 80%;
+}
+
+.shop-modal-content{
+    margin: 3%;
+    height: auto;
+}
