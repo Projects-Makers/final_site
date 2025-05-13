@@ -87,6 +87,30 @@ if (!isset($_SESSION['czas_wejscia'])) {
             localStorage.setItem('selectedLanguage', language); // Zapisz wybór w localStorage
             loadTranslations(language); // Zmień tłumaczenia
         }
+
+
+
+
+        const shopbtn = document.getElementById('shop-btn');
+        const shopbtn1 = document.getElementById('shop-btn1');
+        const shopmodal = document.getElementById('shop-modal');
+        const close = document.querySelector('.close-button1'); // Używamy querySelector, aby wybrać elementy po klasie
+
+
+        shopbtn.addEventListener('click', function() {
+                shopmodal.classList.add('show');         
+        });
+
+        shopbtn1.addEventListener('click', function() {
+                shopmodal.classList.add('show');         
+        });
+
+        close.addEventListener('click', function() {
+                shopmodal.classList.remove('show');         
+        });
+
+        //
+
 </script>
 </body>
 </html>

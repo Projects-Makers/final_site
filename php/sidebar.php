@@ -13,7 +13,7 @@ if (isset($_SESSION['username'])) {
 <aside class="sidebar">
     <div class="icon"><img src="icons/home.png" alt="Home"></div>
     <div class="icon"><img src="icons/map.png" alt="Map"></div>
-    <div class="icon"><img src="icons/shop.png" alt="Shop"></div>
+    <div class="icon" id="shop-btn1"><img src="icons/shop.png" alt="Shop"></div>
     <?php
 if (isset($_SESSION['username'])) {
     echo '<a href="index.php?strona=profil"><div class="icon"><img src="' . $zdjecie_profilowe_path . '" alt="Profilowe" class="zdj-profilowe">'. '</div></a>';
@@ -37,8 +37,7 @@ if (isset($_SESSION['username'])) {
     </div>
 </div>
 
-        <a href="#"><div class="extra-icon"><img src="icons/shop.png" alt="Map">Sklep</div></a>
-<div class="sklep">nigger</div>
+        <a href="#"><div class="extra-icon" id="shop-btn"><img src="icons/shop.png" alt="Map">Sklep</div></a>
         <?php
 if (isset($_SESSION['username'])) {
     echo '<a href="index.php?strona=profil"><div class="extra-icon"><img src="' . $zdjecie_profilowe_path . '"class="zdj-profilowe">' . htmlspecialchars($skrocone) . '</div></a>';
@@ -49,5 +48,13 @@ if (isset($_SESSION['username'])) {
 
         <a href="index.php?strona=settings"><div class="extra-icon"><img src="icons/cogwheel.png" alt="Map">Ustawienia</div></a>
     </div>
+    <div id="shop-modal" class="shop-modal">
+        <div class="sklep">
+        <span class="close-button1">&times;</span>
+            <div class="shop-modal-content">
+            <p>Treść sklepu tutaj</p>
 
+            </div>
+        </div>
+</div>
 </aside>
