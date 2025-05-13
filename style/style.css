@@ -117,3 +117,13 @@ hr {
     border: 0.2vh solid var(--hr-border-color);
     margin: 20px auto;
 }
+
+.sklep{
+	width: 150%;
+	height: 100%;
+	background-color: black;
+	position:absolute ;
+	left: 80%;
+	top: 50%;
+    transform: translate(50%, -50%);
+}
