@@ -52,7 +52,40 @@ if (isset($_SESSION['username'])) {
         <div class="sklep">
         <span class="close-button1">&times;</span>
             <div class="shop-modal-content">
-            <p>Treść sklepu tutaj</p>
+            <div class="shop-list">
+    <?php 
+    require("config.php");
+
+    $querymiasta = "SELECT * FROM wycieczki";  
+    $wynikmiasta = mysqli_query($conn, $querymiasta);
+
+    if (!$wynikmiasta) {
+        echo "<p>Błąd zapytania: " . mysqli_error($conn) . "</p>";
+    } elseif (mysqli_num_rows($wynikmiasta) == 0) {
+        echo "<p>Brak atrakcji powiązanych z miastem.</p>";
+    } else {
+        while ($miasto = mysqli_fetch_array($wynikmiasta)) {
+            $imagePath = 'zdj/' . $miasto["id"] . '.webp';
+            if (!file_exists($imagePath)) {
+                $imagePath = 'zdj/nic.webp';
+            }
+            ?>
+            <div class="shop-item" onclick="window.location.href='index.php?strona=informacje&nr=<?php echo $miasto['id']; ?>';">
+                <div class="shop-item-image">
+                    <img src="<?php echo $imagePath; ?>" alt="<?php echo htmlspecialchars($miasto["nazwa"]); ?>" loading="lazy">
+                </div>
+                <div class="shop-item-info">
+                    <h3 class="shop-item-title"><?php echo htmlspecialchars($miasto["nazwa"]); ?></h3>
+                    <p class="shop-item-location">Lokalizacja: <?php echo htmlspecialchars($miasto["lokalizacja"] ?? 'Nieznana'); ?></p>
+                    <p class="shop-item-price">Cena: <?php echo htmlspecialchars($miasto["cena"] ?? 'Brak danych'); ?> zł</p>
+                </div>
+            </div>
+            <?php
+        }
+    }
+    ?>
+</div>
+
 
             </div>
         </div>
