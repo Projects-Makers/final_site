@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 29, 2025 at 10:59 AM
+-- Generation Time: Maj 13, 2025 at 02:39 PM
 -- Wersja serwera: 10.4.32-MariaDB
 -- Wersja PHP: 8.2.12
 
@@ -110,7 +110,19 @@ INSERT INTO `atrakcje` (`id`, `nazwa`, `cena`, `lokalizacja`, `godz`, `opis`, `l
 (68, 'Kultura i Sztuka - Galeria Sztuki Współczesnej\n\n ', 'Normalny:10zł Ulgowy:5zł', 'ul. Rynek 13, 44-200 Rybnik', 'pon.-pt. 10:00-18:00, sob.-nd. 10:00-16:00', 'Teatr Ziemi Rybnickiej to centrum kulturalne miasta, organizujące spektakle, koncerty i wystawy. Łączy tradycję z nowoczesnością, przyciągając mieszkańców i gości regionu.', 7),
 (69, 'Stadion Miejski w Rybniku\r\n\r\n   ', 'zależna od wydarzenia ', 'ul. Gliwicka 72, 44-200 Rybnik', 'w zależności od wydarzeń sportowych', 'Stadion Miejski w Rybniku to nowoczesny obiekt sportowy, wykorzystywany głównie do meczów żużlowych i piłkarskich. Miejsce emocjonujących wydarzeń i spotkań sportowych mieszkańców.', 7),
 (70, 'Centrum Nauki i Techniki EC1\r\n\r\n  ', 'Normalny:15zł', 'ul. Czołgistów 1, 44-200 Rybnik', 'codziennie 9:00-17:00', 'Centrum Nauki i Techniki EC1 w Łodzi to interaktywne muzeum w dawnej elektrociepłowni. Łączy naukę, historię i technologię, oferując fascynujące wystawy dla dzieci i dorosłych.', 7),
-(71, 'Ośrodek Rekreacyjny \"Nad Nacyną\"\r\n\r\n    ', 'bezpłatnie', 'ul. Nacyna, 44-200 Rybnik', 'cały dzień', 'Ośrodek Rekreacyjny \"Nad Nacyną\" w Rybniku oferuje boiska, ścieżki spacerowe i plac zabaw. To zielona przestrzeń wypoczynku i aktywności na świeżym powietrzu dla całej rodziny.', 7);
+(71, 'Ośrodek Rekreacyjny \"Nad Nacyną\"\r\n\r\n    ', 'bezpłatnie', 'ul. Nacyna, 44-200 Rybnik', 'cały dzień', 'Ośrodek Rekreacyjny \"Nad Nacyną\" w Rybniku oferuje boiska, ścieżki spacerowe i plac zabaw. To zielona przestrzeń wypoczynku i aktywności na świeżym powietrzu dla całej rodziny.', 7),
+(73, 'Carbonarium', 'Normalny: 20zł\r\nUlgowy: 15zł', 'ul. Towarowa 2c (Łaźnia Moszczenica)', 'wt.-pt. 10:00-18:00\r\nsob.-nd. 11:00-19:00', 'Interaktywna wystawa prezentująca historię węgla i górnictwa w regionie. Zlokalizowana w zrewitalizowanej łaźni górniczej, oferuje nowoczesne ekspozycje multimedialne, makiety oraz audioprzewodniki', 8),
+(74, 'Park Zdrojowy', 'bezpłatny', 'ul. Witczaka', 'Całodobowo', 'Rozległy park o powierzchni 18 hektarów, będący sercem dawnego uzdrowiska. Znajdują się tu liczne zabytki, takie jak Dom Zdrojowy, muszla koncertowa, inhalatorium solankowe oraz malownicze alejki i mostki', 8),
+(75, 'Inhalatorium solankowe', 'Wstęp bezpłatny', 'Park Zdrojowy', 'Codziennie: 8:00–20:00', 'Drewniana promenada z inhalatorium, gdzie rozpylana jest solanka z Zabłocia. Miejsce relaksu i terapii zdrowotnej, nawiązujące do uzdrowiskowej tradycji miasta', 8),
+(76, 'Żelazny Szlak Rowerowy', 'Bezpłatnie', 'Pętla rowerowa przebiegająca przez Jastrzębie-Zdrój i okolice', ' Całodobowo', 'Ponad 50-kilometrowa trasa rowerowa wykorzystująca dawne linie kolejowe. Szlak prowadzi przez malownicze tereny polsko-czeskiego pogranicza, oferując liczne miejsca odpoczynku.', 8),
+(77, 'Ośrodek Wypoczynku Niedzielnego', 'Wstęp bezpłatny', 'ul. Kazimierza Wielkiego', 'Całodobowo', 'Popularne miejsce rekreacji z tężnią solankową, wodnym placem zabaw, amfiteatrem oraz terenami zielonymi idealnymi na piknik czy spacer', 8),
+(78, 'Galeria Dzwonków', 'Bilet normalny: 30zł\r\nBilet ulgowy: 20zł', 'Park Uniwersytecki, w zabytkowym budynku sanatoryjnym', 'Informacje dostępne na miejscu', 'Unikalna kolekcja około 8 tysięcy dzwonków z różnych zakątków świata, w tym pasterskich, marynistycznych i kościelnych. Zwiedzanie możliwe z przewodnikiem – właścicielem kolekcji', 8),
+(80, 'Kolej Linowa na Szyndzielnię', 'Bilet normalny: 30 zł \r\nBilet ulgowy: 24 zł', 'ul. Olszówka 38', 'pn. 10:00-17:30\r\nwt.-nd. 9:00-17:30', 'Nowoczesna kolej gondolowa wwożąca turystów na Szyndzielnię (1028 m n.p.m.). Podczas 6-minutowej jazdy można podziwiać panoramę miasta i Beskidów. Przy górnej stacji znajduje się wieża widokowa oraz schronisko PTTK', 9),
+(81, 'Centrum Bajki i Animacji OKO', 'Bilet normalny: 25 zł ulgowy: 20 zł', 'ul. Cieszyńska 24', 'Codziennie: 10:00–18:00', 'Interaktywne centrum edukacyjne poświęcone historii polskiej animacji. Zwiedzający mogą poznać proces tworzenia filmów rysunkowych oraz wziąć udział w warsztatach', 9),
+(82, 'Eko Park \"W Deche\"', '', 'ul. Leszczyńska 20 (przy Gemini Park)', 'pn.-sb. 9:00-21:00\r\nnd. 10:00-20:00', 'Rodzinny park rekreacyjny z drewnianymi instalacjami, wieżą widokową, zjeżdżalniami i placem zabaw. Idealne miejsce na aktywny wypoczynek dla dzieci i dorosłych', 9),
+(83, 'Muzeum Stara Fabryka', 'Bilet normalny: 10 zł, ulgowy: 6 zł', 'pl. Żwirki i Wigury 8', 'wt.-pt. 9:00-15:00\r\nsb.-nd. 10:00-16:00', 'Muzeum prezentujące historię przemysłu włókienniczego w Bielsku-Białej. Wystawy obejmują zabytkowe maszyny, dokumenty oraz eksponaty związane z produkcją tekstyliów', 9),
+(84, 'Rynek Starego Miasta', 'Wstęp bezpłatny', 'Centrum Bielska-Białej', 'Całodobowo', 'Historyczne serce miasta z zachowanym układem urbanistycznym z czasów średniowiecza. Otoczony zabytkowymi kamienicami, jest miejscem licznych wydarzeń kulturalnych i spotkań mieszkańców', 9),
+(85, 'Dom Tkacza', 'Bilet normalny: 10 zł ulgowy: 6 zł', 'ul. Jana III Sobieskiego 51', 'wt.-pt. 9:00-15:00\r\nsb.-nd. 10:00-16:00', 'Zrekonstruowany XVIII-wieczny dom i warsztat sukiennika, prezentujący tradycje rzemieślnicze regionu. Wnętrza ukazują życie i pracę dawnych mieszkańców Bielska-Białej', 9);
 
 -- --------------------------------------------------------
 
@@ -258,6 +270,37 @@ INSERT INTO `restauracje` (`id`, `nazwa`, `cena`, `lokalizacja`, `godz`, `opis`,
 (153, 'Restauracja Cesarska', 'Dania główne od 45 zł, zupy od 18 zł', 'ul. Paderewskiego 35, 41-500 Chorzów', 'Poniedziałek – Piątek: 12:00 – 22:00, Sobota – Niedziela: 12:00 – 23:00', 'Restauracja w Hotelu Diament Arsenal Palace, oferująca dania kuchni międzynarodowej w eleganckiej atmosferze.', 10),
 (154, 'Łania', 'Dania główne od 40 zł, zupy od 20 zł', 'ul. Aleja Łani 5, 41-500 Chorzów', 'Poniedziałek – Piątek: 12:00 – 22:00, Sobota – Niedziela: 12:00 – 23:00', 'Restauracja specjalizująca się w kuchni polskiej, z wyśmienitymi daniami mięsnymi i rybnymi.', 10);
 
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `wycieczki`
+--
+
+CREATE TABLE `wycieczki` (
+  `id` int(11) NOT NULL,
+  `nazwa` varchar(255) DEFAULT NULL,
+  `opis` text DEFAULT NULL,
+  `cena` int(11) DEFAULT NULL,
+  `czas_trwania` int(11) DEFAULT NULL,
+  `dystans` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `wycieczki`
+--
+
+INSERT INTO `wycieczki` (`id`, `nazwa`, `opis`, `cena`, `czas_trwania`, `dystans`) VALUES
+(1, 'Śląska Przygoda', 'Ta wycieczka zabierze Cię na wspaniałą podróż po sercu Śląska. Zaczniemy w Katowicach, gdzie zwiedzimy zarówno nowoczesne centrum miasta, jak i historyczne miejsca związane z przemysłem. Następnie odwiedzimy Gliwice, z ich pięknym rynkiem i zabytkowymi budowlami, oraz Zabrze, gdzie odkryjemy tajemnice górnictwa. Wycieczkę zakończymy w Bytomiu i Rudzie Śląskiej, które oferują unikalne połączenie tradycji przemysłowych i współczesnych atrakcji.', 500, 3, 150),
+(2, 'Wielka Śląska Tura', 'Odkryj różnorodność Górnego Śląska w wycieczce, która obejmuje pięć miast. Od Katowic, stolicy regionu, przez przemysłowy Sosnowiec, po malownicze Dąbrowę Górniczą, Chorzów i Tychy. Każde z tych miast ma swoją unikalną historię, a ty masz okazję zobaczyć połączenie tradycji, nowoczesności i pięknych terenów zielonych.', 450, 2, 120),
+(3, 'Bielsko-Biała i okoliczne miasta', 'Bielsko-Biała, znana z pięknych górskich widoków, przyciąga miłośników natury. W tej wycieczce odkryjemy również Rybnik i Jastrzębie-Zdrój, które łączą w sobie urok przemysłowych miast z naturalnymi krajobrazami. Ta wycieczka to idealna okazja, by zobaczyć jak region łączy industrialne dziedzictwo z zielonymi przestrzeniami.', 550, 3, 180),
+(4, 'Zagłębie Śląskie', 'Zagłębie Śląskie to region pełen historii i przemysłowych tradycji. Wycieczka obejmuje Sosnowiec, Dąbrowę Górniczą, Jaworzno oraz Częstochowę, z wizytą w słynnej Jasnej Górze. Każde miasto ma swoje unikalne atrakcje, od przemysłowych zabytków po duchowe i kulturowe skarby.', 500, 2, 130),
+(5, 'Industrialne Miasta Śląska', 'Śląsk to kraina przemysłowa, której historia sięga setek lat. W tej wycieczce odwiedzimy Zabrze, Gliwice, Ruda Śląską, Chorzów i Bytom. Oprócz przemysłowych obiektów, takich jak kopalnie czy fabryki, zwiedzimy także muzea związane z techniką, które ukazują historię regionu.', 600, 3, 160),
+(6, 'Szlak Miast Górnośląskich', 'W tej wycieczce zwiedzimy cztery ważne miasta Górnego Śląska: Katowice, Gliwice, Tychy i Chorzów. Każde z tych miast ma swoje charakterystyczne cechy - od nowoczesnych centrów po historyczne dzielnice. Idealna wycieczka dla osób, które chcą poznać zarówno kulturę, jak i nowoczesne oblicze Śląska.', 520, 2, 110),
+(7, 'Górnośląska Historia', 'W tej wycieczce odwiedzimy pięć miast, które stanowią klucz do zrozumienia historii Śląska. Zaczniemy od Bytomia, przez Rybnik i Jastrzębie-Zdrój, a następnie odwiedzimy Zabrze i Katowice. To idealna podróż dla pasjonatów historii przemysłowej, którzy chcą odkryć, jak Śląsk zmieniał się na przestrzeni lat.', 600, 4, 200),
+(8, 'Zielony Śląsk', 'Górnośląska aglomeracja to nie tylko przemysł. W tej wycieczce odkryjemy Tychy, Chorzów, Rybnik i Jaworzno, miejsca pełne terenów zielonych, parków i rezerwatów przyrody. Idealna wycieczka dla osób, które pragną odpocząć w otoczeniu natury, a jednocześnie zwiedzić interesujące miasta.', 480, 2, 120),
+(9, 'Miasta Przemysłowe Śląska', 'Od Katowic po Sosnowiec, Chorzów, Gliwice i Rybnik - ta wycieczka to podróż przez miasta, które stanowią serce przemysłowe Śląska. Poznamy nie tylko zabytki związane z przemysłem, ale również zobaczymy, jak te miasta zmieniają się w nowoczesne ośrodki kultury.', 550, 3, 170),
+(10, 'Śląska Wędrówka', 'W tej wycieczce zwiedzimy Chorzów, Bytom, Sosnowiec, Jaworzno i Częstochowę. Każde z tych miast ma swoje unikalne atrakcje: od zabytków przemysłowych po piękne parki i miejsca kultu. Idealna opcja dla osób, które chcą poznać zarówno historię Śląska, jak i jego współczesne oblicze.', 530, 3, 160);
+
 --
 -- Indeksy dla zrzutów tabel
 --
@@ -281,6 +324,12 @@ ALTER TABLE `restauracje`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeksy dla tabeli `wycieczki`
+--
+ALTER TABLE `wycieczki`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -288,7 +337,7 @@ ALTER TABLE `restauracje`
 -- AUTO_INCREMENT for table `atrakcje`
 --
 ALTER TABLE `atrakcje`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=86;
 
 --
 -- AUTO_INCREMENT for table `miasta`
@@ -301,6 +350,12 @@ ALTER TABLE `miasta`
 --
 ALTER TABLE `restauracje`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=155;
+
+--
+-- AUTO_INCREMENT for table `wycieczki`
+--
+ALTER TABLE `wycieczki`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
