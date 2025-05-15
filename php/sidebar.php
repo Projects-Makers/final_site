@@ -70,12 +70,20 @@ if (isset($_SESSION['username'])) {
                 $imagePath = 'zdj/nic.webp';
             }
             ?>
+<<<<<<< HEAD
+            <div class="shop-item" onclick="window.location.href='index.php?strona=informacje&nr=<?php echo $miasto['id']; ?>';">
+=======
             <div class="shop-item" onclick="window.location.href='index.php?strona=sklep&nr=<?php echo $miasto['id']; ?>';">
+>>>>>>> a8012d3269b5e63b3b2daf540f3657c02ba2d593
                 <div class="shop-item-image">
                     <img src="<?php echo $imagePath; ?>" alt="<?php echo htmlspecialchars($miasto["nazwa"]); ?>" loading="lazy">
                 </div>
                 <div class="shop-item-info">
                     <h3 class="shop-item-title"><?php echo htmlspecialchars($miasto["nazwa"]); ?></h3>
+<<<<<<< HEAD
+                    <p class="shop-item-location">Lokalizacja: <?php echo htmlspecialchars($miasto["lokalizacja"] ?? 'Nieznana'); ?></p>
+=======
+>>>>>>> a8012d3269b5e63b3b2daf540f3657c02ba2d593
                     <p class="shop-item-price">Cena: <?php echo htmlspecialchars($miasto["cena"] ?? 'Brak danych'); ?> zł</p>
                 </div>
             </div>
