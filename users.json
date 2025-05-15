@@ -3,7 +3,11 @@
         "username": "2",
         "password": "$2y$10$lkWWiq6XWYHGZQFcgppAXOTsFGTyXIiMK2t1kr9Ca.sL71vCTpR5K",
         "rank": 1,
+<<<<<<< HEAD
         "czas_spedzony": 585,
+=======
+        "czas_spedzony": 586,
+>>>>>>> a8012d3269b5e63b3b2daf540f3657c02ba2d593
         "zdjecie_profilowe": "zdjecia_profilowe\/2.jpg"
     },
     "1": {
