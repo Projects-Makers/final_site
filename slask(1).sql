@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Maj 13, 2025 at 02:39 PM
+-- Generation Time: Maj 13, 2025 at 03:24 PM
 -- Wersja serwera: 10.4.32-MariaDB
 -- Wersja PHP: 8.2.12
 
@@ -122,7 +122,31 @@ INSERT INTO `atrakcje` (`id`, `nazwa`, `cena`, `lokalizacja`, `godz`, `opis`, `l
 (82, 'Eko Park \"W Deche\"', '', 'ul. Leszczyńska 20 (przy Gemini Park)', 'pn.-sb. 9:00-21:00\r\nnd. 10:00-20:00', 'Rodzinny park rekreacyjny z drewnianymi instalacjami, wieżą widokową, zjeżdżalniami i placem zabaw. Idealne miejsce na aktywny wypoczynek dla dzieci i dorosłych', 9),
 (83, 'Muzeum Stara Fabryka', 'Bilet normalny: 10 zł, ulgowy: 6 zł', 'pl. Żwirki i Wigury 8', 'wt.-pt. 9:00-15:00\r\nsb.-nd. 10:00-16:00', 'Muzeum prezentujące historię przemysłu włókienniczego w Bielsku-Białej. Wystawy obejmują zabytkowe maszyny, dokumenty oraz eksponaty związane z produkcją tekstyliów', 9),
 (84, 'Rynek Starego Miasta', 'Wstęp bezpłatny', 'Centrum Bielska-Białej', 'Całodobowo', 'Historyczne serce miasta z zachowanym układem urbanistycznym z czasów średniowiecza. Otoczony zabytkowymi kamienicami, jest miejscem licznych wydarzeń kulturalnych i spotkań mieszkańców', 9),
-(85, 'Dom Tkacza', 'Bilet normalny: 10 zł ulgowy: 6 zł', 'ul. Jana III Sobieskiego 51', 'wt.-pt. 9:00-15:00\r\nsb.-nd. 10:00-16:00', 'Zrekonstruowany XVIII-wieczny dom i warsztat sukiennika, prezentujący tradycje rzemieślnicze regionu. Wnętrza ukazują życie i pracę dawnych mieszkańców Bielska-Białej', 9);
+(85, 'Dom Tkacza', 'Bilet normalny: 10 zł ulgowy: 6 zł', 'ul. Jana III Sobieskiego 51', 'wt.-pt. 9:00-15:00\r\nsb.-nd. 10:00-16:00', 'Zrekonstruowany XVIII-wieczny dom i warsztat sukiennika, prezentujący tradycje rzemieślnicze regionu. Wnętrza ukazują życie i pracę dawnych mieszkańców Bielska-Białej', 9),
+(86, 'Śląski Ogród Zoologiczny', 'Bilet normalny: 25 zł\r\nBilet ulgowy: 15 zł', 'ul. Promenada Gen. Jerzego Ziętka 7', 'Codziennie: 9:00–19:00', 'Jeden z największych ogrodów zoologicznych w Polsce, zajmujący powierzchnię 47,6 ha. Mieszka tu ponad 2 500 zwierząt reprezentujących około 300 gatunków z całego świata', 10),
+(87, 'Legendia – Śląskie Wesołe Miasteczko', 'Bilet normalny: od 99 zł\r\nBilet ulgowy: od 79 zł', 'ul. Plac Atrakcji 1', 'Godziny różnią się w zależności od dnia i sezonu', 'Najstarszy park rozrywki w Polsce, oferujący ponad 40 atrakcji dla dzieci i dorosłych, w tym rollercoastery, karuzele i pokazy tematyczne', 10),
+(88, 'Planetarium Śląskie', 'Bilet normalny: 20 zł\r\nBilet ulgowy: 15 zł', 'al. Planetarium 4', 'wt.-nd. 10:00-18:00', 'Największe i najstarsze planetarium w Polsce, oferujące seanse astronomiczne, wystawy oraz obserwacje nieba przez teleskopy', 10),
+(89, 'Skansen – Górnośląski Park Etnograficzny', 'Bilet normalny: 15 zł\r\nBilet ulgowy: 10 zł', 'ul. Parkowa 25', 'wt.-nd. 10:00-18:00', 'Muzeum na wolnym powietrzu prezentujące tradycyjną architekturę i kulturę Górnego Śląska, z zabytkowymi chałupami, kościołem i młynem', 10),
+(90, 'Stadion Śląski', 'Ceny biletów zależą od rodzaju wydarzenia.', 'ul. Katowicka 10', 'Godziny otwarcia zależą od wydarzeń', 'Wielofunkcyjny stadion sportowy i koncertowy, znany z organizacji meczów piłkarskich, lekkoatletycznych oraz koncertów międzynarodowych gwiazd', 10),
+(91, 'Muzeum Hutnictwa w Chorzowie', 'Bilet normalny: 20 zł\r\nBilet ulgowy: 15 zł', 'ul. Metalowców 4a', 'wt.-nd. 10:00-18:00', 'Nowoczesne muzeum poświęcone historii hutnictwa w regionie, z interaktywnymi wystawami, maszynami i pokazami multimedialnymi', 10),
+(92, 'Zamek Sielecki', 'Wstęp bezpłatny', 'ul. Zamkowa 2, Sosnowiec', 'wt.-nd.10:00-18:00', 'Najstarszy budynek w Sosnowcu, sięgający XV wieku. Obecnie mieści Sosnowieckie Centrum Sztuki, oferując wystawy, koncerty i wydarzenia kulturalne', 12),
+(93, 'Park Sielecki', 'Wstęp bezpłatny', 'ul. 3 Maja, Sosnowiec', 'Całodobowo', 'Historyczny park o powierzchni 20,24 ha, położony nad Czarną Przemszą. Oferuje skatepark, tor do jazdy na rolkach, siłownię plenerową, plac zabaw oraz tężnię solankową', 12),
+(94, 'Park Dietla', 'Wstęp bezpłatny', 'ul. Stefana Żeromskiego, Sosnowiec', 'Całodobowo', 'Zabytkowy park o powierzchni 6,13 ha, założony w 1901 roku przez Heinricha Dietla. Znajdują się tu m.in. glorieta, pozostałości sztucznych ruin oraz różnorodna roślinność', 12),
+(95, 'Park Środula', 'Wstęp bezpłatny', 'ul. Norwida / ul. Blachnickiego, Sosnowiec', 'Całodobowo', 'Rozległy park o powierzchni około 45 ha, oferujący sztuczny stok narciarski, ścieżki rowerowe i spacerowe, siłownię plenerową, plac zabaw oraz wybieg dla psów', 12),
+(96, 'Trójkąt Trzech Cesarzy', 'Wstęp bezpłatny', 'Ujście Białej i Czarnej Przemszy, Sosnowiec', 'Całodobowo', 'Historyczne miejsce, gdzie w latach 1846–1918 stykały się granice trzech imperiów: Austro-Węgier, Prus i Rosji. Obecnie znajduje się tu pomnik upamiętniający to wydarzenie', 12),
+(97, 'Pałac Dietla', 'Wstęp bezpłatny', 'ul. Stefana Żeromskiego 2, Sosnowiec', 'Godziny otwarcia mogą się różnić; zaleca się kontakt przed wizytą', 'Neorenesansowy pałac z końca XIX wieku, należący do przemysłowca Heinricha Dietla. Obecnie pełni funkcje kulturalne i edukacyjne.\r\n', 12),
+(98, 'Wodny Park Tychy', 'Bilet normalny od 15 zł/h \r\nulgowy od 12 zł/h', 'ul. Sikorskiego 20, 43-100 Tychy', 'Strefa rekreacyjna: pon.–pt.10:00–22:00; sob.–niedz.9:00–22:00\r\nWieża zjeżdżalni: pon.–pt.12:00–22:00; sob.–niedz.9:00–22:00', 'Nowoczesny aquapark oferujący baseny, zjeżdżalnie, strefę surfingu oraz SPA. Idealne miejsce na relaks dla całej rodziny', 13),
+(99, 'Muzeum Tyskich Browarów Książęcych', 'Zwiedzanie muzeum: 20 zł\r\nZwiedzanie browaru: 20 zł (dla osób powyżej 16 lat)\r\nZwiedzanie muzeum i browaru: 25 zł (dla osób powyżej 16 lat)', 'ul. Katowicka 9, 43-100 Tychy', 'wt.–niedz. 10:00–20:00', 'Muzeum prezentujące historię piwowarstwa w Tychach, z możliwością zwiedzania zabytkowego browaru', 13),
+(100, 'Jezioro Paprocańskie', 'Wstęp wolny', 'ul. Parkowa, 43-100 Tychy', 'Całodobowo', 'Popularne miejsce rekreacyjne z plażą, wypożyczalnią sprzętu wodnego, placami zabaw i trasami spacerowymi', 13),
+(101, 'Muzeum Miejskie w Tychach', 'Bilet normalny: 5 zł\r\nBilet ulgowy: 3 zł', 'pl. Wolności 1, 43-100 Tychy', 'wt.–niedz. 10:00–17:00', 'Muzeum prezentujące historię miasta, sztukę, fotografię oraz etnologię regionu', 13),
+(102, 'Browar Obywatelski', 'Wstęp wolny', 'ul. Browarowa 7, 43-100 Tychy', 'Zależne od organizowanych wydarzeń', 'Zrewitalizowany kompleks browarniczy z XIX wieku, obecnie miejsce wydarzeń kulturalnych i gastronomicznych', 13),
+(103, 'Zameczek Myśliwski Promnice', 'Wstęp wolny', 'ul. Promnicka 1, 43-100 Tychy', 'Obiekt dostępny z zewnątrz', 'XIX-wieczny zameczek myśliwski położony nad jeziorem Paprocańskim, otoczony malowniczym lasem', 13),
+(104, 'Pałac Kultury Zagłębia', 'Różne w zależności od wydarzenia; od 10 zł wzwyż', 'Plac Wolności 1, 41-300 Dąbrowa Górnicza', 'zalecane sprawdzenie harmonogramu', 'Monumentalny budynek w stylu socrealistycznym, zbudowany w latach 1951–1958, będący centrum kulturalnym miasta. Oferuje koncerty, spektakle teatralne, wystawy i warsztaty', 14),
+(105, 'Muzeum Miejskie „Sztygarka”', 'Bilet normalny: 5 zł\r\nBilet ulgowy: 3 zł', 'ul. Legionów Polskich 69, 41-300 Dąbrowa Górnicza', 'wt.-pt. 10:00–16:00\r\nsb.-nd. 11:00–15:00', 'Muzeum prezentujące historię regionu, geologię oraz dziedzictwo przemysłowe. Znajduje się na terenie dawnej szkoły górniczej z 1889 roku', 14),
+(106, 'Pogoria III', 'Wstęp wolny', 'ul. Malinowe Górki, 41-300 Dąbrowa Górnicza', 'Całodobowo', 'Najpopularniejsze z czterech sztucznych jezior w mieście, oferujące plażę, ścieżki rowerowe, wypożyczalnie sprzętu wodnego oraz miejsca do rekreacji', 14),
+(107, 'Pustynia Błędowska', 'Wstęp wolny', 'Około 10 km na północ od centrum Dąbrowy Górniczej', 'Całodobowo', 'Największy obszar pustynny w Polsce i Europie Środkowej, o powierzchni około 32 km². Idealne miejsce na spacery i obserwację unikalnego krajobrazu', 14),
+(108, 'Bazylika Serca Pana Jezusa', 'Wstęp wolny', 'ul. Ofiar Katynia 1, 41-303 Dąbrowa Górnicza (Strzemieszyce Wielkie)', 'Codziennie: 7:00–19:00', 'Neogotycka bazylika z początku XX wieku, będąca ważnym ośrodkiem religijnym i zabytkiem architektury sakralnej', 14),
+(109, 'Park Zielona', 'Wstęp wolny', 'ul. Letnia, 41-300 Dąbrowa Górnicza', 'Całodobowo', 'Rozległy park miejski oferujący alejki spacerowe, place zabaw, stawy oraz miejsca do piknikowania. Popularne miejsce wypoczynku dla mieszkańców', 14);
 
 -- --------------------------------------------------------
 
@@ -268,7 +292,19 @@ INSERT INTO `restauracje` (`id`, `nazwa`, `cena`, `lokalizacja`, `godz`, `opis`,
 (151, 'Pierogarnia Pod Beczką', 'Dania główne od 20 zł, pierogi od 15 zł', 'Rynek 7, 41-500 Chorzów', 'Poniedziałek – Piątek: 12:00 – 22:00, Sobota – Niedziela: 12:00 – 23:00', 'Tradycyjna pierogarnia oferująca szeroki wybór pierogów w różnych smakach, idealna na rodzinne obiady.', 10),
 (152, 'Kraken', 'Dania główne od 25 zł, napoje od 10 zł', 'ul. Rynek 13/u3, 41-500 Chorzów', 'Poniedziałek – Piątek: 12:00 – 23:00, Sobota – Niedziela: 12:00 – 24:00', 'Pub z szeroką ofertą alkoholi, przekąsek i dań, idealne miejsce na spotkania z przyjaciółmi.', 10),
 (153, 'Restauracja Cesarska', 'Dania główne od 45 zł, zupy od 18 zł', 'ul. Paderewskiego 35, 41-500 Chorzów', 'Poniedziałek – Piątek: 12:00 – 22:00, Sobota – Niedziela: 12:00 – 23:00', 'Restauracja w Hotelu Diament Arsenal Palace, oferująca dania kuchni międzynarodowej w eleganckiej atmosferze.', 10),
-(154, 'Łania', 'Dania główne od 40 zł, zupy od 20 zł', 'ul. Aleja Łani 5, 41-500 Chorzów', 'Poniedziałek – Piątek: 12:00 – 22:00, Sobota – Niedziela: 12:00 – 23:00', 'Restauracja specjalizująca się w kuchni polskiej, z wyśmienitymi daniami mięsnymi i rybnymi.', 10);
+(154, 'Łania', 'Dania główne od 40 zł, zupy od 20 zł', 'ul. Aleja Łani 5, 41-500 Chorzów', 'Poniedziałek – Piątek: 12:00 – 22:00, Sobota – Niedziela: 12:00 – 23:00', 'Restauracja specjalizująca się w kuchni polskiej, z wyśmienitymi daniami mięsnymi i rybnymi.', 10),
+(155, 'Lolo Rosso', 'Przystawki: 18–24 zł\r\nMakarony: 36–54 zł\r\nDania mięsne: 28–36 zł\r\nDesery: 24 zł', 'ul. Władysława Reymonta 13', '-', 'Restauracja oferująca dania kuchni włoskiej i śródziemnomorskiej, takie jak bruschetty, tagliatelle ze szpinakiem czy linguine z krewetkami. Przytulne wnętrze i sezonowe menu', 12),
+(156, 'Ha-Noi – Restauracja Wietnamska', 'Zupy: 15–17 zł\r\nDania główne: 28–40 zł\r\nMakaron i ryż smażony: 24–35 zł\r\nPad Thai: 24–35,90 zł', 'al. ks. Franciszka Blachnickiego 3, 41-219 Sosnowiec', 'pn.-czw. 10:00–20:00\r\npt.-sb. zamknięte\r\nsb. 10:00 – 20:00\r\n\r\n', 'Autentyczna kuchnia wietnamska z szerokim wyborem zup, dań mięsnych i wegetariańskich. Popularne pozycje to zupa Pho, sajgonki oraz różne warianty Pad Thai', 12),
+(157, 'Pocco Italia Ristorante', 'Przystawki: 20–50 zł\r\nMakarony: 34–54 zł\r\nPizza: 28–56 zł\r\nDania główne: 44–54 zł', 'ul. Romana Dmowskiego 9, 41-219 Sosnowiec', 'pn.-czw. 12:00–21:00\r\n\r\npt.-sb. 12:00–22:00\r\n\r\nnd. 12:00–21:00', 'Włoska restauracja oferująca szeroki wybór makaronów, pizz oraz dań głównych. Specjalności to m.in. tagliatelle al salmone, pizza Gamberi e Cozze oraz lasagne alla Bolognese', 12),
+(158, 'Tapas Bar Maya', 'ceny tapas i dań głównych zazwyczaj mieszczą się w przedziale 20–50 zł.', 'ul. Stanisława Małachowskiego 9, 41-200 Sosnowiec', 'Brak dostępnych informacji.', 'Hiszpańska restauracja serwująca tradycyjne tapas oraz dania kuchni śródziemnomorskiej. Przytulne wnętrze i bogata oferta win oraz drinków', 12),
+(159, 'Pietruszkowe Pole', 'dania wegetariańskie i wegańskie zazwyczaj w przedziale 25–45 zł.', 'ul. Targowa 8/IV, 41-200 Sosnowiec', 'pn.-czw. 11:00–19:00\r\npt. 11:00–21:00\r\nsb. 12:00–21:00\r\nnd. 12:00–19:00', 'Restauracja wegetariańska i wegańska oferująca dania przygotowywane z sezonowych składników. Kameralne wnętrze i kreatywne podejście do kuchni roślinnej', 12),
+(160, 'Jacek Placek', 'tradycyjne dania kuchni polskiej zazwyczaj w przedziale 20–40 zł.', 'ul. Aleksandra Wieczorka 3, 41-219 Sosnowiec', 'Brak dostępnych informacji.', 'Przytulna restauracja serwująca tradycyjne dania kuchni polskiej, z naciskiem na domowe smaki. Znana z doskonałych placków ziemniaczanych i różnorodnych dań obiadowych', 12),
+(161, 'Restauracja Dotychczas', 'Dania główne: 30–60 zł', 'ul. Sikorskiego 72 (Mercado Park), 43-100 Tychy', 'pn.-czw. 12:00 – 21:00\r\npt.-sb. 12:00 – 22:00\r\nnd. 12:00 – 20:00', 'Nowoczesna restauracja z ekologicznym podejściem do kuchni. Oferuje dania przygotowywane z sezonowych składników, własne wyroby cukiernicze i wędliniarskie. Idealne miejsce na lunch, kolację czy organizację przyjęć okolicznościowych', 13),
+(162, 'W Międzyczasie – Coffee & Restaurant', 'Dania główne: 30–60 zł', 'ul. Damrota 66, 43-100 Tychy', 'zalecany kontakt telefoniczny', 'Przytulna restauracja oferująca dania kuchni włoskiej i śródziemnomorskiej, desery, koktajle oraz szeroki wybór win. Idealne miejsce na spotkania towarzyskie i rodzinne.', 13),
+(163, 'Osteria Le Botti', 'Dania główne: 40–80 zł', 'ul. Budowlanych 43, 43-100 Tychy', ' zalecany kontakt telefoniczny', 'Autentyczna włoska restauracja serwująca dania przygotowywane według tradycyjnych receptur, z oryginalnych włoskich składników', 13),
+(164, 'Restauracja Pod Prosiakiem', 'Dania główne: 45–114 zł', 'ul. Katowicka 10, 43-100 Tychy', ' zalecany kontakt telefoniczny', 'Restauracja specjalizująca się w kuchni śląskiej, oferująca tradycyjne dania mięsne, takie jak steki, gołąbki czy kaczka, w przytulnym wnętrzu z kącikiem dla dzieci', 13),
+(165, 'Lokalizacja Bistro', 'Dania główne: 30–60 zł', 'ul. Edukacji 48, 43-100 Tychy', ' zalecany kontakt telefoniczny', 'Nowoczesne bistro oferujące dania przygotowywane z sezonowych składników, codziennie wypiekane pieczywo oraz autorskie menu', 13),
+(166, 'La Fontana', 'Dania główne: 30–60 zł', 'ul. Budowlanych 43, 43-100 Tychy', 'zalecany kontakt telefoniczny', 'Restauracja specjalizująca się w kuchni włoskiej, oferująca dania przygotowywane z oryginalnych, wysokiej jakości produktów, w przyjemnym wnętrzu z miłą obsługą', 13);
 
 -- --------------------------------------------------------
 
@@ -337,7 +373,7 @@ ALTER TABLE `wycieczki`
 -- AUTO_INCREMENT for table `atrakcje`
 --
 ALTER TABLE `atrakcje`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=86;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
 
 --
 -- AUTO_INCREMENT for table `miasta`
@@ -349,7 +385,7 @@ ALTER TABLE `miasta`
 -- AUTO_INCREMENT for table `restauracje`
 --
 ALTER TABLE `restauracje`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=155;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=167;
 
 --
 -- AUTO_INCREMENT for table `wycieczki`
