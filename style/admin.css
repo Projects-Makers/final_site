@@ -122,9 +122,55 @@
     text-align: center;
     position: relative;
 }
+@media screen and (min-width:769px){
 
+.back-buttone {
+    left: 10px;
+    background: #6a5acd;
+    color: white;
+    padding: 10px 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background 0.3s ease;
+}
+.back-buttone:hover {
+    background: #5a4ecf;
+}
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #6a5acd;
+    color: white;
+    padding: 20px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background 0.3s ease;
+}
+
+.back-button:hover {
+background: #5a4ecf;
+}
+}
 /* Przycisk powrotu */
-
+@media screen and (max-width:768px){
+    .back-buttone {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background: #6a5acd;
+        color: white;
+        padding: 20px 24px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 18px;
+        transition: background 0.3s ease;
+    }
+    .back-buttone:hover {
+        background: #5a4ecf;
+    }
     .back-button {
         position: absolute;
         top: 10px;
@@ -137,16 +183,11 @@
         font-size: 18px;
         transition: background 0.3s ease;
     }
-    
-
-
-
-
 
 .back-button:hover {
     background: #5a4ecf;
 }
-
+}
 .form-container-1 {
     margin: 0 auto;
     padding: 20px;
@@ -355,6 +396,7 @@ title-centered-edit {
     border-radius: 1vh;
     align-items: center;
     cursor: pointer;
+    color: white;
 }
 
 .miasto-item-box:hover{
@@ -369,8 +411,9 @@ title-centered-edit {
     color: var(--reverse-font-color);
     font-size: large;
     text-decoration: none;
+    color: white;
 } 
 
 .miasto-item-link a{
-    color: black;
+    color: rgb(255, 255, 255);
 }

@@ -92,8 +92,6 @@ echo '</div>';
 
 echo '<h3>Statystyki:</h3>';
 echo '<ul>';
-echo '<li>Liczba postów: 10</li>';
-echo '<li>Liczba komentarzy: 20</li>';
 echo '<li>Czas spędzony na stronie: ' . $users[$username]['czas_spedzony'] . ' minut</li>';
 echo '</ul>';
 

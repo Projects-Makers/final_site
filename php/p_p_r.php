@@ -1,5 +1,5 @@
-<a href="index.php?strona=informacje&nr=<?php echo $_GET["l"];?>" class="back-button">← Powrót do wyboru</a>
 <div class="baner-container2">
+<a href="index.php?strona=informacje&nr=<?php echo $_GET["l"];?>" class="back-buttone">← Powrót do wyboru</a>
         <div class="lacznik">
             <div class="zdjecie12">
                 <div class="baner-podstrona">
