@@ -1,4 +1,5 @@
 @import 'style.css';
+@media screen and (min-width:769px){
 
 .form-container {
     background-color: var(--card-bg);
@@ -19,7 +20,28 @@
     transition: opacity 0.3s ease, transform 0.3s ease; /* Płynna animacja */
         
 }
-
+}
+@media screen and (max-width:768px){
+.form-container {
+    background-color: var(--card-bg);
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+    top: 35%;
+    left: 17%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    display: none; /* Formularz na początku jest ukryty */
+    opacity: 0; /* Ukryty formularz */
+    transform: scale(0.9); /* Skala formularza początkowa (trochę mniejsza) */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Płynna animacja */
+        
+}
+}
 .form-container.show {
     display: block; /* Kiedy ma być widoczny */
     opacity: 1; /* Pełna widoczność formularza */
